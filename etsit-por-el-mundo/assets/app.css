@@ -1,0 +1,21 @@
+:root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+body { margin: 0; color:#111; background:#fff; }
+.wrap { max-width: 1150px; margin: 0 auto; padding: 18px; }
+.top { border-bottom: 1px solid rgba(0,0,0,.1); }
+h1 { margin: 0 0 6px; font-size: 26px; }
+p { margin: 0; opacity: .85; }
+
+.map { margin-top: 16px; min-height: 520px; border:1px solid rgba(0,0,0,.12); border-radius: 12px; overflow:hidden; }
+
+.panel { margin-top: 18px; }
+.filters { display:flex; flex-wrap:wrap; gap:12px; align-items:end; }
+label { display:flex; flex-direction:column; gap:6px; font-size:14px; }
+select, button { padding: 8px 10px; border-radius: 10px; border:1px solid rgba(0,0,0,.18); background:#fff; }
+button { cursor:pointer; }
+
+.results { margin-top: 12px; }
+#count { margin: 8px 0; opacity:.85; }
+.tableWrap { overflow:auto; border:1px solid rgba(0,0,0,.12); border-radius:12px; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+th, td { text-align:left; padding:10px; border-bottom:1px solid rgba(0,0,0,.06); }
+th { background: rgba(0,0,0,.03); }
