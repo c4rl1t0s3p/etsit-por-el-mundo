@@ -1,0 +1,4343 @@
+{
+  "meta": {
+    "curso": "2026-2027",
+    "source_excel": "Oferta_de_plazas_2026-27_web_OI.xlsx",
+    "offers_count": 190,
+    "countries_count": 42
+  },
+  "countries": {
+    "AR": {
+      "iso2": "AR",
+      "cities": [
+        "Buenos Aires",
+        "Mendoza",
+        "Salta",
+        "Tucumán"
+      ],
+      "cities_count": 4,
+      "offers_count": 5,
+      "offers": [
+        {
+          "universidad": "Instituto Tecnológico de Buenos Aires - ITBA",
+          "ciudad": "Buenos Aires",
+          "codigo_erasmus": "",
+          "plazas": "3",
+          "programa": "MS",
+          "cert": "",
+          "observaciones": "Pueden juntarse las plazas (1 alumno x 10 meses + 1 semestre)",
+          "pais": "AR"
+        },
+        {
+          "universidad": "Universidad de Mendoza",
+          "ciudad": "Mendoza",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "",
+          "observaciones": "",
+          "pais": "AR"
+        },
+        {
+          "universidad": "Universidad Favaloro",
+          "ciudad": "Buenos Aires",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "",
+          "observaciones": "",
+          "pais": "AR"
+        },
+        {
+          "universidad": "Universidad Nacional de Tucumán",
+          "ciudad": "Tucumán",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "-",
+          "observaciones": "Áreas de estudios: Electrical Engineering / Biomedical Engineering / Computer Science",
+          "pais": "AR"
+        },
+        {
+          "universidad": "Universidad Católica de Salta - UCASAL",
+          "ciudad": "Salta",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "AB",
+          "cert": "",
+          "observaciones": "el estudiante podrá participar en el programa tras haber cursado al menos tres (3) años completos o 180 ECTS de estudios universitarios",
+          "pais": "AR"
+        }
+      ]
+    },
+    "AT": {
+      "iso2": "AT",
+      "cities": [
+        "Graz",
+        "Innsbruck",
+        "Viena"
+      ],
+      "cities_count": 3,
+      "offers_count": 4,
+      "offers": [
+        {
+          "universidad": "Technische Universität Graz",
+          "ciudad": "Graz",
+          "codigo_erasmus": "A  GRAZ02",
+          "plazas": "3",
+          "programa": "ER",
+          "cert": "ALEMÁN B2 o INGLÉS B2 (TOEFL 75, IELTS 6.0, TOEIC (785 listening and reading - 310 speaking and writing), Cambridge ESOL First Certificate in English (FCE) OR Certificate in Advanced English (CAE) OR Certificate of Proficiency in English (CPE) or Certificate issued by the language centre of a University",
+          "observaciones": "Sólo se puede hacerse el TFG/TFM si un profesor acepta al alumno. El área de estudios para alumnos de GITST y MUIT es computer science.",
+          "pais": "AT"
+        },
+        {
+          "universidad": "FH Joanneum",
+          "ciudad": "Graz",
+          "codigo_erasmus": "A  GRAZ09",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "ALEMÁN B2",
+          "observaciones": "https://www.fh-joanneum.at/en/international/study-programmes/international-programme-kapfenberg/ \nhttps://www.fh-joanneum.at/en/international/study-programmes/",
+          "pais": "AT"
+        },
+        {
+          "universidad": "MCI | THE ENTREPRENEURIAL SCHOOL",
+          "ciudad": "Innsbruck",
+          "codigo_erasmus": "A  INNSBRU08",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2 (TOEFL 85 IBT o IELTS 6.0 o CAE o PTE academic o Oxford test of English o online English test provided by MCI* o ALEMÁN B1 (www.mci.edu/exchange-incoming)",
+          "observaciones": "On undergraduate level, the courses are only offered in the fall semester // No permiten coger asignaturas de varios materes por tema de solapamiento de horarios",
+          "pais": "AT"
+        },
+        {
+          "universidad": "Technische Universität Wien",
+          "ciudad": "Viena",
+          "codigo_erasmus": "A  WIEN02",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "ALEMÁN B1 o ALEMÁN A2 + curso intentivo de alemán o INGLÉS B1 (se acepta el certificado del departamento de lingüística)",
+          "observaciones": "En la solicitud online hay que registrarse como Master students. Asignaturas en INGLES sólo a nivel MASTER. \nPara poder realizar el TFM ponen como condición necesaria el tener un tutor y un tema para el TFM prevío a la llegada, dan una oferta de TFMs y hay que coger uno o renunciar a hacer el TFM. \nSe puede coger algunas asignaturas de la Faculty of informatics",
+          "pais": "AT"
+        }
+      ]
+    },
+    "AU": {
+      "iso2": "AU",
+      "cities": [
+        "Sydney"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "UNSW: The University of New South Wales",
+          "ciudad": "Sydney",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "AB",
+          "cert": "IELTS 6.5 o TOEFL 90 (iBT) o TOEFL 577 (PBT) o CPE (B grade) o CAE (A grade)",
+          "observaciones": "acuerdo bilateral no renovado. No conseguimos contatar con ellos.",
+          "pais": "AU"
+        }
+      ]
+    },
+    "BE": {
+      "iso2": "BE",
+      "cities": [
+        "Bruselas",
+        "Gent",
+        "Leuven",
+        "Lieja",
+        "Louvain-la-Neuve"
+      ],
+      "cities_count": 5,
+      "offers_count": 5,
+      "offers": [
+        {
+          "universidad": "Université Libre de Bruxelles ULB - Ecole Polytechnique de Bruxelles",
+          "ciudad": "Bruselas",
+          "codigo_erasmus": "B  BRUXEL04",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B1",
+          "observaciones": "Sólo se puede hacer TFG con asignaturas que incluyan un proyecto. Se requiere cursar 15ECTS de asignaturas (a parte del TFG). ENG para el Master en ingeniería eléctrica. Se debe encontrar un \"Promoter\" para realizar el research project (TFM) antes del 1 de junio.",
+          "pais": "BE"
+        },
+        {
+          "universidad": "Universiteit Gent",
+          "ciudad": "Gent",
+          "codigo_erasmus": "B  GENT01",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "INGLES B2: TOEFL min 87 o IELTS 6,0 (min 6,0 in writing) o TOEIC min 785 o FCE, CAE, CPE o University language Center certifying a level B2 o HOLANDES B2 (proof that the student finished successfully a Dutch study programme of at least 1 year)",
+          "observaciones": "2 plazas para Biomedical Engineering y 2 plazas para Electrical Engineering (se puede nominar solamente en un área)",
+          "pais": "BE"
+        },
+        {
+          "universidad": "Katholike Universiteit Leuven",
+          "ciudad": "Leuven",
+          "codigo_erasmus": "B  LEUVEN01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "courses available to exchange students can be found here: https://onderwijsaanbod.kuleuven.be/opleidingen/e/SC_51977178.htm#&bl=all \nOJO: solo se puede coger 2 asignaturas máximo en la facultad de business",
+          "pais": "BE"
+        },
+        {
+          "universidad": "Université de Liège",
+          "ciudad": "Lieja",
+          "codigo_erasmus": "B  LIEGE01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B2",
+          "observaciones": "",
+          "pais": "BE"
+        },
+        {
+          "universidad": "Université Catholique de Louvain - EPL",
+          "ciudad": "Louvain-la-Neuve",
+          "codigo_erasmus": "B  LOUVAIN01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B2 (DELF - DALF) o INGLÉS B2 (TOEFL - IEALTS - CAP - CPE o statement of English language teacher)",
+          "observaciones": "El acuerdo es con EPL (École Polytechnique de Louvain). Bachelor en francés. Máster en inglés.",
+          "pais": "BE"
+        }
+      ]
+    },
+    "BG": {
+      "iso2": "BG",
+      "cities": [
+        "Ruse",
+        "Sofia"
+      ],
+      "cities_count": 2,
+      "offers_count": 2,
+      "offers": [
+        {
+          "universidad": "Angel Kanchev University of Ruse",
+          "ciudad": "Ruse",
+          "codigo_erasmus": "BG ROUSSE01",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "INGLÉS B1",
+          "observaciones": "Posibilidad de cursar asignaturas del Bachelor degree: Information and Communication Technology en inglés",
+          "pais": "BG"
+        },
+        {
+          "universidad": "Technical University of Sofia",
+          "ciudad": "Sofia",
+          "codigo_erasmus": "BG SOFIA16",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B1",
+          "observaciones": "",
+          "pais": "BG"
+        }
+      ]
+    },
+    "BR": {
+      "iso2": "BR",
+      "cities": [
+        "Bairro São José",
+        "Brasilia",
+        "Campinas",
+        "Rio de Janeiro",
+        "Santa Rita do Sapucaí",
+        "Sao Paulo",
+        "São Caetano do Sul/São Paulo"
+      ],
+      "cities_count": 7,
+      "offers_count": 8,
+      "offers": [
+        {
+          "universidad": "UNIVERSIDADE DE BRASILIA",
+          "ciudad": "Brasilia",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "AB",
+          "cert": "PORTUGUES B1 o INGLÉS B2",
+          "observaciones": "CURSO DE GRADUAÇÃO EM ENGENHARIA DE REDES DE COMUNICAÇÂO FACULDADE DE TECNOLOGIA/UnB (FT/UnB) / primer semestre: febrero a junio; segundo semestre: agosto a diciembre",
+          "pais": "BR"
+        },
+        {
+          "universidad": "UNIVERSIDADE DE PASSO FUNDO (UPF)",
+          "ciudad": "Bairro São José",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "AB",
+          "cert": "PORTUGUES B1",
+          "observaciones": "Puede desdoblarse el número de plazas (2 plazas x 5 meses cada una) / primer semestre: febrero a junio; segundo semestre: agosto a diciembre",
+          "pais": "BR"
+        },
+        {
+          "universidad": "Universidade de Sao Paulo USP",
+          "ciudad": "Sao Paulo",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "MS",
+          "cert": "INGLÉS B2",
+          "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una) / primer semestre: febrero a junio; segundo semestre: agosto a diciembre",
+          "pais": "BR"
+        },
+        {
+          "universidad": "Universidade Estadual de Campinas UNICAMP",
+          "ciudad": "Campinas",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "MS",
+          "cert": "INGLÉS B2",
+          "observaciones": "Puede desdoblarse el número de plazas (2 plazas x 5 meses cada una) / primer semestre: febrero a junio; segundo semestre: agosto a diciembre",
+          "pais": "BR"
+        },
+        {
+          "universidad": "Universidade Estadual Paulista 'Júlio de Mesquita Filho' UNESP",
+          "ciudad": "Sao Paulo",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "MS",
+          "cert": "INGLÉS B2",
+          "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una) / primer semestre: febrero a junio; segundo semestre: agosto a diciembre",
+          "pais": "BR"
+        },
+        {
+          "universidad": "Instituto Nacional de Telecomunicações INATEL",
+          "ciudad": "Santa Rita do Sapucaí",
+          "codigo_erasmus": "",
+          "plazas": "4",
+          "programa": "AB",
+          "cert": "PORTUGUES B1 o INGLÉS B2",
+          "observaciones": "Se pueden unir semestres y solicitar movilidad de un curso completo",
+          "pais": "BR"
+        },
+        {
+          "universidad": "Universidade Federal do Rio de Janeiro UFRJ",
+          "ciudad": "Rio de Janeiro",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "MS",
+          "cert": "INGLÉS B2",
+          "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una)",
+          "pais": "BR"
+        },
+        {
+          "universidad": "Instituto Mauá de Tecnología",
+          "ciudad": "São Caetano do Sul/São Paulo",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "PORTUGUES B1",
+          "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una) / https://www.maua.br/en / primer semestre: febrero a junio; segundo semestre: agosto a diciembre",
+          "pais": "BR"
+        }
+      ]
+    },
+    "CA": {
+      "iso2": "CA",
+      "cities": [
+        "Montréal"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "École Polytechnique Montreal",
+          "ciudad": "Montréal",
+          "codigo_erasmus": "",
+          "plazas": "3",
+          "programa": "AB",
+          "cert": "FRANCÉS C1",
+          "observaciones": "La selección se hace desde el Rectorado = todos los alumnos UPM compiten por la plaza",
+          "pais": "CA"
+        }
+      ]
+    },
+    "CH": {
+      "iso2": "CH",
+      "cities": [
+        "Ginebra",
+        "Lausana",
+        "Winterthur"
+      ],
+      "cities_count": 3,
+      "offers_count": 3,
+      "offers": [
+        {
+          "universidad": "HES-SO Haute École Spécialisée de Suisse Occidentale - hepia",
+          "ciudad": "Ginebra",
+          "codigo_erasmus": "CH DELEMONT03",
+          "plazas": "6",
+          "programa": "AB",
+          "cert": "FRANCÉS B1 (asignaturas de grado SOLO en francés; en master algunas asignaturas en inglés)",
+          "observaciones": "HES-SO Campus en Lausanne y HEPIA campus en Ginebra / 3 alumnos en el área 714 Electronics Engineering Telecommunications y 3 alumnos en el área 611 Informatics, Computer Science. No se puede cursar TFT, solo asignaturas. 30 ECTS por semestre",
+          "pais": "CH"
+        },
+        {
+          "universidad": "École Polytechnique Fédérale de Lausanne - EPFL",
+          "ciudad": "Lausana",
+          "codigo_erasmus": "CH LAUSANN06",
+          "plazas": "3",
+          "programa": "AB",
+          "cert": "FRANCÉS B2 o INGLÉS B2",
+          "observaciones": "Nota mínima expediente académico: 7. Bachelor en francés. Master programm en inglés y francés. El alumno debe registrar entre 20/30 créditos ECTS por semestre. Para el TFG, debe solicitar \"semester Project\" (programa de Máster). No se permite cursar asignaturas en el mismo semestre que se realiza el TFM. The access to courses in our College of Management of Technology (Management of Technology and Entrepreneurship, and Financial Engineering) is not open to exchange students. Asignaturas NO disponibles para alumnos de movilidad: https://www.epfl.ch/education/international/fr/venir-etudier-a-l-epfl/semestres-cours/conditions/",
+          "pais": "CH"
+        },
+        {
+          "universidad": "Zürcher Hochschule für Angewandte Wissenschaften ZHAW",
+          "ciudad": "Winterthur",
+          "codigo_erasmus": "CH WINTERT03",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "ALEMÁN B2 o INGLÉS B2 (TOEFL 550/213/79 o TOEIC 700 o IELTS 6.0 o CAE) / for Master Programs: INGLÉS C1\nforma parte de EELISA",
+          "observaciones": "",
+          "pais": "CH"
+        }
+      ]
+    },
+    "CL": {
+      "iso2": "CL",
+      "cities": [
+        "Santiago de Chile"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "Pontificia Universidad Católica de Chile PUCC",
+          "ciudad": "Santiago de Chile",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "MS",
+          "cert": "",
+          "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una)",
+          "pais": "CL"
+        }
+      ]
+    },
+    "CN": {
+      "iso2": "CN",
+      "cities": [
+        "Beijing",
+        "Hangzhou",
+        "Hsinchu",
+        "Jiangsu",
+        "Shanghai"
+      ],
+      "cities_count": 5,
+      "offers_count": 7,
+      "offers": [
+        {
+          "universidad": "Beijing Institute of Technology",
+          "ciudad": "Beijing",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "AB",
+          "cert": "INGLÉS B2",
+          "observaciones": "área de estudios: Telecom and Electronics /  La asignación se hace por parte del Rectorado / Se puede solicitar la beca de Asia modalidad B 3000€",
+          "pais": "CN"
+        },
+        {
+          "universidad": "Tongji University",
+          "ciudad": "Shanghai",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "INGLÉS B2",
+          "observaciones": "áreas de estudios: Software y Telecom and Electronics (1 plaza por área) / La asignación se hace por parte del Rectorado / beca 1.200€ (hay 10 becas para el primer semestre y 10 becas para el segundo semestre) / los alumnos chinos deberán tener un permiso de  residencia de mínimo 5 años en España",
+          "pais": "CN"
+        },
+        {
+          "universidad": "Tsinghua University",
+          "ciudad": "Beijing",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "AB",
+          "cert": "INGLÉS B2",
+          "observaciones": "área de studios: biomedical engineering y Telecom /  La asignación se hace por parte del Rectorado / Se puede solicitar la beca de Asia modalidad B 3000€",
+          "pais": "CN"
+        },
+        {
+          "universidad": "Zhejiang University",
+          "ciudad": "Hangzhou",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "AB",
+          "cert": "INGLÉS B2",
+          "observaciones": "área de estudios: Software / biomedical engineering / La asignación se hace por parte del Rectorado / Se puede solicitar la beca de Asia modalidad B 3000€ / Posibilidad de solicitar una beca del Gobierno Chino (CSC - China Scholarship Council )",
+          "pais": "CN"
+        },
+        {
+          "universidad": "Nanjing University of Posts and Telecommunications",
+          "ciudad": "Jiangsu",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "AB",
+          "cert": "INGLÉS B2",
+          "observaciones": "áreas de estudios: Telecom / Se puede solicitar la beca de Asia modalidad B 3000€",
+          "pais": "CN"
+        },
+        {
+          "universidad": "Beijing Jiatong University",
+          "ciudad": "Beijing",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "AB",
+          "cert": "INGLÉS B2",
+          "observaciones": "áreas de estudios: Telecom / Se puede solicitar la beca de Asia modalidad B 3000€",
+          "pais": "CN"
+        },
+        {
+          "universidad": "National Tsing Hua University",
+          "ciudad": "Hsinchu",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "AB",
+          "cert": "INGLÉS B2",
+          "observaciones": "áreas de estudios: Telecom / Se puede solicitar la beca de Asia modalidad B 3000€",
+          "pais": "CN"
+        }
+      ]
+    },
+    "CO": {
+      "iso2": "CO",
+      "cities": [
+        "Barranquilla",
+        "Bogotá",
+        "Medellín",
+        "Pereira"
+      ],
+      "cities_count": 4,
+      "offers_count": 5,
+      "offers": [
+        {
+          "universidad": "Pontifica Universidad Javeriana PUJ",
+          "ciudad": "Bogotá",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "MS",
+          "cert": "",
+          "observaciones": "Puede desdoblarse el número de plazas (2 plazas x 5 meses cada una)",
+          "pais": "CO"
+        },
+        {
+          "universidad": "Universidad de los Andes UNIAND",
+          "ciudad": "Bogotá",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "MS",
+          "cert": "",
+          "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una)",
+          "pais": "CO"
+        },
+        {
+          "universidad": "Universidad EIA (Escuela de Ingenieria de Antioquia)",
+          "ciudad": "Medellín",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "",
+          "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una)",
+          "pais": "CO"
+        },
+        {
+          "universidad": "Universidad del Norte (UNINORTE)",
+          "ciudad": "Barranquilla",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "MS",
+          "cert": "",
+          "observaciones": "se pueden juntar semestres e ir un curso completo",
+          "pais": "CO"
+        },
+        {
+          "universidad": "Universidad Tecnológica de Pereira UTP",
+          "ciudad": "Pereira",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "AB",
+          "cert": "",
+          "observaciones": "",
+          "pais": "CO"
+        }
+      ]
+    },
+    "CZ": {
+      "iso2": "CZ",
+      "cities": [
+        "Prague"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "Czech Technical University CTU",
+          "ciudad": "Prague",
+          "codigo_erasmus": "CZ PRAHA10",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2 (se acepta el certificado del departamento de lingüística) o ALEMÁN B1",
+          "observaciones": "incoming students are required to collect at least 15 ECTS credits/semester",
+          "pais": "CZ"
+        }
+      ]
+    },
+    "DE": {
+      "iso2": "DE",
+      "cities": [
+        "Aachen",
+        "Berlín",
+        "Bonn",
+        "Darmstadt",
+        "Erlangen",
+        "Hamburg",
+        "Kassel",
+        "Mannheim",
+        "München",
+        "Saarbruecken",
+        "Stuttgart"
+      ],
+      "cities_count": 11,
+      "offers_count": 11,
+      "offers": [
+        {
+          "universidad": "RWTH - Aachen",
+          "ciudad": "Aachen",
+          "codigo_erasmus": "D  AACHEN01",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "INGLÉS B2 (TOEFL 90 IBT o IELTS 5.5 o CAE) y/o ALEMÁN B1 (TestDaF - Level 4 in all four examination areas- o\nDeutsche Sprachprüfung für den Hochschulzugang - Test of German Language Ability for International Students - (DSH, Level 2 or 3) o Deutsches Sprachdiplom der Kultusministerkonferenz - German Language Certificate of the Standing Conference of the German Ministers of Education and Cultural Affairs – Level 2 (KMK II) o The Kleines Deutsches Sprachdiplom - KDS-  Großes Deutsches Sprachdiplom, or Zentrale Oberstufenprüfung - ZOP - (German language certificates of the Goethe Institute) o Deutsche Sprachprüfung II of the Sprachen- und Dolmetscher Institut München - German Language Examination II of the Language and Translators' Institute, Munich)",
+          "observaciones": "Bachelor en alemán. Master programm en inglés. El TFM se incluye en el LA cuando el alumno tenga un Supervisor en destino. Se puede agrupar meses",
+          "pais": "DE"
+        },
+        {
+          "universidad": "Technische Universität Berlin",
+          "ciudad": "Berlín",
+          "codigo_erasmus": "D  BERLIN02",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2 o ALEMÁN A2 (nivel ALEMÁN B1 requerido antes del comienzo del semestre)\nOJO: Anything above (B1, B2, C1, C2) can’t be older than 3 years at the time of the application deadline (summer semester: December\n1st, winter semester: June 1st) Comprobad los requisitos de idiomas en la web de la TU Berlin según la titulación solicitada",
+          "observaciones": "Mínimo 160-180 ECTS superados para cursar asignaturas de Máster",
+          "pais": "DE"
+        },
+        {
+          "universidad": "Rheinish Friedrich-Wilhems-Universität Bonn",
+          "ciudad": "Bonn",
+          "codigo_erasmus": "D  BONN01",
+          "plazas": "3",
+          "programa": "ER",
+          "cert": "INGLÉS B2 o ALEMÁN B1",
+          "observaciones": "Máster en inglés",
+          "pais": "DE"
+        },
+        {
+          "universidad": "Technische Universität Darmstadt",
+          "ciudad": "Darmstadt",
+          "codigo_erasmus": "D  DARMSTA01",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "ALEMÁN A2 + intensive German language course / Inglés B2  \nPara alumnos DT Inglés B2\nPara alumnos DT Alemán: Goethe Certificate C1",
+          "observaciones": "Para DT 90 ECTS (60ECTS de asignaturas y 30 de TFM). El Master de TU Darmstadt en inglés es: Master iCE (MICE = Master in Information and Communication Engineering). Duración 1año y medio + prorroga de max 1 año. El Máster en alemán: Master in Elektrotechnik und Informationstechnik / English courses: https://www.tucan.tu-darmstadt.de/scripts/mgrqcgi?APPNAME=CampusNet&PRGNAME=ACTION&ARGUMENTS=-ArRbQdVLqES91bsx53bxh1nfz5Sc3fPdqO2LhUfD4HVUxTtzHuqoJHc7CJmS6nO2o088NXhvM02sBmu5wKMaBzuB4gCU0ez5SiTxsNp50HT9SD9dB3t4Y7gLEDBa=",
+          "pais": "DE"
+        },
+        {
+          "universidad": "Friedrich-Alexander Universität FAU",
+          "ciudad": "Erlangen",
+          "codigo_erasmus": "D  ERLANGE01",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "Bachelor: Aleman A2 o Inglés B2 // Master: Alemán B1 o Inglés B2 Official certificates (TOEFL, IELTS,\nDAF, etc.) or confirmations issued by a professional language teacher with\nstamp and signature are accepted. \n- for English: www.fau.de/files/2014/08/Programmstudierende_aus_dem_Ausland-\nNachweis-Englischkenntnisse.pdf",
+          "observaciones": "Para hacer TFG en inglés es necesario buscar un tutor y consensuar con él el idioma. ENG para el Master \"Communications and Multimedia Engineering (CME)\" se requiere un nivel minimo de alemán A2 o es obligado hacer el curso intensivo de alemán en septiembre / 2*10 plazas en el area biomedical engineering y 2*10 plazas en el area Electronica engineering / Forma parte de EELISA",
+          "pais": "DE"
+        },
+        {
+          "universidad": "Hamburg University of Technology - TUHH",
+          "ciudad": "Hamburg",
+          "codigo_erasmus": "D  HAMBURG03",
+          "plazas": "6",
+          "programa": "ER",
+          "cert": "INGLÉS B2 (se acepta atestación firmada del departamento de lingüística) o ALEMÁN B1",
+          "observaciones": "asignaturas de Máster en inglés y Bachelor Engineering Science / 2 estudiantes en el área bio y 4 estudiantes en el área teleco",
+          "pais": "DE"
+        },
+        {
+          "universidad": "Universität Kassel",
+          "ciudad": "Kassel",
+          "codigo_erasmus": "D  KASSEL01",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "INGLÉS B2 o ALEMÁN B1",
+          "observaciones": "Algunas asignaturas en inglés, especialmete en el área 061 / posibilidad de TFM y TFG en inglés: la unviersidad aceptará las solicitudes \"caso por caso\"",
+          "pais": "DE"
+        },
+        {
+          "universidad": "Mannheim University of Applied Sciences",
+          "ciudad": "Mannheim",
+          "codigo_erasmus": "D  MANNHEI03",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "ALEMÁN B1 o ALEMAN A2 + curso intensivo de alemán en septiembre o INGLÉS B2",
+          "observaciones": "Biomédical engineering sólo en Departamento Tecnologías de la Información (NO con Departamento de Biotecnología) /Alemán para Bioingeniería médica / Inglés o Alemán para Electronics /Alemán para Bachelor y demás programas de Máster. Mínimo 180 ECTS superados para cursar asignaturas de Máster.",
+          "pais": "DE"
+        },
+        {
+          "universidad": "Technische Universität München",
+          "ciudad": "München",
+          "codigo_erasmus": "D  MUNCHEN02",
+          "plazas": "3",
+          "programa": "ER",
+          "cert": "ALEMÁN B1 o INGLÉS B2 (una atestación del departmento de lingüística es aceptada)",
+          "observaciones": "Se pueden cursar asignaturas de varios departamentos pero la mayoría deben ser de Electrical and Computer Engineering (at least 60%). Para movilidad de 1 semestre, solo hay un periodo de examinación.",
+          "pais": "DE"
+        },
+        {
+          "universidad": "Universität des Saarlandes",
+          "ciudad": "Saarbruecken",
+          "codigo_erasmus": "D  SAARBRU01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "ALEMÁN B1 o INGLÉS B2",
+          "observaciones": "asignaturas de Máster \"Computer and Communication Technology\" en inglés / 2 plazas para computer science  / acuerdo con su UDS Systems Engineering. course catalogue: https://www.lsf.uni-saarland.de/qisserver/rds?state=wtree&search=1&trex=step&root120242=396627%7C397868%7C394098&P.vx=kurz uy acuerdo con UDS Computer Science",
+          "pais": "DE"
+        },
+        {
+          "universidad": "Universität Stuttgart",
+          "ciudad": "Stuttgart",
+          "codigo_erasmus": "D  STUTTGA01",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "INGLÉS B2 o ALEMÁN B1 + cursos intensivos de alemán (250€)",
+          "observaciones": "Para realizar e TFG o TFM  el alumno deberá solicitar el curso entero y cursar asignaturas en el 1er semestre mientras el Proyecto se realizará en el 2ndo semestre / Mínimo 180 ECTS superados para cursar asignaturas de Máster /2 alumnos para 714 y 2 alumos para 914.",
+          "pais": "DE"
+        }
+      ]
+    },
+    "DK": {
+      "iso2": "DK",
+      "cities": [
+        "Aalborg",
+        "Lyngby (Copenhague)"
+      ],
+      "cities_count": 2,
+      "offers_count": 2,
+      "offers": [
+        {
+          "universidad": "Aalborg University",
+          "ciudad": "Aalborg",
+          "codigo_erasmus": "DK ALBORG01",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "INGLES B2 (IELTS 6.5 / TOEFL 85  with a minimum score of 20 in each section / Cambridge ESOL C1)",
+          "observaciones": "Campus en Aalborg y en Copenhagen. Mínimo 180 ECTS superados para cursar asignaturas de Máster.  Se requiere cursar 30 ECTS/semestre. Para asignaturas de Electronics y IT, escoger asignaturas de \"Innovative Communication Technologies and Entrepreneurship\", \"Signal Processing and Acoustics\" y \"Control and Automation\" /Students can only choose course packages with the study board(s) that are covered by the exchange agreement with you as an exchange partner",
+          "pais": "DK"
+        },
+        {
+          "universidad": "Technical University of Denmark - DTU",
+          "ciudad": "Lyngby (Copenhague)",
+          "codigo_erasmus": "DK LYNGBY01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2 (atestación del departamento de lingüística válida)",
+          "observaciones": "Bachelor en Danés. Master en inglés. No se puede comenzar la Master's Thesis hasta Febrero y el periodo de realización es 5 meses. Min 20 ECTS por semestre http://www.dtu.dk/english/Education/Incoming-students/Exchange.",
+          "pais": "DK"
+        }
+      ]
+    },
+    "ES": {
+      "iso2": "ES",
+      "cities": [
+        "Alicante",
+        "Barcelona",
+        "Bilbao",
+        "Cáceres",
+        "Gerona",
+        "Gijón",
+        "Murcia",
+        "Málaga",
+        "Sevilla",
+        "Valencia",
+        "Valladolid",
+        "Vigo"
+      ],
+      "cities_count": 12,
+      "offers_count": 13,
+      "offers": [
+        {
+          "universidad": "Universidad de Alicante",
+          "ciudad": "Alicante",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "SICUE",
+          "cert": "",
+          "observaciones": "",
+          "pais": "ES"
+        },
+        {
+          "universidad": "Universidad de Extremadura (Campus de Cáceres)",
+          "ciudad": "Cáceres",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "SICUE",
+          "cert": "",
+          "observaciones": "",
+          "pais": "ES"
+        },
+        {
+          "universidad": "Universidad de Málaga",
+          "ciudad": "Málaga",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "SICUE",
+          "cert": "",
+          "observaciones": "",
+          "pais": "ES"
+        },
+        {
+          "universidad": "Universidad de Oviedo (EPI de Gijón)",
+          "ciudad": "Gijón",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "SICUE",
+          "cert": "",
+          "observaciones": "2 alumnos de 9 meses para GITST y 2 alumnos de 9 meses para GISD",
+          "pais": "ES"
+        },
+        {
+          "universidad": "Universidad de Sevilla",
+          "ciudad": "Sevilla",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "SICUE",
+          "cert": "",
+          "observaciones": "",
+          "pais": "ES"
+        },
+        {
+          "universidad": "Universidad de Valladolid",
+          "ciudad": "Valladolid",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "SICUE",
+          "cert": "",
+          "observaciones": "2 alumnos de 9 meses para GITST y 2 alumnos de 9 meses para GIB (acuerdo firmado con la Facultad de Medicina)",
+          "pais": "ES"
+        },
+        {
+          "universidad": "Universidad de Vigo",
+          "ciudad": "Vigo",
+          "codigo_erasmus": "",
+          "plazas": "3",
+          "programa": "SICUE",
+          "cert": "",
+          "observaciones": "",
+          "pais": "ES"
+        },
+        {
+          "universidad": "Universidad del Pais Vasco",
+          "ciudad": "Bilbao",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "SICUE",
+          "cert": "",
+          "observaciones": "",
+          "pais": "ES"
+        },
+        {
+          "universidad": "Universidad de Gerona",
+          "ciudad": "Gerona",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "SICUE",
+          "cert": "",
+          "observaciones": "Campus de Montilivi",
+          "pais": "ES"
+        },
+        {
+          "universidad": "Universidad Politécnica de Cataluña UPC",
+          "ciudad": "Barcelona",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "SICUE",
+          "cert": "",
+          "observaciones": "2 plazas para GIB - 1 plaza por para GISD (facultad de informática - Grado en Ciencia e Ingeniería de Datos)",
+          "pais": "ES"
+        },
+        {
+          "universidad": "Universidad Pomeu Fabra",
+          "ciudad": "Barcelona",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "SICUE",
+          "cert": "",
+          "observaciones": "",
+          "pais": "ES"
+        },
+        {
+          "universidad": "Universidad Católica San Antonio de\nMurcia",
+          "ciudad": "Murcia",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "SICUE",
+          "cert": "",
+          "observaciones": "",
+          "pais": "ES"
+        },
+        {
+          "universidad": "Universidad Politécnica de Valencia UPV",
+          "ciudad": "Valencia",
+          "codigo_erasmus": "",
+          "plazas": "5",
+          "programa": "SICUE",
+          "cert": "",
+          "observaciones": "",
+          "pais": "ES"
+        }
+      ]
+    },
+    "FI": {
+      "iso2": "FI",
+      "cities": [
+        "Helsinki",
+        "Mikkeli",
+        "Oulu",
+        "Tampere"
+      ],
+      "cities_count": 4,
+      "offers_count": 4,
+      "offers": [
+        {
+          "universidad": "Aalto University - School of Electrical Engineering",
+          "ciudad": "Helsinki",
+          "codigo_erasmus": "SF ESPOO12",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "INGLÉS B2 (también válido el certificado en inglés del departamento de lingüística de la ETSIT)",
+          "observaciones": "2/3 de las asignatutras deben ser del dpto. Electrical engineering. 1/3 puede ser de otros dpto de Aalto University (Schools of Technology)",
+          "pais": "FI"
+        },
+        {
+          "universidad": "South-Eastern Finland University of Applied Sciences XAMK",
+          "ciudad": "Mikkeli",
+          "codigo_erasmus": "SF MIKKELI07",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "https://into.aalto.fi/display/enmasterelec/How+to+apply",
+          "pais": "FI"
+        },
+        {
+          "universidad": "University of Oulu",
+          "ciudad": "Oulu",
+          "codigo_erasmus": "SF OULU01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "Enviar tema de TFG con mucha antelación.",
+          "pais": "FI"
+        },
+        {
+          "universidad": "Tampere University",
+          "ciudad": "Tampere",
+          "codigo_erasmus": "SF TAMPERE17",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2 (certificado de l departamentode lingüística válido) o a score report from one of the following language tests:\nTOEFL: Minimum score of 92/iBT (including Home Edition), with no section below 20\nIELTS: Minimum score of 6.5, with no individual score below 5.5 (including IELTS Online)\nDuolingo: Minimum score of 115\nCopies of other test scores may be accepted. We will contact you during the review process if any certificate or test score cannot be considered. Please note that test results are valid for only two years.",
+          "observaciones": "alumnado de bio cogen asignaturas de biotechnology en el departamento de electronics and automation. Están nominados en ese departamento, no hay IIA con biomedical engineering",
+          "pais": "FI"
+        }
+      ]
+    },
+    "FR": {
+      "iso2": "FR",
+      "cities": [
+        "Besançon",
+        "Blois",
+        "Bordeaux",
+        "Brest",
+        "Brest-Nantes-Rennes",
+        "Caen",
+        "Cergy (Paris)",
+        "Evry (Paris)",
+        "Grenoble",
+        "Lille",
+        "Lyon",
+        "Marseille",
+        "Metz y Atlanta",
+        "Nancy",
+        "Nantes",
+        "Palaiseau",
+        "Paris",
+        "Paris Saclay - Metz - Rennes",
+        "Sophia Antipolis",
+        "Strasbourg",
+        "Tarbes",
+        "Toulouse",
+        "Valenciennes"
+      ],
+      "cities_count": 23,
+      "offers_count": 40,
+      "offers": [
+        {
+          "universidad": "Université Marie et Louis Pasteur",
+          "ciudad": "Besançon",
+          "codigo_erasmus": "F  BESANCO01",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "FRANCÉS B1",
+          "observaciones": "Medical Technology",
+          "pais": "FR"
+        },
+        {
+          "universidad": "École pour l'Informatique et les Techniques Avancées - EPITA",
+          "ciudad": "Paris",
+          "codigo_erasmus": "F  BICETRE02",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B2",
+          "observaciones": "Master degrees in English: https://www.epita.fr/en/degree-programs-english/",
+          "pais": "FR"
+        },
+        {
+          "universidad": "ENSEIRB MATMECA / IPB",
+          "ciudad": "Bordeaux",
+          "codigo_erasmus": "F  BORDEAU54",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B2",
+          "observaciones": "Master of Science taught in English: Radio and telecommunication systems http://enseirb-matmeca.bordeaux-inp.fr/fr/radio-and-telecommunication-systems y Software engineering \nhttp://enseirb-matmeca.bordeaux-inp.fr/fr/software-engineering \nVisiting Research Project program for valuable experience in our Research Centers https://drive.google.com/file/d/0B3HMMbqJTyL9b1pEeU43eklvQXM/view?usp=sharing  \nMás INFO de los programas: https://drive.google.com/drive/folders/0B3HMMbqJTyL9WjNlajJnR3ZqWlU a student has to take all courses of the semester in the department where he/she is registered, e.g. a Master 1 student registered in Computer Science Department, has to follow all courses of the semester in the Computer Science Department.\nFor Information list of all taught courses: http://www.enseirb-matmeca.fr/syllabus/",
+          "pais": "FR"
+        },
+        {
+          "universidad": "École Nationale d’Ingénieurs de Brest ENIB",
+          "ciudad": "Brest",
+          "codigo_erasmus": "F  BREST07",
+          "plazas": "3",
+          "programa": "ER",
+          "cert": "FRANCÉS B2  o INGLÉS B2 (for project or bachelor/master thesis)",
+          "observaciones": "Every international student must attend a French language course throughout the year (a placement test will determine your group)",
+          "pais": "FR"
+        },
+        {
+          "universidad": "ISEN Yncréa Ouest",
+          "ciudad": "Brest",
+          "codigo_erasmus": "F  BREST26",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "INGLÉS B2 (TOEIC (min. 785), TOEFL-IBT (min . 72) or equivalent test (Cambridge, Duolingo)) o FRANCÉS B2",
+          "observaciones": "Subjects in English given in the fall semester (they are working to extend them to the spring semester): https://isen-nantes.fr/international-accueil/exchange-students/",
+          "pais": "FR"
+        },
+        {
+          "universidad": "École Nationale Supérieure d'Ingénieurs de Caen ENSICAEN",
+          "ciudad": "Caen",
+          "codigo_erasmus": "F  CAEN05",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B2",
+          "observaciones": "DT 2 opciones: 1. 4º curso de grado + 2º de MUIT o 2. 2º curso de MUIT (2 años)",
+          "pais": "FR"
+        },
+        {
+          "universidad": "EURECOM",
+          "ciudad": "Sophia Antipolis",
+          "codigo_erasmus": "F  CANNES09",
+          "plazas": "3",
+          "programa": "ER",
+          "cert": "INGLÉS B1 (recomendado FRANCÉS A2 una vez inscritos)",
+          "observaciones": "https://www.eurecom.fr/index.php/en/teaching/engineering-studies-exchange-students / Para alumnos de DT: 18 meses ( 1 curso asignaturas y 1 semestre TFM TOTAL: 90 ECTS)",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Ecole Nationale Supérieure de l'Electronique et de ses Applications - ENSEA",
+          "ciudad": "Cergy (Paris)",
+          "codigo_erasmus": "F  CERGY01",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B2",
+          "observaciones": "new English-taught programs starting in September 2022 in the following fields of study: Physical Engineering and Embedded Systems, Materials and Chemistry, Computer Science",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Telecom Sud Paris",
+          "ciudad": "Evry (Paris)",
+          "codigo_erasmus": "F  EVRY11",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B2 o INGLÉS B2 (TOEFL Ibt - 95; Cambridge CAE; IELTS - 7.00; Cambridge: CAE; TOEIC: 945)",
+          "observaciones": "Decidirán caso por caso la posibilidad de hacer TFG / Master of Engineering (in French or in English). /No pueden mezclar asignaturas de diferentes majors or Master of Science / No se puede coger asignaturas de diferentes cursos / TSP offers more than 11 Master’s programs fully in English.\nhttp://www.telecom-sudparis.eu/p_en_formations_ingenieur-generaliste_approfondissement_1054.html",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Centrale SUPELEC",
+          "ciudad": "Paris Saclay - Metz - Rennes",
+          "codigo_erasmus": "F  GIF-YVE03",
+          "plazas": "6",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B2",
+          "observaciones": "3 students for the double degree programme  (3 campus: Paris Saclay, Metz and Rennes) y 3 alumnos para programa de movilidad. For non degree students, the spring semester may be fully taught in English. Para exchange students, se puede escoger asignaturas de 2º curso en Centrale Supelec: https://www.centralesupelec.fr/sites/default/files/cat_2024_-_2a_-_en_v1.pdf",
+          "pais": "FR"
+        },
+        {
+          "universidad": "INP Grenoble, Institute of Engineering and Management",
+          "ciudad": "Grenoble",
+          "codigo_erasmus": "F  GRENOBL22",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B2",
+          "observaciones": "1 alumno en el dpto. PHELMA, 2 alumnos en el dpto. ENSE3, 2 alumnos en el dpto. ENSIMAG",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Université Grenoble Alpes - UGA",
+          "ciudad": "Grenoble",
+          "codigo_erasmus": "F  GRENOBL55",
+          "plazas": "5",
+          "programa": "ER",
+          "cert": "FRANCÉS B2 o INGLÉS B2 (certificado del departamento de lingüística aceptado)",
+          "observaciones": "Acuerdo en el área de bioingeniería con la facultad de farmacia de la UGA. Inglés para asignaturas de Máster. Although most of the courses are in French, our Faculty proposes course enterly in English in master 2 programs: http://formations.univ-grenoble-alpes.fr/fr/catalogue/master-XB/sciences-technologies-sante-STS/master-ingenierie-de-la-sante-program-master-ingenierie-de-la-sante.html?search-keywords=sant%E9",
+          "pais": "FR"
+        },
+        {
+          "universidad": "HEC",
+          "ciudad": "Paris",
+          "codigo_erasmus": "F  JOUY-JO02",
+          "plazas": "3",
+          "programa": "ER",
+          "cert": "INGLÉS B2 o INGLÉS B1 + FRANCÉS A2",
+          "observaciones": "Se abona matrícula para la DT",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Université des Sciences et Technologies de Lille - Polytech Lille",
+          "ciudad": "Lille",
+          "codigo_erasmus": "F  LILLE103",
+          "plazas": "3",
+          "programa": "ER",
+          "cert": "FRANCÉS B1",
+          "observaciones": "Polytech Lille: We recommend that students who intend to come for a study period of one semester apply for the autumn Semester. An important part of the Spring semester is dedicated to the industrial placement\nor to projects in laboratories (particularly during the fourth and fifth year).\nStudents who come for the full academic year will combine study period with placements in research laboratories or in industry. The best period to carry out a project is from the beginning of February to the end of June // You cannot combine lectures from different engineering degree courses or semesters because of incompatible timetables.",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Centrale Lille",
+          "ciudad": "Lille",
+          "codigo_erasmus": "F  LILLE14",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B1",
+          "observaciones": "3 students for the double degree programme",
+          "pais": "FR"
+        },
+        {
+          "universidad": "IMT Nord Europe",
+          "ciudad": "Lille",
+          "codigo_erasmus": "F  LILLE91",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B1",
+          "observaciones": "Posibilidad de cursar 30 ECTS en inglés en el 2ndo semestre en la especialidad Embedded Systems and Information Systems: http://imt-lille-douai.fr/formations/toutes-les-formations/semester-for-exchange-students/advanced-construction-materials-in-their-environment-acme/\nCybersecurity engineering: semestre de otoño se imparte totalmente en inglés",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Université Claude Bernard Lyon 1 - Polytech Lyon",
+          "ciudad": "Lyon",
+          "codigo_erasmus": "F  LYON01",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "FRANCÉS B2",
+          "observaciones": "",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Centrale Lyon",
+          "ciudad": "Lyon",
+          "codigo_erasmus": "F  LYON11",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B2 (TOEFL 96 / TOEIC 825 / IELTS 7 / Cambridge 173 / Duolinguo 120)",
+          "observaciones": "3 students for the double degree programme / Los alumnos deben tener 180 ECTS aprobados (mobilidad a partir de 4º curso)",
+          "pais": "FR"
+        },
+        {
+          "universidad": "INSA Lyon",
+          "ciudad": "Lyon",
+          "codigo_erasmus": "F  LYON12",
+          "plazas": "6",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B2",
+          "observaciones": "http://www.insa-lyon.fr/en/exchange-students /  English course catalogue: https://www.insa-lyon.fr/en/information-science-technology-semester-ist\n2 alumnos/as  para teleco - 2 alumnos/as para bio - 2 alumnos/as para datos",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Centrale Méditerranée",
+          "ciudad": "Marseille",
+          "codigo_erasmus": "F  MARSEIL11",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1",
+          "observaciones": "3 students for the double degree programme",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Université de Lorraine - École des Mines de Nancy - Telecom Nancy",
+          "ciudad": "Nancy",
+          "codigo_erasmus": "F  NANCY43",
+          "plazas": "6",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B2",
+          "observaciones": "3 plazas para Telecom Nancy y 3 plazas para Écoles des Mines de Nancy. \nÉcoles des Mines de Nancy: MSc in Security of Computer Systems and Big Data and Data Science : http://mines-nancy.univ-lorraine.fr/content/master-science-msc-security-computer-systems.  http://www.mines-nancy.univ-lorraine.fr/node/242 \nTelecom Nancy: solo área 0610 (ICTs) para estudiantes de teleco y datos",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Université de Nantes - Polytech Nantes",
+          "ciudad": "Nantes",
+          "codigo_erasmus": "F  NANTES01",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B2",
+          "observaciones": "",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Centrale Nantes",
+          "ciudad": "Nantes",
+          "codigo_erasmus": "F  NANTES07",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B1",
+          "observaciones": "3 students for the double degree programme / Asignaturas de Master en inglés",
+          "pais": "FR"
+        },
+        {
+          "universidad": "IMT Atlantique",
+          "ciudad": "Brest-Nantes-Rennes",
+          "codigo_erasmus": "F  NANTES80",
+          "plazas": "5",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B2",
+          "observaciones": "",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Institut d'Optique Théorique et Appliquée",
+          "ciudad": "Palaiseau",
+          "codigo_erasmus": "F  ORSAY02",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o B2 / INGLÉS B2",
+          "observaciones": "",
+          "pais": "FR"
+        },
+        {
+          "universidad": "ENSTA Paris",
+          "ciudad": "Paris",
+          "codigo_erasmus": "F  PARIS080",
+          "plazas": "3",
+          "programa": "ER",
+          "cert": "FRANCÉS B1",
+          "observaciones": "Para TFG o TFM, una vez asignada la plaza, el alumno debe buscar un tutor",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Mines Paris - PSL University",
+          "ciudad": "Paris",
+          "codigo_erasmus": "F  PARIS081",
+          "plazas": "3",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 (TEF (204); DELF (A2); TCF (200) or certificate from hom University) o INGLÉS B1 (TOEIC, TOEFL, Cambridge and those provided by partner universities). For Double Degree students, a B1 in French is required.",
+          "observaciones": "No se puede solicitar para irse en 3er curso de grado. Para doble titulación: students have to choose a minor through their application and validate  120 ECTS (including 90 ECTS for courses, 6 ECTS for the compulsory internship and 24 ECTS for the minor final project) / forma parte de EELISA (Paris Sciences et Lettres - PSL)",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Telecom Paris",
+          "ciudad": "Paris",
+          "codigo_erasmus": "F  PARIS083",
+          "plazas": "3",
+          "programa": "ER",
+          "cert": "FRANCÉS A2 (Baccalaureat; TCF; TFI 255-400;  DELF) o ENGLISH B2 (TOEFL; IELTS 5.5; TOEIC: 750;  CAE)",
+          "observaciones": "Para alumnos de DT la nota media deberá ser mínimo 7.0. Solo se pueden elegir asignaturas que pertenecen al programa \"Diplôme d'ingénieur\" (Master of Science in Engineering). For non degree student, students must include a minimum of 20 ECTS per semester.",
+          "pais": "FR"
+        },
+        {
+          "universidad": "ECE Engineering School",
+          "ciudad": "Paris",
+          "codigo_erasmus": "F  PARIS222",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B2 (IELTS 6.0; TOEFL 83; TOEIC 780)",
+          "observaciones": "Se puede solicitar para un curso completo o 1er semestre",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Sorbonne Université",
+          "ciudad": "Paris",
+          "codigo_erasmus": "F  PARIS468",
+          "plazas": "5",
+          "programa": "ER/EIT HEALTH",
+          "cert": "INGLÉS B2 (aceptan el certificado del departamento de lingüística) o FRANCÉS B1",
+          "observaciones": "PRIORIDAD ALUMNOS PROGRAMA EIT HEALTH",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Université de Strasbourg - Telecom physique",
+          "ciudad": "Strasbourg",
+          "codigo_erasmus": "F  STRASBO48",
+          "plazas": "6",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B2",
+          "observaciones": "",
+          "pais": "FR"
+        },
+        {
+          "universidad": "École Nationale d'Ingénieurs de Tarbes",
+          "ciudad": "Tarbes",
+          "codigo_erasmus": "F  TARBES03",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B1",
+          "observaciones": "",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Institut National des Sciences Appliquées de Toulouse INSA Toulouse",
+          "ciudad": "Toulouse",
+          "codigo_erasmus": "F  TOULOUS14",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCES B1 o INGLÉS B1 (ver factsheet para listado de asignaturas en inglés)",
+          "observaciones": "Asignaturas principalmente en francés excepto algunos Master y asignaturas de grado del 2º semestre. http://www.insa-toulouse.fr/en/international/studying-at-insa-toulouse/programmes_in_english.html / DT (Diplôme d'ingénieur de l'INSA Toulouse) con 2 opciones: 1. 4º curso de grado + 2º de MUIT o 2. 2º curso de MUIT (2 años)",
+          "pais": "FR"
+        },
+        {
+          "universidad": "ISAE-SUPAERO",
+          "ciudad": "Toulouse",
+          "codigo_erasmus": "F  TOULOUS16",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 / FRANCÉS B1 + INGLÉS B2 para alumnos DT",
+          "observaciones": "Para alumnos de grado, no es posible realizar asignaturas en el 2ndo semestre. Para alumnos de DT, es posible realizar asignaturas durante todo el año académico. La DT (4 semestres) se puede empezar en el segundo curso de MUIT o 4º de GITST (+ 2ndo de MUIT)",
+          "pais": "FR"
+        },
+        {
+          "universidad": "ENSICA",
+          "ciudad": "Toulouse",
+          "codigo_erasmus": "F  TOULOUS17",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "FRANCÉS B1",
+          "observaciones": "",
+          "pais": "FR"
+        },
+        {
+          "universidad": "INPT Inst. Nat. Polytechnique de Toulouse ENSEEIHT",
+          "ciudad": "Toulouse",
+          "codigo_erasmus": "F  TOULOUS28",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "INGLÉS B2 O FRANCÉS B1",
+          "observaciones": "No aparece la calificación oficial del TFT en el transcript of records. Para DT el Master es Electronic systems for embedded communications and applications (en inglés) / courses catalogue: http://www.enseeiht.fr/fr/formation/formation-ingenieur-1/etudiant-1a-ou-2a.html / OJO: Un alumno de movilidad no puede realizar unas prácticas en una emprea extrerna, unicamente en un laboratorio de la ENSEEIHT. Esta norma no se aplica a alumnos de doble titulación / Posibilidad de hacer Máster ESECA de 1 año: tuition fees 5000€ / DT se puede empezar en el 4º curso GITST (no es el ESECA)",
+          "pais": "FR"
+        },
+        {
+          "universidad": "INSA - Université Polytechnique Hauts-de-France UPHF (GRADO)",
+          "ciudad": "Valenciennes",
+          "codigo_erasmus": "F  VALENCI01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B1",
+          "observaciones": "Bachelor https://formations.uphf.fr/cdm/cursus/licence3",
+          "pais": "FR"
+        },
+        {
+          "universidad": "INSA - Université Polytechnique Hauts-de-France UPHF (MASTER)",
+          "ciudad": "Valenciennes",
+          "codigo_erasmus": "F  VALENCI21",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1 o INGLÉS B1",
+          "observaciones": "Master: https://formations.uphf.fr/cdm/cursus/master",
+          "pais": "FR"
+        },
+        {
+          "universidad": "Georgia Tech",
+          "ciudad": "Metz y Atlanta",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "DEADLINE: 1 de diciembre TOEFL 90 (ECE) (min 19 for each section) or IELTS 7 (min 6.5 for reading and listening and min 5.5 for writing) or TOEIC 850\nGRE (only for CS): verbal 150 / quantitative 155 / analytical writing 3",
+          "observaciones": "http://www.gatech.edu / http://www.gt-lorraine.eu Master of Science degree in Electrical & Computer Engineering (30 SCH)\nEl master consiste en pasar 1 semestre (fall semester) en Metz, Francia y un curso completo en Atlanta, EEUU (spring y siguiente fall semester)\nGPA 3.5 / coste: $40K + financial aid",
+          "pais": "FR"
+        },
+        {
+          "universidad": "INSA Centre Val de Loire",
+          "ciudad": "Blois",
+          "codigo_erasmus": "F  BLOIS13",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "FRANCÉS B1",
+          "observaciones": "Se puede desdoblar el número de plazas (4 estudiantes por 1 semestre)",
+          "pais": "FR"
+        }
+      ]
+    },
+    "GR": {
+      "iso2": "GR",
+      "cities": [
+        "Egaleo-Athina"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "University of West Attica",
+          "ciudad": "Egaleo-Athina",
+          "codigo_erasmus": "G  EGALEO02",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "https://erasmus.uniwa.gr/en/erasmus/course-catalogue/ ;  https://erasmus.uniwa.gr/wp-content/uploads/sites/159/2021/02/FACT-SHEET-UNIWA.pd",
+          "pais": "GR"
+        }
+      ]
+    },
+    "HR": {
+      "iso2": "HR",
+      "cities": [
+        "Zagreb"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "University of Zagreb - Faculty of Electrical Engineering and Computing",
+          "ciudad": "Zagreb",
+          "codigo_erasmus": "HR ZAGREB 01",
+          "plazas": "",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "",
+          "pais": "HR"
+        }
+      ]
+    },
+    "HU": {
+      "iso2": "HU",
+      "cities": [
+        "Budapest"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "Budapest University of Technology and Economics",
+          "ciudad": "Budapest",
+          "codigo_erasmus": "HU BUDAPES02",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "forma parte de EELISA",
+          "pais": "HU"
+        }
+      ]
+    },
+    "IE": {
+      "iso2": "IE",
+      "cities": [
+        "Limerick"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "Univ. of Limerick",
+          "ciudad": "Limerick",
+          "codigo_erasmus": "IRL LIMERIC01",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "",
+          "pais": "IE"
+        }
+      ]
+    },
+    "IT": {
+      "iso2": "IT",
+      "cities": [
+        "Bari",
+        "Cagliari",
+        "Florencia",
+        "Milán",
+        "Napoles",
+        "Padova",
+        "Pavia",
+        "Roma",
+        "Trento",
+        "Turín"
+      ],
+      "cities_count": 10,
+      "offers_count": 14,
+      "offers": [
+        {
+          "universidad": "Politecnico di Bari",
+          "ciudad": "Bari",
+          "codigo_erasmus": "I  BARI05",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "ITALIANO B1",
+          "observaciones": "",
+          "pais": "IT"
+        },
+        {
+          "universidad": "Università degli Studi di Cagliari",
+          "ciudad": "Cagliari",
+          "codigo_erasmus": "I  CAGLIAR01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "",
+          "pais": "IT"
+        },
+        {
+          "universidad": "Università degli Studi di Firenze",
+          "ciudad": "Florencia",
+          "codigo_erasmus": "I  FIRENZE01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "ITALIANO B1 o INGLÉS B2",
+          "observaciones": "La defensa del TFG se realizará en la ETSIT respetando su normativa y proceso de matriculación.",
+          "pais": "IT"
+        },
+        {
+          "universidad": "Politecnico di Milano",
+          "ciudad": "Milán",
+          "codigo_erasmus": "I  MILANO02",
+          "plazas": "8",
+          "programa": "ER",
+          "cert": "ITALIANO B1 o INGLÉS B2 / DT INGLÉS TOEFL IBT 78 - TOEIC 720 - IELTS 6.0 - Cambridge FCE/ACE/PCE - Trinity College ISE II",
+          "observaciones": "INGLÉS para asignaturas de Master / Para DT típicamente 120 ECTS, pero permiten reconocer hasta 30 ECTS. Para DT con Master of Computer Science se requiere nota media de 24/30 (sistema de calificación italiano) = 7,5 UPM / Para el TFM/TFG, no hay calificación oficial en el transcript of records, se debe pedir al Profesor  Supervisor que constituye un tribunal y se pide una evaluación final",
+          "pais": "IT"
+        },
+        {
+          "universidad": "Universitá degli Studi di Napoli Federico II",
+          "ciudad": "Napoles",
+          "codigo_erasmus": "I  NAPOLI01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "ITALIANO B1 o INGLÉS B2",
+          "observaciones": "Posibilidad de hacer TFG en inglés.",
+          "pais": "IT"
+        },
+        {
+          "universidad": "Universitá degli Studi di Napoli \"Parthenope\"",
+          "ciudad": "Napoles",
+          "codigo_erasmus": "I  NAPOLI03",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "ITALIANO A2 o INGLÉS B2",
+          "observaciones": "www.ingegnieria.uniparthenope.it/didattica",
+          "pais": "IT"
+        },
+        {
+          "universidad": "Università La Sapienza",
+          "ciudad": "Roma",
+          "codigo_erasmus": "I  ROMA01",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "ITALIANO B1 o INGLÉS B2 (aceptan TOEIC con 2 competencias)",
+          "observaciones": "La defensa del TFG se realizará en la ETSIT respetando su normativa y proceso de matriculación. www.facebook.com/SapienzaExchangeStudents",
+          "pais": "IT"
+        },
+        {
+          "universidad": "Università degli Studi di Roma 'Tor Vergata'",
+          "ciudad": "Roma",
+          "codigo_erasmus": "I  ROMA02",
+          "plazas": "º",
+          "programa": "ER",
+          "cert": "ITALIANO B1 o INGLÉS B2",
+          "observaciones": "",
+          "pais": "IT"
+        },
+        {
+          "universidad": "Università degli Studi di Padova",
+          "ciudad": "Padova",
+          "codigo_erasmus": "I  PADOVA01",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "ITALIANO A2 o INGLÉS B1 (certificate from Lingüistic Department at ETSIT is accepted) / for DT INGLÉS B2 (certificate from Lingüistic Department at ETSIT is accepted)",
+          "observaciones": "2 alumnos para 914 - Biomedical Engineering y 2 alumnos para 714 - Electrical Engineering / Para alumnos de DT: 42 credits must be from technical subjects (subjects that are in the official study plan), the rest of credits (18 ECTS) may be chosen from other dpt of Padova University (may be language courses or internships) / 30 credits must be from \"characterizing\" (\"caratterizzanti\" in Italian) subjects. Those are the courses with one of the following label:\n - signal processing\n - telecommunications\n - electromagnetism\n - networks\nfinal project of track 005PD (international mobility) that is worth 30 credits (the standard final thesis of 18 ECTS credits is for Italian\nstudents that do not go abroad)",
+          "pais": "IT"
+        },
+        {
+          "universidad": "University of Rome Campus Bio-Medico – UCBM",
+          "ciudad": "Roma",
+          "codigo_erasmus": "I  ROMA14",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "ITALIANO B1 o INGLÉS B2",
+          "observaciones": "",
+          "pais": "IT"
+        },
+        {
+          "universidad": "Universitá degli Studi di Pavia",
+          "ciudad": "Pavia",
+          "codigo_erasmus": "I  PAVIA01",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "ITALIANO B1 o INGLÉS B2",
+          "observaciones": "asignaturas de Máster en inglés",
+          "pais": "IT"
+        },
+        {
+          "universidad": "Università degli studi Roma Tre",
+          "ciudad": "Roma",
+          "codigo_erasmus": "I  ROMA16",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "ITALIANO B1 o INGLÉS B2",
+          "observaciones": "",
+          "pais": "IT"
+        },
+        {
+          "universidad": "Politecnico di Torino",
+          "ciudad": "Turín",
+          "codigo_erasmus": "I  TORINO02",
+          "plazas": "8",
+          "programa": "ER",
+          "cert": "ITALIANO B2 o INGLÉS B2: IELTS 5.5 o TOEFL 72 IbT o TOEIC Listening: 400 Reading: 385\nSpeaking: 160 Writing: 150 o Cambridge ESOL examinations o PEARSON 59 / A declaration from the Home University is requested during the nomination process\n (certificate of the linguistic department is accepted) \nDOUBLE/JOINT DEGREE STUDENTS\n• DEGREE PROGRAMME (Bachelor/Master of Science) offered in Italian or partially in Italian/English: IELTS 5.5 or higher + PLIDA B1 or higher (All the language requirements are satisfied at the admission\n• DEGREE PROGRAMME (Bachelor/Master of Science) offered in English: IELTS 5.5 or higher (PLIDA A2 or passing Italian language level A2 at Polito)\nEXCHANGE STUDENTS (mobility for courses/courses and final project/final project/Research)\nLanguage of teaching of the courses/activities included in the proposal of Learning Agreement: ITALIAN (B2 level) / ENGLISH (B2 level) / ENGLISH AND ITALIAN (English-B2 level, Italian-B2 level)",
+          "observaciones": "DT para el Máster in Communications and computer networks engineering. Para DT - 90 ECTS. El segundo año de DT, los alumnos están exentos de tasas de matricula pero deben pagar tasas requeridas por el Gobierno italiano / No se puede cursar asignaturas del 1er año de grado / Mínimo 20 créditos ECTS por semestre/ 3 alumnos para la DT / 4 alumnos en el área Biomedical Engineering y 4 alumnos en el área Electronic Engineering o computer science /  Para el TFM/TFG, no hay calificación oficial en el transcript of records, se debe pedir al Profesor Supervisor que constituya un tribunal y se pide una evaluación final / define a proposal of Learning Agreement including at least 18 creditsECTS per semester from the Degree Course for which you have been nominated (el resto de ECTS pueden ser elegidos en otras titulaciones)",
+          "pais": "IT"
+        },
+        {
+          "universidad": "Università degli Studi di Trento",
+          "ciudad": "Trento",
+          "codigo_erasmus": "I  TRENTO01",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "ITALIANO A2 (para asignaturas en italiano) o INGLÉS B1 (B2 para algunos grados; para asignaturas en inglés)",
+          "observaciones": "Algunas clases pueden pedir requisitos adicionales de idiomas:http://international.unitn.it/incoming/languagerequirements / Oferta académica en inglés: http://international.unitn.it/incoming/dss-academic-offer",
+          "pais": "IT"
+        }
+      ]
+    },
+    "JP": {
+      "iso2": "JP",
+      "cities": [
+        "Kyoto",
+        "Tokyo",
+        "Toyohashi"
+      ],
+      "cities_count": 3,
+      "offers_count": 3,
+      "offers": [
+        {
+          "universidad": "Doshisha Universíty - Graduate School of  Science and Engineering",
+          "ciudad": "Kyoto",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "INGLÉS B2 (TOEFL 79; IELTS 6,0)",
+          "observaciones": "1 plaza para un curso completo / 1 plaza para DT /competitivo con otras Escuelas UPM. Nota mínima expediente: 7.0 \nSe oferta la posibilidad de realizar un proyecto de investigación como parte del TFM (el TFM se evaluará y defenderá en la ETSIT) Para DT: Course catalogue: http://istc.doshisha.ac.jp/en/course/course.html http://istc.doshisha.ac.jp/en/faq/faq.html / Para alumnos interesados en realizar una DT, ponerse en contacto con la oficina internacional (2 años) / Se puede solicitar la beca de Asia modalidad B 3000€",
+          "pais": "JP"
+        },
+        {
+          "universidad": "Technology Keio University",
+          "ciudad": "Tokyo",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "AB",
+          "cert": "INGLÉS B2",
+          "observaciones": "Para doble título: 2 plazas competitivo con otras escuelas UPM / Para alumnos interesados en realizar una DT, ponerse en contacto con la oficina internacional (2 years) / Se requiere una nota media de 7/10 / Se puede solicitar la beca de Asia modalidad B 3000€",
+          "pais": "JP"
+        },
+        {
+          "universidad": "Toyohashi University of Technology",
+          "ciudad": "Toyohashi",
+          "codigo_erasmus": "",
+          "plazas": "5",
+          "programa": "AB",
+          "cert": "INGLÉS B2",
+          "observaciones": "Fuerte relación con ISOM - GIS program (Global Green Innovators Department Program) hasta marzo 2029 beca para estudiantes de Europa: 80000yen/month = 482€/mes\nhttps://drive.google.com/drive/folders/1ZbM2o8Lp1VvXx20ReUESaCFDG7NRQY7k",
+          "pais": "JP"
+        }
+      ]
+    },
+    "MK": {
+      "iso2": "MK",
+      "cities": [
+        "Skopje"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "Ss. Cyril and Methodius University in Skopje",
+          "ciudad": "Skopje",
+          "codigo_erasmus": "MK SKOPJE01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "",
+          "pais": "MK"
+        }
+      ]
+    },
+    "MX": {
+      "iso2": "MX",
+      "cities": [
+        "Colima",
+        "Monterrey",
+        "México",
+        "Nuevo León",
+        "Puebla"
+      ],
+      "cities_count": 5,
+      "offers_count": 8,
+      "offers": [
+        {
+          "universidad": "Universidad Popular Autónoma del Estado de Puebla UPAEP",
+          "ciudad": "Puebla",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "",
+          "observaciones": "",
+          "pais": "MX"
+        },
+        {
+          "universidad": "Universidad Anáhuac",
+          "ciudad": "México",
+          "codigo_erasmus": "",
+          "plazas": "1",
+          "programa": "AB",
+          "cert": "",
+          "observaciones": "",
+          "pais": "MX"
+        },
+        {
+          "universidad": "Instituto Politécnico Nacional IPN",
+          "ciudad": "México",
+          "codigo_erasmus": "",
+          "plazas": "3",
+          "programa": "MS",
+          "cert": "",
+          "observaciones": "Puede desdoblarse el número de plazas (6 plazas x 5 meses cada una)",
+          "pais": "MX"
+        },
+        {
+          "universidad": "Instituto Tecnológico y de Estudios Superiores de Monterrey ITESM",
+          "ciudad": "Monterrey",
+          "codigo_erasmus": "",
+          "plazas": "3",
+          "programa": "MS/AB",
+          "cert": "",
+          "observaciones": "Puede desdoblarse el número de plazas (6 plazas x 5 meses cada una). Los alumnos deben tener 180ECTS superados antes de la movilidad. 1 plaza para teleco, 1 plaza para datos 1 plaza para bio. Los alumnos de grado pueden solicitar la beca Magalhaes (MS); los alumnos de máster se nominan bajo un acuerdo bilateral (AB). Hay 2 plazas de un un semestre para máster o 1 plaza de un curso completo",
+          "pais": "MX"
+        },
+        {
+          "universidad": "Universidad Nacional Autónoma de México UNAM",
+          "ciudad": "México",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "MS",
+          "cert": "",
+          "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una)",
+          "pais": "MX"
+        },
+        {
+          "universidad": "Universidad de Colima",
+          "ciudad": "Colima",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "",
+          "observaciones": "",
+          "pais": "MX"
+        },
+        {
+          "universidad": "Universidad de Colima",
+          "ciudad": "Colima",
+          "codigo_erasmus": "",
+          "plazas": "3",
+          "programa": "AB",
+          "cert": "",
+          "observaciones": "",
+          "pais": "MX"
+        },
+        {
+          "universidad": "Universidad Autónoma de Nuevo León - UANL",
+          "ciudad": "Nuevo León",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "",
+          "observaciones": "",
+          "pais": "MX"
+        }
+      ]
+    },
+    "MY": {
+      "iso2": "MY",
+      "cities": [
+        "Penang"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "Universiti Sains Malaysia",
+          "ciudad": "Penang",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "INGLÉS B2",
+          "observaciones": "área de studios: Software. La asignación se hace por parte del Rectorado / Se puede solicitar la beca de Asia modalidad B 3000€",
+          "pais": "MY"
+        }
+      ]
+    },
+    "NL": {
+      "iso2": "NL",
+      "cities": [
+        "Eindhoven"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "Technische Universiteit Eindhoven",
+          "ciudad": "Eindhoven",
+          "codigo_erasmus": "NL EINDHOV17",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "INGLÉS C1/C2 TOEFL (Test of English as a Foreign Language)\nOverall band score of at least 90 AND a minimum score of 21 for each section\nWe only accept the TOEFL internet-based test (iBT)\nWe only accept all scores from 1 test date; we do not accept MyBest Scores\nFor admission to the academic year 2023 - 2024 we do not accept the TOEFL iBT Special Home Edition test\nIELTS (academic version)\nOverall band score of at least 6.5 and a minimum of 6.0 for each section\nWe do not accept the IELTS online test\nWe only accept all scores from 1 test date; we do not accept IELTS One Skill Retake\nCambridge certificates\nProof that you have passed the C2 proficiency (formally known as Certificate of Proficiency in English CPE), with overall score 180 and a minimum of 169 in each section), or the C1 Advanced Certificate (formally known as the Certificate in Advanced English CAE) with overall score 176 and a minimum of 169 in each section\n\nThe language test results may not be older than 2 years.\nhttps://www.tue.nl/en/education/become-a-tue-student/admission-and-enrollment/language-proficiency-requirements",
+          "observaciones": "2*6 en 914 y 2*6 en 714 Posibilidad de 1 alumno * 12 meses \nlink para buscar supervisores para TFT: https://www.tue.nl/en/university/departments/electrical-engineering/research/ \nPara el área 714 (electrical engineering): el 50% de las asignaturas deben cursarse en Electrical Enginnering",
+          "pais": "NL"
+        }
+      ]
+    },
+    "NO": {
+      "iso2": "NO",
+      "cities": [
+        "Narvik",
+        "Trondheim"
+      ],
+      "cities_count": 2,
+      "offers_count": 2,
+      "offers": [
+        {
+          "universidad": "UiT Norges Arctic university of Norway",
+          "ciudad": "Narvik",
+          "codigo_erasmus": "N  TROMSO01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B1 (IELTS or TOEFL preferIble)",
+          "observaciones": "",
+          "pais": "NO"
+        },
+        {
+          "universidad": "Norwegian University of Science and Technology NTNU",
+          "ciudad": "Trondheim",
+          "codigo_erasmus": "N  TRONDHE01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "Disponible solo asignaturas de Master en inglés",
+          "pais": "NO"
+        }
+      ]
+    },
+    "PA": {
+      "iso2": "PA",
+      "cities": [
+        "El Dorado"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "Universidad Tecnológica de Panamá UTP",
+          "ciudad": "El Dorado",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "MS",
+          "cert": "",
+          "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una)",
+          "pais": "PA"
+        }
+      ]
+    },
+    "PE": {
+      "iso2": "PE",
+      "cities": [
+        "Lima"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "Pontificia Universidad Católica del Perú PUCP",
+          "ciudad": "Lima",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "MS",
+          "cert": "",
+          "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una)",
+          "pais": "PE"
+        }
+      ]
+    },
+    "PL": {
+      "iso2": "PL",
+      "cities": [
+        "Cracovia",
+        "Lodz",
+        "Poznan",
+        "Rzeszów",
+        "Szczecin",
+        "Varsovia",
+        "Wroclaw"
+      ],
+      "cities_count": 7,
+      "offers_count": 8,
+      "offers": [
+        {
+          "universidad": "University of Science and Technology - AGH",
+          "ciudad": "Cracovia",
+          "codigo_erasmus": "PL KRAKOW02",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2 (certificado del departamento de lingüística aceptado)",
+          "observaciones": "",
+          "pais": "PL"
+        },
+        {
+          "universidad": "Cracow University of Technology- Politechnika Krakowska",
+          "ciudad": "Cracovia",
+          "codigo_erasmus": "PL KRAKOW03",
+          "plazas": "3",
+          "programa": "ER",
+          "cert": "INGLÉS B1 (vale el TOEIC con 2 competencias)",
+          "observaciones": "oferta de asignaturas: https://erasmus.pk.edu.pl/incoming-students/studies-at-cut-faculties-and-subjects/ \nFaculty of Electrical and Computer Engineering: dr inż. Damian Grela (dgrela@pk.edu.pl)",
+          "pais": "PL"
+        },
+        {
+          "universidad": "Technical University of Lodz",
+          "ciudad": "Lodz",
+          "codigo_erasmus": "PL LODZ02",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "",
+          "pais": "PL"
+        },
+        {
+          "universidad": "Poznan University of Technology",
+          "ciudad": "Poznan",
+          "codigo_erasmus": "PL POZNAN02",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "INGLÉS B2 (certificate from the Language Department is valid)",
+          "observaciones": "2 alumnos en el área de teleco (2*12) y 2 alumnos en el área de bio (2*12) Se puede desdoblar el número de meses (8*5)",
+          "pais": "PL"
+        },
+        {
+          "universidad": "Rzeszów University of Technology",
+          "ciudad": "Rzeszów",
+          "codigo_erasmus": "PL RZESZOW01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "",
+          "pais": "PL"
+        },
+        {
+          "universidad": "West Pomeranian University of Technology",
+          "ciudad": "Szczecin",
+          "codigo_erasmus": "PL SZCZECI02",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "",
+          "pais": "PL"
+        },
+        {
+          "universidad": "Warsaw University of Technology",
+          "ciudad": "Varsovia",
+          "codigo_erasmus": "PL WARSZAW02",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "2 alumnos en Information and Communication // 2 alumnos Electronics and automation. Si se incluye el TFT la universidad pide  tener un tutor en destino antes de iniciar la movilidad",
+          "pais": "PL"
+        },
+        {
+          "universidad": "Politechnika Wroclawska / Wroclaw University of Technology",
+          "ciudad": "Wroclaw",
+          "codigo_erasmus": "PL WROCLAW02",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "",
+          "pais": "PL"
+        }
+      ]
+    },
+    "PR": {
+      "iso2": "PR",
+      "cities": [
+        "San Juan"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "Universidad Politécnica de Puerto Rico PUPR",
+          "ciudad": "San Juan",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "",
+          "observaciones": "",
+          "pais": "PR"
+        }
+      ]
+    },
+    "PT": {
+      "iso2": "PT",
+      "cities": [
+        "Bragança",
+        "Coimbra",
+        "Covilhas",
+        "Leiria",
+        "Lisboa",
+        "Porto"
+      ],
+      "cities_count": 6,
+      "offers_count": 7,
+      "offers": [
+        {
+          "universidad": "Instituto Politécnico de Bragança",
+          "ciudad": "Bragança",
+          "codigo_erasmus": "P  BRAGANC01",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "PORTUGUÉS B1 o INGLÉS B1",
+          "observaciones": "",
+          "pais": "PT"
+        },
+        {
+          "universidad": "Universidade da Beira Interior",
+          "ciudad": "Covilhas",
+          "codigo_erasmus": "P  COVILHA01",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "PORTUGUÉS B1 o INGLÉS B1",
+          "observaciones": "",
+          "pais": "PT"
+        },
+        {
+          "universidad": "Polytechnic Institute of Leiria",
+          "ciudad": "Leiria",
+          "codigo_erasmus": "P  LEIRIA01",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "PORTUGUÉS A2 o INGLÉS B1",
+          "observaciones": "",
+          "pais": "PT"
+        },
+        {
+          "universidad": "Universidade de Lisboa* - Técnico de Lisboa",
+          "ciudad": "Lisboa",
+          "codigo_erasmus": "P  LISBOA109",
+          "plazas": "7",
+          "programa": "ER/EIT HEALTH",
+          "cert": "PORTUGUÉS B2 o INGLÉS B2",
+          "observaciones": "PRIORIDAD ALUMNOS PROGRAMA EIT HEALTH 2 plazas en Electrical Engineering y Computer Science + 5 plazas en Biomedical Engineering",
+          "pais": "PT"
+        },
+        {
+          "universidad": "Universidade de Lisboa* - Faculty of Sciences",
+          "ciudad": "Lisboa",
+          "codigo_erasmus": "P  LISBOA109",
+          "plazas": "6",
+          "programa": "ER",
+          "cert": "PORTUGUÉS B2",
+          "observaciones": "2 plazas en Electrical Engineering + 2 plazas en Biomedical Engineering +  2 plazas en Earth Science",
+          "pais": "PT"
+        },
+        {
+          "universidad": "Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto - ISEP",
+          "ciudad": "Porto",
+          "codigo_erasmus": "P  PORTO05",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "PORTUGUÉS B1",
+          "observaciones": "",
+          "pais": "PT"
+        },
+        {
+          "universidad": "Universidade de Coimbra",
+          "ciudad": "Coimbra",
+          "codigo_erasmus": "P  COIMBRA01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "PORTUGUÉS B1 o INGLÉS B2",
+          "observaciones": "bachelor’s classes are taught in Portuguese and master’s in English",
+          "pais": "PT"
+        }
+      ]
+    },
+    "RO": {
+      "iso2": "RO",
+      "cities": [
+        "Bucarest",
+        "Sibiu"
+      ],
+      "cities_count": 2,
+      "offers_count": 3,
+      "offers": [
+        {
+          "universidad": "Universitatea \"Lucian Blaga\" Sibiu",
+          "ciudad": "Sibiu",
+          "codigo_erasmus": "RO SIBIU01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "",
+          "pais": "RO"
+        },
+        {
+          "universidad": "Academia Tehnica Militara din Bucaresti - MTA",
+          "ciudad": "Bucarest",
+          "codigo_erasmus": "RO BUCURES02",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "",
+          "pais": "RO"
+        },
+        {
+          "universidad": "National University of Science and Technology POLITEHNICA Bucharest",
+          "ciudad": "Bucarest",
+          "codigo_erasmus": "RO BUCURES43",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B1",
+          "observaciones": "forma parte de EELISA",
+          "pais": "RO"
+        }
+      ]
+    },
+    "RS": {
+      "iso2": "RS",
+      "cities": [
+        "Belgrado"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "University of Belgrade - School of Electrical Engineering",
+          "ciudad": "Belgrado",
+          "codigo_erasmus": "RS BELGRAD02",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2 (certificate from the Language Department is valid)",
+          "observaciones": "",
+          "pais": "RS"
+        }
+      ]
+    },
+    "SE": {
+      "iso2": "SE",
+      "cities": [
+        "Estocolmo",
+        "Jönköping",
+        "Karlskrona",
+        "Linköping",
+        "Luleå",
+        "Lund",
+        "Västerås"
+      ],
+      "cities_count": 7,
+      "offers_count": 7,
+      "offers": [
+        {
+          "universidad": "Jönköping University",
+          "ciudad": "Jönköping",
+          "codigo_erasmus": "S  JONKOPI01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2 (TOEFL 575 (at least 4,5 in written test) / /90 (at least 20 in written test). IELTS 6.5 (and no section below 5.5)",
+          "observaciones": "",
+          "pais": "SE"
+        },
+        {
+          "universidad": "Blekinge Institute of Technology",
+          "ciudad": "Karlskrona",
+          "codigo_erasmus": "S  KARLSKR01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "Read more about cost of living at www.studyinsweden.se / Como cualquier destino en Suecia, es muy importante buscar alojamiento con suficiente antelación. En este destino es especialmente complicado, ya que al ser una ciudad pequeña la universidad no ayuda en la búsqueda de piso, ni tampoco existen residencias de estudiantes al uso.",
+          "pais": "SE"
+        },
+        {
+          "universidad": "Linköping University - Faculty of Science and Engineering",
+          "ciudad": "Linköping",
+          "codigo_erasmus": "S  LINKOPI01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "Buscar tutor para TFG si no se va a hacer asignaturas. https://liu.se/en/education/exchange-studies https://sway.com/k2fFXu3fSTJw918r?ref=Link Read more about cost of living at www.studyinsweden.se / GIB: https://liu.se/en/education/program/6mbme",
+          "pais": "SE"
+        },
+        {
+          "universidad": "Luleå University of Technology",
+          "ciudad": "Luleå",
+          "codigo_erasmus": "S  LULEA01",
+          "plazas": "4",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "2 alumnos para eñ área electrical engineering + 2 alumnos en el área computer science\nSe requiere cursar en destino 30 ECTS / semestre",
+          "pais": "SE"
+        },
+        {
+          "universidad": "Lund Institute of Technology",
+          "ciudad": "Lund",
+          "codigo_erasmus": "S  LUND01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "list of courses available: https://www.lth.se/english/study-at-lth/exchange-studies/find-exchange-courses/courses-in-engineering/ \nStudents are not allowed to change courses unless there are problems in terms of course clashes or any other justifiable reason / El alumno debe matricular 30 créditos por semestre",
+          "pais": "SE"
+        },
+        {
+          "universidad": "KTH - School of Electrical Engineering EES",
+          "ciudad": "Estocolmo",
+          "codigo_erasmus": "S  STOCKHO04",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "El alumno debe matricular un máximo 30 créditos por semestre  / We have created a page focusing on double degrees and describing the studies, requirements and specializations.\nHere the link that will be useful to prospective double degree students at our school:\nhttps://www.kth.se/social/group/double-degree-stud-2/page/master-specializations-with-electrical-e/\n\nPara DT 90 ECTS típicamente. Read more about cost of living at www.studyinsweden.se",
+          "pais": "SE"
+        },
+        {
+          "universidad": "Mälardalen University",
+          "ciudad": "Västerås",
+          "codigo_erasmus": "S  VASTERA01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "Read more about cost of living at www.studyinsweden.se",
+          "pais": "SE"
+        }
+      ]
+    },
+    "SI": {
+      "iso2": "SI",
+      "cities": [
+        "Ljubljana"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "University of Ljubljana",
+          "ciudad": "Ljubljana",
+          "codigo_erasmus": "SI LJUBLJA01",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2 (A Language Certificate that references the CEFR scale.\nA TOEFL score of 79 (IBT) or an IELTS score of 6 for English.\nResults from the OLS (Online Language Support) platform.\nAny other official language certificate)",
+          "observaciones": "OJO: cada año se modifican las asignaturas que pueden cursar los alumnos de prog. de intercambio y no se garantiza el reconocimiento de créditos en la ETSIT con la modificación del PF / Para cursar asignaturas de Máster, el alumno debe haber superado al menos 180ECTS / los alumnos de GIB deben coger asignaturas de la facultad de electrical engineering:\nhttps://fe.uni-lj.si/wp-content/uploads/2024/04/Shema-predmetov-winter-semester.pdf\nhttps://fe.uni-lj.si/wp-content/uploads/2024/04/Shema-predmetov-summer-semester.pdf",
+          "pais": "SI"
+        }
+      ]
+    },
+    "TR": {
+      "iso2": "TR",
+      "cities": [
+        "Istambul",
+        "Tekirdag"
+      ],
+      "cities_count": 2,
+      "offers_count": 5,
+      "offers": [
+        {
+          "universidad": "ITÜ İstanbul Teknik Üniversitesi",
+          "ciudad": "Istambul",
+          "codigo_erasmus": "TR ISTANBU04",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B1",
+          "observaciones": "forma parte de EELISA",
+          "pais": "TR"
+        },
+        {
+          "universidad": "Marmara Üniversitesi",
+          "ciudad": "Istambul",
+          "codigo_erasmus": "TR ISTANBU05",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "",
+          "pais": "TR"
+        },
+        {
+          "universidad": "Yildiz Technical University",
+          "ciudad": "Istambul",
+          "codigo_erasmus": "TR ISTANBU07",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "acuerdo firmado con el departamento de biotecnología. Hace falta coger al menos una asignatura de este departamento para luego poder coger asignaturas del departamento de bioingeniería",
+          "pais": "TR"
+        },
+        {
+          "universidad": "Özyegin Üniversitesi",
+          "ciudad": "Istambul",
+          "codigo_erasmus": "TR ISTANBU31",
+          "plazas": "2",
+          "programa": "ER",
+          "cert": "INGLÉS B2 (No official test score is required from exchange students nominated by our partner universities. However, we expect to receive a formal letter from the institution (language dpt. attesting to the language level if the medium of instruction is not English)",
+          "observaciones": "course list: https://www.ozyegin.edu.tr/en/ects-course-catalog-courses-offered/courses-offered?utm_source=footer",
+          "pais": "TR"
+        },
+        {
+          "universidad": "Namik Kemal University",
+          "ciudad": "Tekirdag",
+          "codigo_erasmus": "TR TEKIRDAG01",
+          "plazas": "1",
+          "programa": "ER",
+          "cert": "INGLÉS B2",
+          "observaciones": "",
+          "pais": "TR"
+        }
+      ]
+    },
+    "TW": {
+      "iso2": "TW",
+      "cities": [
+        "Taipei"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "National Taiwan University - NTU",
+          "ciudad": "Taipei",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "INGLÉS B2 o CHINO B1",
+          "observaciones": "Las solicitudes para DT son prioritarias. Los alumnos deben cursar 18 créditos NTU (equivalente a 60ECTS) durante el primer año y realizar una master thesis de 6 meses de duración durante el segundo curso de la DT / Se puede solicitar la beca de Asia modalidad B 3000€",
+          "pais": "TW"
+        }
+      ]
+    },
+    "UK": {
+      "iso2": "UK",
+      "cities": [
+        "Cranfield",
+        "Londres"
+      ],
+      "cities_count": 2,
+      "offers_count": 2,
+      "offers": [
+        {
+          "universidad": "Cranfield University",
+          "ciudad": "Cranfield",
+          "codigo_erasmus": "UK CRANFIE01",
+          "plazas": "3",
+          "programa": "AB/ER",
+          "cert": "INGLÉS B2 (TOEFL 92 iBT - TOEIC 800 - IELTS 6.5 - CAE) ver presentación en la web",
+          "observaciones": "Double degree programme: Se paga la matrícula completa que incluye un descuento del 50% (aprox. 14000£) excepto para los MBA. El curso académico dura entre 11 y 13 meses. Tuition fees: https://www.cranfield.ac.uk/study/taught-degrees/fees-and-funding / course list: https://www.cranfield.ac.uk/courses/taught/a-to-z\nPosibilidad de realizar un proyecto de investigación  \nPara visa: aplicar con la carta de aceptación (aprox. 370£)\nPara programa erasmus, se paga el crédito pero posibilidad de tener un descuento de 50€ (overseas fees)",
+          "pais": "UK"
+        },
+        {
+          "universidad": "Queen Mary University of London",
+          "ciudad": "Londres",
+          "codigo_erasmus": "UK LONDON031",
+          "plazas": "1",
+          "programa": "AB",
+          "cert": "INGLÉS B2-C1",
+          "observaciones": "La duración mínima del Proyecto son 9 meses / no se puede cursar asignaturas pero sí idiomas",
+          "pais": "UK"
+        }
+      ]
+    },
+    "US": {
+      "iso2": "US",
+      "cities": [
+        "Berkeley",
+        "Chicago",
+        "Metz y Atlanta",
+        "State of Virginia"
+      ],
+      "cities_count": 4,
+      "offers_count": 4,
+      "offers": [
+        {
+          "universidad": "Georgia Tech",
+          "ciudad": "Metz y Atlanta",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "DEADLINE: 1 de diciembre TOEFL 90 (ECE) (min 19 for each section) or IELTS 7 (min 6.5 for reading and listening and min 5.5 for writing) or TOEIC 850\nGRE (only for CS): verbal 150 / quantitative 155 / analytical writing 3",
+          "observaciones": "http://www.gatech.edu / http://www.gt-lorraine.eu Master of Science degree in Electrical & Computer Engineering (30 SCH)\nEl master consiste en pasar 1 semestre (fall semester) en Metz, Francia y un curso completo en Atlanta, EEUU (spring y siguiente fall semester)\nGPA 3.5 / coste: $40K + financial aid",
+          "pais": "US"
+        },
+        {
+          "universidad": "University of California - Berkeley",
+          "ciudad": "Berkeley",
+          "codigo_erasmus": "",
+          "plazas": "5",
+          "programa": "AB",
+          "cert": "INGLÉS B2: TOEFL 106",
+          "observaciones": "no pedir EECS sino IEOR - ME- NE / no es para research / GPA: min 3.4 / coste $62K + finalcial aid",
+          "pais": "US"
+        },
+        {
+          "universidad": "George Mason University",
+          "ciudad": "State of Virginia",
+          "codigo_erasmus": "",
+          "plazas": "6",
+          "programa": "AB",
+          "cert": "INGLÉS B2 (TOEFL Undergraduate 80 (minimum required in each seccion: 18) / Graduate 80 (minimum required in each seccion: 20) or IELTS 6.5 (minimum required in each seccion: 6.0) or Duolinguo Undergraduate 110 / Graduate (DD program) 120. GRE is a requirement for the MS in Electrical Engineering program https://www.gmu.edu/admissions-aid/apply-now/how-apply/international/english-proficiency-requirements",
+          "observaciones": "Existen 2 acuerdos: \n- Exchange program para alumnos de grado y máster (en conjunto con la UPM) : 1 plaza de 1 curso académico o 2 plazas de un semestre. GPA: 2.5 \n- Doble titulación (1+1 program): 5 plazas para alumnos del MUIT. GPA: 3.0 El alumno deberá pagar un seguro (aprox para curso completo 3000$). Se requiere el GRE para subir a la aplicación de GMU (ver application deadline). NO SE RECOMIENDA APLICAR PARA COMPUTER SCIENCE. \nOJO, para la agencia de evaluación externa Spantran the Evaluation Company, no hay que enviar el ToR en percentiles sino el ToR en inglés con ultima situación. Se puede pedir evaluation interna para el GPA\nrequisitos para alumnos de DT: https://admissions.gmu.edu/grad/application-deadlines-and-requirements/?academicUnit=VS. \nSe puede reconocer de 6 a 12 credit hours (de 12 a 24 ECTS)=transfer credits: course by course evaluation (externa). \nLos alumnos (menos de 10) pueden recibir un descuento del 35% (on out of state tuition fees).\nPara los dos acuerdos, se puede pedir la beca USA/CANADÁ.",
+          "pais": "US"
+        },
+        {
+          "universidad": "Illinois Tech",
+          "ciudad": "Chicago",
+          "codigo_erasmus": "",
+          "plazas": "15",
+          "programa": "AB",
+          "cert": "2 AÑOS DE VALIDEZ\n- TOEFL IBT 80 (20 en cada sección) - No se acepta TOEFL MyBest Scores - Score tests must be sent to IIT  Institution code 1318 - Choose Department not listed when completing the TOEFL official score request form :  Level - Graduate:  Campus - leave blank  \n- IELTS 6.5 (6.0 en cada sección) - No se acepta online IELTS - choose the electronic upload delivery system \n- Duolinguo English Test 115 (115 en cada sección)\n- GRE; A: entre 2.5 - 3.5 NEW: if you choose any 1-year Master's offered by the departments under the Armour College of Engineering and the School of Applied Technology, you will NOT be required to submit a GRE general score. If choosing College of Science, then you will be required to pass the GRE general exam. Institution code is 1318",
+          "observaciones": "Ver Presentación del IIT y https://admissions.iit.edu/graduate/apply/apply-masters-program\nDT mínimum 12 meses. Double Degree: 24 Credit hour mínimum requiered (included Research project = TFM) Se requiere un GPA de 3.0; nota mínima en la ETSIT 6.5;  no más de 10 asignaturas suspensas en toda la carrera \nIf interested in any of the Master's degree programs offered by the Department of Computer Science, and if you have some background in Computer Science, it is very important that you successfully pass - 6.5 out of 10,  the following course equivalents ( Master's level) at UPM :\nCS 430 - Introduction to Algorithms\nhttps://bulletin.iit.edu/undergraduate/courses/cs/\nCS 450 - Operating Systems\nhttps://bulletin.iit.edu/undergraduate/courses/cs/\nSo if  you have not yet taken these courses, you should register for those equivalent courses at UPM (if on offer) for the new semester starting in Feb at UPM\nIf on the other hand, you do not have any background in Computer Science, but are interested in one of the Master's degree programs offered by this department, you should also have successfully passed (6.5 out of 10) the following courses:\nCS 201 - Accelerated Introduction to Computer Science\nCS 401 - Introduction to Advanced Studies I\nCS 402 - Introduction to Advanced Studies II\nSe puede transfereir hasta 6 US credits (12 ECTS)\nDepartment of Computer Science: students must have successfully passed CS430 CS500 with a grade B (6.5)\nDepartment of Electrical and Compter Engineering: students must have successfully passed Probability and Statistics and Signals & Systems",
+          "pais": "US"
+        }
+      ]
+    },
+    "UY": {
+      "iso2": "UY",
+      "cities": [
+        "Montevideo"
+      ],
+      "cities_count": 1,
+      "offers_count": 1,
+      "offers": [
+        {
+          "universidad": "Universidad de Montevideo",
+          "ciudad": "Montevideo",
+          "codigo_erasmus": "",
+          "plazas": "2",
+          "programa": "AB",
+          "cert": "",
+          "observaciones": "Para alumnado del GITST, solo itinerario de telemática",
+          "pais": "UY"
+        }
+      ]
+    }
+  },
+  "offers": [
+    {
+      "universidad": "Technische Universität Graz",
+      "ciudad": "Graz",
+      "codigo_erasmus": "A  GRAZ02",
+      "plazas": "3",
+      "programa": "ER",
+      "cert": "ALEMÁN B2 o INGLÉS B2 (TOEFL 75, IELTS 6.0, TOEIC (785 listening and reading - 310 speaking and writing), Cambridge ESOL First Certificate in English (FCE) OR Certificate in Advanced English (CAE) OR Certificate of Proficiency in English (CPE) or Certificate issued by the language centre of a University",
+      "observaciones": "Sólo se puede hacerse el TFG/TFM si un profesor acepta al alumno. El área de estudios para alumnos de GITST y MUIT es computer science.",
+      "pais": "AT"
+    },
+    {
+      "universidad": "FH Joanneum",
+      "ciudad": "Graz",
+      "codigo_erasmus": "A  GRAZ09",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "ALEMÁN B2",
+      "observaciones": "https://www.fh-joanneum.at/en/international/study-programmes/international-programme-kapfenberg/ \nhttps://www.fh-joanneum.at/en/international/study-programmes/",
+      "pais": "AT"
+    },
+    {
+      "universidad": "MCI | THE ENTREPRENEURIAL SCHOOL",
+      "ciudad": "Innsbruck",
+      "codigo_erasmus": "A  INNSBRU08",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2 (TOEFL 85 IBT o IELTS 6.0 o CAE o PTE academic o Oxford test of English o online English test provided by MCI* o ALEMÁN B1 (www.mci.edu/exchange-incoming)",
+      "observaciones": "On undergraduate level, the courses are only offered in the fall semester // No permiten coger asignaturas de varios materes por tema de solapamiento de horarios",
+      "pais": "AT"
+    },
+    {
+      "universidad": "Technische Universität Wien",
+      "ciudad": "Viena",
+      "codigo_erasmus": "A  WIEN02",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "ALEMÁN B1 o ALEMÁN A2 + curso intentivo de alemán o INGLÉS B1 (se acepta el certificado del departamento de lingüística)",
+      "observaciones": "En la solicitud online hay que registrarse como Master students. Asignaturas en INGLES sólo a nivel MASTER. \nPara poder realizar el TFM ponen como condición necesaria el tener un tutor y un tema para el TFM prevío a la llegada, dan una oferta de TFMs y hay que coger uno o renunciar a hacer el TFM. \nSe puede coger algunas asignaturas de la Faculty of informatics",
+      "pais": "AT"
+    },
+    {
+      "universidad": "Université Libre de Bruxelles ULB - Ecole Polytechnique de Bruxelles",
+      "ciudad": "Bruselas",
+      "codigo_erasmus": "B  BRUXEL04",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B1",
+      "observaciones": "Sólo se puede hacer TFG con asignaturas que incluyan un proyecto. Se requiere cursar 15ECTS de asignaturas (a parte del TFG). ENG para el Master en ingeniería eléctrica. Se debe encontrar un \"Promoter\" para realizar el research project (TFM) antes del 1 de junio.",
+      "pais": "BE"
+    },
+    {
+      "universidad": "Universiteit Gent",
+      "ciudad": "Gent",
+      "codigo_erasmus": "B  GENT01",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "INGLES B2: TOEFL min 87 o IELTS 6,0 (min 6,0 in writing) o TOEIC min 785 o FCE, CAE, CPE o University language Center certifying a level B2 o HOLANDES B2 (proof that the student finished successfully a Dutch study programme of at least 1 year)",
+      "observaciones": "2 plazas para Biomedical Engineering y 2 plazas para Electrical Engineering (se puede nominar solamente en un área)",
+      "pais": "BE"
+    },
+    {
+      "universidad": "Katholike Universiteit Leuven",
+      "ciudad": "Leuven",
+      "codigo_erasmus": "B  LEUVEN01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "courses available to exchange students can be found here: https://onderwijsaanbod.kuleuven.be/opleidingen/e/SC_51977178.htm#&bl=all \nOJO: solo se puede coger 2 asignaturas máximo en la facultad de business",
+      "pais": "BE"
+    },
+    {
+      "universidad": "Université de Liège",
+      "ciudad": "Lieja",
+      "codigo_erasmus": "B  LIEGE01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B2",
+      "observaciones": "",
+      "pais": "BE"
+    },
+    {
+      "universidad": "Université Catholique de Louvain - EPL",
+      "ciudad": "Louvain-la-Neuve",
+      "codigo_erasmus": "B  LOUVAIN01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B2 (DELF - DALF) o INGLÉS B2 (TOEFL - IEALTS - CAP - CPE o statement of English language teacher)",
+      "observaciones": "El acuerdo es con EPL (École Polytechnique de Louvain). Bachelor en francés. Máster en inglés.",
+      "pais": "BE"
+    },
+    {
+      "universidad": "Angel Kanchev University of Ruse",
+      "ciudad": "Ruse",
+      "codigo_erasmus": "BG ROUSSE01",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "INGLÉS B1",
+      "observaciones": "Posibilidad de cursar asignaturas del Bachelor degree: Information and Communication Technology en inglés",
+      "pais": "BG"
+    },
+    {
+      "universidad": "Technical University of Sofia",
+      "ciudad": "Sofia",
+      "codigo_erasmus": "BG SOFIA16",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B1",
+      "observaciones": "",
+      "pais": "BG"
+    },
+    {
+      "universidad": "HES-SO Haute École Spécialisée de Suisse Occidentale - hepia",
+      "ciudad": "Ginebra",
+      "codigo_erasmus": "CH DELEMONT03",
+      "plazas": "6",
+      "programa": "AB",
+      "cert": "FRANCÉS B1 (asignaturas de grado SOLO en francés; en master algunas asignaturas en inglés)",
+      "observaciones": "HES-SO Campus en Lausanne y HEPIA campus en Ginebra / 3 alumnos en el área 714 Electronics Engineering Telecommunications y 3 alumnos en el área 611 Informatics, Computer Science. No se puede cursar TFT, solo asignaturas. 30 ECTS por semestre",
+      "pais": "CH"
+    },
+    {
+      "universidad": "École Polytechnique Fédérale de Lausanne - EPFL",
+      "ciudad": "Lausana",
+      "codigo_erasmus": "CH LAUSANN06",
+      "plazas": "3",
+      "programa": "AB",
+      "cert": "FRANCÉS B2 o INGLÉS B2",
+      "observaciones": "Nota mínima expediente académico: 7. Bachelor en francés. Master programm en inglés y francés. El alumno debe registrar entre 20/30 créditos ECTS por semestre. Para el TFG, debe solicitar \"semester Project\" (programa de Máster). No se permite cursar asignaturas en el mismo semestre que se realiza el TFM. The access to courses in our College of Management of Technology (Management of Technology and Entrepreneurship, and Financial Engineering) is not open to exchange students. Asignaturas NO disponibles para alumnos de movilidad: https://www.epfl.ch/education/international/fr/venir-etudier-a-l-epfl/semestres-cours/conditions/",
+      "pais": "CH"
+    },
+    {
+      "universidad": "Zürcher Hochschule für Angewandte Wissenschaften ZHAW",
+      "ciudad": "Winterthur",
+      "codigo_erasmus": "CH WINTERT03",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "ALEMÁN B2 o INGLÉS B2 (TOEFL 550/213/79 o TOEIC 700 o IELTS 6.0 o CAE) / for Master Programs: INGLÉS C1\nforma parte de EELISA",
+      "observaciones": "",
+      "pais": "CH"
+    },
+    {
+      "universidad": "Czech Technical University CTU",
+      "ciudad": "Prague",
+      "codigo_erasmus": "CZ PRAHA10",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2 (se acepta el certificado del departamento de lingüística) o ALEMÁN B1",
+      "observaciones": "incoming students are required to collect at least 15 ECTS credits/semester",
+      "pais": "CZ"
+    },
+    {
+      "universidad": "RWTH - Aachen",
+      "ciudad": "Aachen",
+      "codigo_erasmus": "D  AACHEN01",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "INGLÉS B2 (TOEFL 90 IBT o IELTS 5.5 o CAE) y/o ALEMÁN B1 (TestDaF - Level 4 in all four examination areas- o\nDeutsche Sprachprüfung für den Hochschulzugang - Test of German Language Ability for International Students - (DSH, Level 2 or 3) o Deutsches Sprachdiplom der Kultusministerkonferenz - German Language Certificate of the Standing Conference of the German Ministers of Education and Cultural Affairs – Level 2 (KMK II) o The Kleines Deutsches Sprachdiplom - KDS-  Großes Deutsches Sprachdiplom, or Zentrale Oberstufenprüfung - ZOP - (German language certificates of the Goethe Institute) o Deutsche Sprachprüfung II of the Sprachen- und Dolmetscher Institut München - German Language Examination II of the Language and Translators' Institute, Munich)",
+      "observaciones": "Bachelor en alemán. Master programm en inglés. El TFM se incluye en el LA cuando el alumno tenga un Supervisor en destino. Se puede agrupar meses",
+      "pais": "DE"
+    },
+    {
+      "universidad": "Technische Universität Berlin",
+      "ciudad": "Berlín",
+      "codigo_erasmus": "D  BERLIN02",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2 o ALEMÁN A2 (nivel ALEMÁN B1 requerido antes del comienzo del semestre)\nOJO: Anything above (B1, B2, C1, C2) can’t be older than 3 years at the time of the application deadline (summer semester: December\n1st, winter semester: June 1st) Comprobad los requisitos de idiomas en la web de la TU Berlin según la titulación solicitada",
+      "observaciones": "Mínimo 160-180 ECTS superados para cursar asignaturas de Máster",
+      "pais": "DE"
+    },
+    {
+      "universidad": "Rheinish Friedrich-Wilhems-Universität Bonn",
+      "ciudad": "Bonn",
+      "codigo_erasmus": "D  BONN01",
+      "plazas": "3",
+      "programa": "ER",
+      "cert": "INGLÉS B2 o ALEMÁN B1",
+      "observaciones": "Máster en inglés",
+      "pais": "DE"
+    },
+    {
+      "universidad": "Technische Universität Darmstadt",
+      "ciudad": "Darmstadt",
+      "codigo_erasmus": "D  DARMSTA01",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "ALEMÁN A2 + intensive German language course / Inglés B2  \nPara alumnos DT Inglés B2\nPara alumnos DT Alemán: Goethe Certificate C1",
+      "observaciones": "Para DT 90 ECTS (60ECTS de asignaturas y 30 de TFM). El Master de TU Darmstadt en inglés es: Master iCE (MICE = Master in Information and Communication Engineering). Duración 1año y medio + prorroga de max 1 año. El Máster en alemán: Master in Elektrotechnik und Informationstechnik / English courses: https://www.tucan.tu-darmstadt.de/scripts/mgrqcgi?APPNAME=CampusNet&PRGNAME=ACTION&ARGUMENTS=-ArRbQdVLqES91bsx53bxh1nfz5Sc3fPdqO2LhUfD4HVUxTtzHuqoJHc7CJmS6nO2o088NXhvM02sBmu5wKMaBzuB4gCU0ez5SiTxsNp50HT9SD9dB3t4Y7gLEDBa=",
+      "pais": "DE"
+    },
+    {
+      "universidad": "Friedrich-Alexander Universität FAU",
+      "ciudad": "Erlangen",
+      "codigo_erasmus": "D  ERLANGE01",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "Bachelor: Aleman A2 o Inglés B2 // Master: Alemán B1 o Inglés B2 Official certificates (TOEFL, IELTS,\nDAF, etc.) or confirmations issued by a professional language teacher with\nstamp and signature are accepted. \n- for English: www.fau.de/files/2014/08/Programmstudierende_aus_dem_Ausland-\nNachweis-Englischkenntnisse.pdf",
+      "observaciones": "Para hacer TFG en inglés es necesario buscar un tutor y consensuar con él el idioma. ENG para el Master \"Communications and Multimedia Engineering (CME)\" se requiere un nivel minimo de alemán A2 o es obligado hacer el curso intensivo de alemán en septiembre / 2*10 plazas en el area biomedical engineering y 2*10 plazas en el area Electronica engineering / Forma parte de EELISA",
+      "pais": "DE"
+    },
+    {
+      "universidad": "Hamburg University of Technology - TUHH",
+      "ciudad": "Hamburg",
+      "codigo_erasmus": "D  HAMBURG03",
+      "plazas": "6",
+      "programa": "ER",
+      "cert": "INGLÉS B2 (se acepta atestación firmada del departamento de lingüística) o ALEMÁN B1",
+      "observaciones": "asignaturas de Máster en inglés y Bachelor Engineering Science / 2 estudiantes en el área bio y 4 estudiantes en el área teleco",
+      "pais": "DE"
+    },
+    {
+      "universidad": "Universität Kassel",
+      "ciudad": "Kassel",
+      "codigo_erasmus": "D  KASSEL01",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "INGLÉS B2 o ALEMÁN B1",
+      "observaciones": "Algunas asignaturas en inglés, especialmete en el área 061 / posibilidad de TFM y TFG en inglés: la unviersidad aceptará las solicitudes \"caso por caso\"",
+      "pais": "DE"
+    },
+    {
+      "universidad": "Mannheim University of Applied Sciences",
+      "ciudad": "Mannheim",
+      "codigo_erasmus": "D  MANNHEI03",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "ALEMÁN B1 o ALEMAN A2 + curso intensivo de alemán en septiembre o INGLÉS B2",
+      "observaciones": "Biomédical engineering sólo en Departamento Tecnologías de la Información (NO con Departamento de Biotecnología) /Alemán para Bioingeniería médica / Inglés o Alemán para Electronics /Alemán para Bachelor y demás programas de Máster. Mínimo 180 ECTS superados para cursar asignaturas de Máster.",
+      "pais": "DE"
+    },
+    {
+      "universidad": "Technische Universität München",
+      "ciudad": "München",
+      "codigo_erasmus": "D  MUNCHEN02",
+      "plazas": "3",
+      "programa": "ER",
+      "cert": "ALEMÁN B1 o INGLÉS B2 (una atestación del departmento de lingüística es aceptada)",
+      "observaciones": "Se pueden cursar asignaturas de varios departamentos pero la mayoría deben ser de Electrical and Computer Engineering (at least 60%). Para movilidad de 1 semestre, solo hay un periodo de examinación.",
+      "pais": "DE"
+    },
+    {
+      "universidad": "Universität des Saarlandes",
+      "ciudad": "Saarbruecken",
+      "codigo_erasmus": "D  SAARBRU01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "ALEMÁN B1 o INGLÉS B2",
+      "observaciones": "asignaturas de Máster \"Computer and Communication Technology\" en inglés / 2 plazas para computer science  / acuerdo con su UDS Systems Engineering. course catalogue: https://www.lsf.uni-saarland.de/qisserver/rds?state=wtree&search=1&trex=step&root120242=396627%7C397868%7C394098&P.vx=kurz uy acuerdo con UDS Computer Science",
+      "pais": "DE"
+    },
+    {
+      "universidad": "Universität Stuttgart",
+      "ciudad": "Stuttgart",
+      "codigo_erasmus": "D  STUTTGA01",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "INGLÉS B2 o ALEMÁN B1 + cursos intensivos de alemán (250€)",
+      "observaciones": "Para realizar e TFG o TFM  el alumno deberá solicitar el curso entero y cursar asignaturas en el 1er semestre mientras el Proyecto se realizará en el 2ndo semestre / Mínimo 180 ECTS superados para cursar asignaturas de Máster /2 alumnos para 714 y 2 alumos para 914.",
+      "pais": "DE"
+    },
+    {
+      "universidad": "Aalborg University",
+      "ciudad": "Aalborg",
+      "codigo_erasmus": "DK ALBORG01",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "INGLES B2 (IELTS 6.5 / TOEFL 85  with a minimum score of 20 in each section / Cambridge ESOL C1)",
+      "observaciones": "Campus en Aalborg y en Copenhagen. Mínimo 180 ECTS superados para cursar asignaturas de Máster.  Se requiere cursar 30 ECTS/semestre. Para asignaturas de Electronics y IT, escoger asignaturas de \"Innovative Communication Technologies and Entrepreneurship\", \"Signal Processing and Acoustics\" y \"Control and Automation\" /Students can only choose course packages with the study board(s) that are covered by the exchange agreement with you as an exchange partner",
+      "pais": "DK"
+    },
+    {
+      "universidad": "Technical University of Denmark - DTU",
+      "ciudad": "Lyngby (Copenhague)",
+      "codigo_erasmus": "DK LYNGBY01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2 (atestación del departamento de lingüística válida)",
+      "observaciones": "Bachelor en Danés. Master en inglés. No se puede comenzar la Master's Thesis hasta Febrero y el periodo de realización es 5 meses. Min 20 ECTS por semestre http://www.dtu.dk/english/Education/Incoming-students/Exchange.",
+      "pais": "DK"
+    },
+    {
+      "universidad": "Université Marie et Louis Pasteur",
+      "ciudad": "Besançon",
+      "codigo_erasmus": "F  BESANCO01",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "FRANCÉS B1",
+      "observaciones": "Medical Technology",
+      "pais": "FR"
+    },
+    {
+      "universidad": "École pour l'Informatique et les Techniques Avancées - EPITA",
+      "ciudad": "Paris",
+      "codigo_erasmus": "F  BICETRE02",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B2",
+      "observaciones": "Master degrees in English: https://www.epita.fr/en/degree-programs-english/",
+      "pais": "FR"
+    },
+    {
+      "universidad": "ENSEIRB MATMECA / IPB",
+      "ciudad": "Bordeaux",
+      "codigo_erasmus": "F  BORDEAU54",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B2",
+      "observaciones": "Master of Science taught in English: Radio and telecommunication systems http://enseirb-matmeca.bordeaux-inp.fr/fr/radio-and-telecommunication-systems y Software engineering \nhttp://enseirb-matmeca.bordeaux-inp.fr/fr/software-engineering \nVisiting Research Project program for valuable experience in our Research Centers https://drive.google.com/file/d/0B3HMMbqJTyL9b1pEeU43eklvQXM/view?usp=sharing  \nMás INFO de los programas: https://drive.google.com/drive/folders/0B3HMMbqJTyL9WjNlajJnR3ZqWlU a student has to take all courses of the semester in the department where he/she is registered, e.g. a Master 1 student registered in Computer Science Department, has to follow all courses of the semester in the Computer Science Department.\nFor Information list of all taught courses: http://www.enseirb-matmeca.fr/syllabus/",
+      "pais": "FR"
+    },
+    {
+      "universidad": "École Nationale d’Ingénieurs de Brest ENIB",
+      "ciudad": "Brest",
+      "codigo_erasmus": "F  BREST07",
+      "plazas": "3",
+      "programa": "ER",
+      "cert": "FRANCÉS B2  o INGLÉS B2 (for project or bachelor/master thesis)",
+      "observaciones": "Every international student must attend a French language course throughout the year (a placement test will determine your group)",
+      "pais": "FR"
+    },
+    {
+      "universidad": "ISEN Yncréa Ouest",
+      "ciudad": "Brest",
+      "codigo_erasmus": "F  BREST26",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "INGLÉS B2 (TOEIC (min. 785), TOEFL-IBT (min . 72) or equivalent test (Cambridge, Duolingo)) o FRANCÉS B2",
+      "observaciones": "Subjects in English given in the fall semester (they are working to extend them to the spring semester): https://isen-nantes.fr/international-accueil/exchange-students/",
+      "pais": "FR"
+    },
+    {
+      "universidad": "École Nationale Supérieure d'Ingénieurs de Caen ENSICAEN",
+      "ciudad": "Caen",
+      "codigo_erasmus": "F  CAEN05",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B2",
+      "observaciones": "DT 2 opciones: 1. 4º curso de grado + 2º de MUIT o 2. 2º curso de MUIT (2 años)",
+      "pais": "FR"
+    },
+    {
+      "universidad": "EURECOM",
+      "ciudad": "Sophia Antipolis",
+      "codigo_erasmus": "F  CANNES09",
+      "plazas": "3",
+      "programa": "ER",
+      "cert": "INGLÉS B1 (recomendado FRANCÉS A2 una vez inscritos)",
+      "observaciones": "https://www.eurecom.fr/index.php/en/teaching/engineering-studies-exchange-students / Para alumnos de DT: 18 meses ( 1 curso asignaturas y 1 semestre TFM TOTAL: 90 ECTS)",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Ecole Nationale Supérieure de l'Electronique et de ses Applications - ENSEA",
+      "ciudad": "Cergy (Paris)",
+      "codigo_erasmus": "F  CERGY01",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B2",
+      "observaciones": "new English-taught programs starting in September 2022 in the following fields of study: Physical Engineering and Embedded Systems, Materials and Chemistry, Computer Science",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Telecom Sud Paris",
+      "ciudad": "Evry (Paris)",
+      "codigo_erasmus": "F  EVRY11",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B2 o INGLÉS B2 (TOEFL Ibt - 95; Cambridge CAE; IELTS - 7.00; Cambridge: CAE; TOEIC: 945)",
+      "observaciones": "Decidirán caso por caso la posibilidad de hacer TFG / Master of Engineering (in French or in English). /No pueden mezclar asignaturas de diferentes majors or Master of Science / No se puede coger asignaturas de diferentes cursos / TSP offers more than 11 Master’s programs fully in English.\nhttp://www.telecom-sudparis.eu/p_en_formations_ingenieur-generaliste_approfondissement_1054.html",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Centrale SUPELEC",
+      "ciudad": "Paris Saclay - Metz - Rennes",
+      "codigo_erasmus": "F  GIF-YVE03",
+      "plazas": "6",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B2",
+      "observaciones": "3 students for the double degree programme  (3 campus: Paris Saclay, Metz and Rennes) y 3 alumnos para programa de movilidad. For non degree students, the spring semester may be fully taught in English. Para exchange students, se puede escoger asignaturas de 2º curso en Centrale Supelec: https://www.centralesupelec.fr/sites/default/files/cat_2024_-_2a_-_en_v1.pdf",
+      "pais": "FR"
+    },
+    {
+      "universidad": "INP Grenoble, Institute of Engineering and Management",
+      "ciudad": "Grenoble",
+      "codigo_erasmus": "F  GRENOBL22",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B2",
+      "observaciones": "1 alumno en el dpto. PHELMA, 2 alumnos en el dpto. ENSE3, 2 alumnos en el dpto. ENSIMAG",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Université Grenoble Alpes - UGA",
+      "ciudad": "Grenoble",
+      "codigo_erasmus": "F  GRENOBL55",
+      "plazas": "5",
+      "programa": "ER",
+      "cert": "FRANCÉS B2 o INGLÉS B2 (certificado del departamento de lingüística aceptado)",
+      "observaciones": "Acuerdo en el área de bioingeniería con la facultad de farmacia de la UGA. Inglés para asignaturas de Máster. Although most of the courses are in French, our Faculty proposes course enterly in English in master 2 programs: http://formations.univ-grenoble-alpes.fr/fr/catalogue/master-XB/sciences-technologies-sante-STS/master-ingenierie-de-la-sante-program-master-ingenierie-de-la-sante.html?search-keywords=sant%E9",
+      "pais": "FR"
+    },
+    {
+      "universidad": "HEC",
+      "ciudad": "Paris",
+      "codigo_erasmus": "F  JOUY-JO02",
+      "plazas": "3",
+      "programa": "ER",
+      "cert": "INGLÉS B2 o INGLÉS B1 + FRANCÉS A2",
+      "observaciones": "Se abona matrícula para la DT",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Université des Sciences et Technologies de Lille - Polytech Lille",
+      "ciudad": "Lille",
+      "codigo_erasmus": "F  LILLE103",
+      "plazas": "3",
+      "programa": "ER",
+      "cert": "FRANCÉS B1",
+      "observaciones": "Polytech Lille: We recommend that students who intend to come for a study period of one semester apply for the autumn Semester. An important part of the Spring semester is dedicated to the industrial placement\nor to projects in laboratories (particularly during the fourth and fifth year).\nStudents who come for the full academic year will combine study period with placements in research laboratories or in industry. The best period to carry out a project is from the beginning of February to the end of June // You cannot combine lectures from different engineering degree courses or semesters because of incompatible timetables.",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Centrale Lille",
+      "ciudad": "Lille",
+      "codigo_erasmus": "F  LILLE14",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B1",
+      "observaciones": "3 students for the double degree programme",
+      "pais": "FR"
+    },
+    {
+      "universidad": "IMT Nord Europe",
+      "ciudad": "Lille",
+      "codigo_erasmus": "F  LILLE91",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B1",
+      "observaciones": "Posibilidad de cursar 30 ECTS en inglés en el 2ndo semestre en la especialidad Embedded Systems and Information Systems: http://imt-lille-douai.fr/formations/toutes-les-formations/semester-for-exchange-students/advanced-construction-materials-in-their-environment-acme/\nCybersecurity engineering: semestre de otoño se imparte totalmente en inglés",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Université Claude Bernard Lyon 1 - Polytech Lyon",
+      "ciudad": "Lyon",
+      "codigo_erasmus": "F  LYON01",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "FRANCÉS B2",
+      "observaciones": "",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Centrale Lyon",
+      "ciudad": "Lyon",
+      "codigo_erasmus": "F  LYON11",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B2 (TOEFL 96 / TOEIC 825 / IELTS 7 / Cambridge 173 / Duolinguo 120)",
+      "observaciones": "3 students for the double degree programme / Los alumnos deben tener 180 ECTS aprobados (mobilidad a partir de 4º curso)",
+      "pais": "FR"
+    },
+    {
+      "universidad": "INSA Lyon",
+      "ciudad": "Lyon",
+      "codigo_erasmus": "F  LYON12",
+      "plazas": "6",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B2",
+      "observaciones": "http://www.insa-lyon.fr/en/exchange-students /  English course catalogue: https://www.insa-lyon.fr/en/information-science-technology-semester-ist\n2 alumnos/as  para teleco - 2 alumnos/as para bio - 2 alumnos/as para datos",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Centrale Méditerranée",
+      "ciudad": "Marseille",
+      "codigo_erasmus": "F  MARSEIL11",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1",
+      "observaciones": "3 students for the double degree programme",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Université de Lorraine - École des Mines de Nancy - Telecom Nancy",
+      "ciudad": "Nancy",
+      "codigo_erasmus": "F  NANCY43",
+      "plazas": "6",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B2",
+      "observaciones": "3 plazas para Telecom Nancy y 3 plazas para Écoles des Mines de Nancy. \nÉcoles des Mines de Nancy: MSc in Security of Computer Systems and Big Data and Data Science : http://mines-nancy.univ-lorraine.fr/content/master-science-msc-security-computer-systems.  http://www.mines-nancy.univ-lorraine.fr/node/242 \nTelecom Nancy: solo área 0610 (ICTs) para estudiantes de teleco y datos",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Université de Nantes - Polytech Nantes",
+      "ciudad": "Nantes",
+      "codigo_erasmus": "F  NANTES01",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B2",
+      "observaciones": "",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Centrale Nantes",
+      "ciudad": "Nantes",
+      "codigo_erasmus": "F  NANTES07",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B1",
+      "observaciones": "3 students for the double degree programme / Asignaturas de Master en inglés",
+      "pais": "FR"
+    },
+    {
+      "universidad": "IMT Atlantique",
+      "ciudad": "Brest-Nantes-Rennes",
+      "codigo_erasmus": "F  NANTES80",
+      "plazas": "5",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B2",
+      "observaciones": "",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Institut d'Optique Théorique et Appliquée",
+      "ciudad": "Palaiseau",
+      "codigo_erasmus": "F  ORSAY02",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o B2 / INGLÉS B2",
+      "observaciones": "",
+      "pais": "FR"
+    },
+    {
+      "universidad": "ENSTA Paris",
+      "ciudad": "Paris",
+      "codigo_erasmus": "F  PARIS080",
+      "plazas": "3",
+      "programa": "ER",
+      "cert": "FRANCÉS B1",
+      "observaciones": "Para TFG o TFM, una vez asignada la plaza, el alumno debe buscar un tutor",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Mines Paris - PSL University",
+      "ciudad": "Paris",
+      "codigo_erasmus": "F  PARIS081",
+      "plazas": "3",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 (TEF (204); DELF (A2); TCF (200) or certificate from hom University) o INGLÉS B1 (TOEIC, TOEFL, Cambridge and those provided by partner universities). For Double Degree students, a B1 in French is required.",
+      "observaciones": "No se puede solicitar para irse en 3er curso de grado. Para doble titulación: students have to choose a minor through their application and validate  120 ECTS (including 90 ECTS for courses, 6 ECTS for the compulsory internship and 24 ECTS for the minor final project) / forma parte de EELISA (Paris Sciences et Lettres - PSL)",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Telecom Paris",
+      "ciudad": "Paris",
+      "codigo_erasmus": "F  PARIS083",
+      "plazas": "3",
+      "programa": "ER",
+      "cert": "FRANCÉS A2 (Baccalaureat; TCF; TFI 255-400;  DELF) o ENGLISH B2 (TOEFL; IELTS 5.5; TOEIC: 750;  CAE)",
+      "observaciones": "Para alumnos de DT la nota media deberá ser mínimo 7.0. Solo se pueden elegir asignaturas que pertenecen al programa \"Diplôme d'ingénieur\" (Master of Science in Engineering). For non degree student, students must include a minimum of 20 ECTS per semester.",
+      "pais": "FR"
+    },
+    {
+      "universidad": "ECE Engineering School",
+      "ciudad": "Paris",
+      "codigo_erasmus": "F  PARIS222",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B2 (IELTS 6.0; TOEFL 83; TOEIC 780)",
+      "observaciones": "Se puede solicitar para un curso completo o 1er semestre",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Sorbonne Université",
+      "ciudad": "Paris",
+      "codigo_erasmus": "F  PARIS468",
+      "plazas": "5",
+      "programa": "ER/EIT HEALTH",
+      "cert": "INGLÉS B2 (aceptan el certificado del departamento de lingüística) o FRANCÉS B1",
+      "observaciones": "PRIORIDAD ALUMNOS PROGRAMA EIT HEALTH",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Université de Strasbourg - Telecom physique",
+      "ciudad": "Strasbourg",
+      "codigo_erasmus": "F  STRASBO48",
+      "plazas": "6",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B2",
+      "observaciones": "",
+      "pais": "FR"
+    },
+    {
+      "universidad": "École Nationale d'Ingénieurs de Tarbes",
+      "ciudad": "Tarbes",
+      "codigo_erasmus": "F  TARBES03",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B1",
+      "observaciones": "",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Institut National des Sciences Appliquées de Toulouse INSA Toulouse",
+      "ciudad": "Toulouse",
+      "codigo_erasmus": "F  TOULOUS14",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCES B1 o INGLÉS B1 (ver factsheet para listado de asignaturas en inglés)",
+      "observaciones": "Asignaturas principalmente en francés excepto algunos Master y asignaturas de grado del 2º semestre. http://www.insa-toulouse.fr/en/international/studying-at-insa-toulouse/programmes_in_english.html / DT (Diplôme d'ingénieur de l'INSA Toulouse) con 2 opciones: 1. 4º curso de grado + 2º de MUIT o 2. 2º curso de MUIT (2 años)",
+      "pais": "FR"
+    },
+    {
+      "universidad": "ISAE-SUPAERO",
+      "ciudad": "Toulouse",
+      "codigo_erasmus": "F  TOULOUS16",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 / FRANCÉS B1 + INGLÉS B2 para alumnos DT",
+      "observaciones": "Para alumnos de grado, no es posible realizar asignaturas en el 2ndo semestre. Para alumnos de DT, es posible realizar asignaturas durante todo el año académico. La DT (4 semestres) se puede empezar en el segundo curso de MUIT o 4º de GITST (+ 2ndo de MUIT)",
+      "pais": "FR"
+    },
+    {
+      "universidad": "ENSICA",
+      "ciudad": "Toulouse",
+      "codigo_erasmus": "F  TOULOUS17",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "FRANCÉS B1",
+      "observaciones": "",
+      "pais": "FR"
+    },
+    {
+      "universidad": "INPT Inst. Nat. Polytechnique de Toulouse ENSEEIHT",
+      "ciudad": "Toulouse",
+      "codigo_erasmus": "F  TOULOUS28",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "INGLÉS B2 O FRANCÉS B1",
+      "observaciones": "No aparece la calificación oficial del TFT en el transcript of records. Para DT el Master es Electronic systems for embedded communications and applications (en inglés) / courses catalogue: http://www.enseeiht.fr/fr/formation/formation-ingenieur-1/etudiant-1a-ou-2a.html / OJO: Un alumno de movilidad no puede realizar unas prácticas en una emprea extrerna, unicamente en un laboratorio de la ENSEEIHT. Esta norma no se aplica a alumnos de doble titulación / Posibilidad de hacer Máster ESECA de 1 año: tuition fees 5000€ / DT se puede empezar en el 4º curso GITST (no es el ESECA)",
+      "pais": "FR"
+    },
+    {
+      "universidad": "INSA - Université Polytechnique Hauts-de-France UPHF (GRADO)",
+      "ciudad": "Valenciennes",
+      "codigo_erasmus": "F  VALENCI01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B1",
+      "observaciones": "Bachelor https://formations.uphf.fr/cdm/cursus/licence3",
+      "pais": "FR"
+    },
+    {
+      "universidad": "INSA - Université Polytechnique Hauts-de-France UPHF (MASTER)",
+      "ciudad": "Valenciennes",
+      "codigo_erasmus": "F  VALENCI21",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1 o INGLÉS B1",
+      "observaciones": "Master: https://formations.uphf.fr/cdm/cursus/master",
+      "pais": "FR"
+    },
+    {
+      "universidad": "University of West Attica",
+      "ciudad": "Egaleo-Athina",
+      "codigo_erasmus": "G  EGALEO02",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "https://erasmus.uniwa.gr/en/erasmus/course-catalogue/ ;  https://erasmus.uniwa.gr/wp-content/uploads/sites/159/2021/02/FACT-SHEET-UNIWA.pd",
+      "pais": "GR"
+    },
+    {
+      "universidad": "Politecnico di Bari",
+      "ciudad": "Bari",
+      "codigo_erasmus": "I  BARI05",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "ITALIANO B1",
+      "observaciones": "",
+      "pais": "IT"
+    },
+    {
+      "universidad": "Università degli Studi di Cagliari",
+      "ciudad": "Cagliari",
+      "codigo_erasmus": "I  CAGLIAR01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "",
+      "pais": "IT"
+    },
+    {
+      "universidad": "Università degli Studi di Firenze",
+      "ciudad": "Florencia",
+      "codigo_erasmus": "I  FIRENZE01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "ITALIANO B1 o INGLÉS B2",
+      "observaciones": "La defensa del TFG se realizará en la ETSIT respetando su normativa y proceso de matriculación.",
+      "pais": "IT"
+    },
+    {
+      "universidad": "Politecnico di Milano",
+      "ciudad": "Milán",
+      "codigo_erasmus": "I  MILANO02",
+      "plazas": "8",
+      "programa": "ER",
+      "cert": "ITALIANO B1 o INGLÉS B2 / DT INGLÉS TOEFL IBT 78 - TOEIC 720 - IELTS 6.0 - Cambridge FCE/ACE/PCE - Trinity College ISE II",
+      "observaciones": "INGLÉS para asignaturas de Master / Para DT típicamente 120 ECTS, pero permiten reconocer hasta 30 ECTS. Para DT con Master of Computer Science se requiere nota media de 24/30 (sistema de calificación italiano) = 7,5 UPM / Para el TFM/TFG, no hay calificación oficial en el transcript of records, se debe pedir al Profesor  Supervisor que constituye un tribunal y se pide una evaluación final",
+      "pais": "IT"
+    },
+    {
+      "universidad": "Universitá degli Studi di Napoli Federico II",
+      "ciudad": "Napoles",
+      "codigo_erasmus": "I  NAPOLI01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "ITALIANO B1 o INGLÉS B2",
+      "observaciones": "Posibilidad de hacer TFG en inglés.",
+      "pais": "IT"
+    },
+    {
+      "universidad": "Universitá degli Studi di Napoli \"Parthenope\"",
+      "ciudad": "Napoles",
+      "codigo_erasmus": "I  NAPOLI03",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "ITALIANO A2 o INGLÉS B2",
+      "observaciones": "www.ingegnieria.uniparthenope.it/didattica",
+      "pais": "IT"
+    },
+    {
+      "universidad": "Università La Sapienza",
+      "ciudad": "Roma",
+      "codigo_erasmus": "I  ROMA01",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "ITALIANO B1 o INGLÉS B2 (aceptan TOEIC con 2 competencias)",
+      "observaciones": "La defensa del TFG se realizará en la ETSIT respetando su normativa y proceso de matriculación. www.facebook.com/SapienzaExchangeStudents",
+      "pais": "IT"
+    },
+    {
+      "universidad": "Università degli Studi di Roma 'Tor Vergata'",
+      "ciudad": "Roma",
+      "codigo_erasmus": "I  ROMA02",
+      "plazas": "º",
+      "programa": "ER",
+      "cert": "ITALIANO B1 o INGLÉS B2",
+      "observaciones": "",
+      "pais": "IT"
+    },
+    {
+      "universidad": "Università degli Studi di Padova",
+      "ciudad": "Padova",
+      "codigo_erasmus": "I  PADOVA01",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "ITALIANO A2 o INGLÉS B1 (certificate from Lingüistic Department at ETSIT is accepted) / for DT INGLÉS B2 (certificate from Lingüistic Department at ETSIT is accepted)",
+      "observaciones": "2 alumnos para 914 - Biomedical Engineering y 2 alumnos para 714 - Electrical Engineering / Para alumnos de DT: 42 credits must be from technical subjects (subjects that are in the official study plan), the rest of credits (18 ECTS) may be chosen from other dpt of Padova University (may be language courses or internships) / 30 credits must be from \"characterizing\" (\"caratterizzanti\" in Italian) subjects. Those are the courses with one of the following label:\n - signal processing\n - telecommunications\n - electromagnetism\n - networks\nfinal project of track 005PD (international mobility) that is worth 30 credits (the standard final thesis of 18 ECTS credits is for Italian\nstudents that do not go abroad)",
+      "pais": "IT"
+    },
+    {
+      "universidad": "University of Rome Campus Bio-Medico – UCBM",
+      "ciudad": "Roma",
+      "codigo_erasmus": "I  ROMA14",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "ITALIANO B1 o INGLÉS B2",
+      "observaciones": "",
+      "pais": "IT"
+    },
+    {
+      "universidad": "Universitá degli Studi di Pavia",
+      "ciudad": "Pavia",
+      "codigo_erasmus": "I  PAVIA01",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "ITALIANO B1 o INGLÉS B2",
+      "observaciones": "asignaturas de Máster en inglés",
+      "pais": "IT"
+    },
+    {
+      "universidad": "Università degli studi Roma Tre",
+      "ciudad": "Roma",
+      "codigo_erasmus": "I  ROMA16",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "ITALIANO B1 o INGLÉS B2",
+      "observaciones": "",
+      "pais": "IT"
+    },
+    {
+      "universidad": "Politecnico di Torino",
+      "ciudad": "Turín",
+      "codigo_erasmus": "I  TORINO02",
+      "plazas": "8",
+      "programa": "ER",
+      "cert": "ITALIANO B2 o INGLÉS B2: IELTS 5.5 o TOEFL 72 IbT o TOEIC Listening: 400 Reading: 385\nSpeaking: 160 Writing: 150 o Cambridge ESOL examinations o PEARSON 59 / A declaration from the Home University is requested during the nomination process\n (certificate of the linguistic department is accepted) \nDOUBLE/JOINT DEGREE STUDENTS\n• DEGREE PROGRAMME (Bachelor/Master of Science) offered in Italian or partially in Italian/English: IELTS 5.5 or higher + PLIDA B1 or higher (All the language requirements are satisfied at the admission\n• DEGREE PROGRAMME (Bachelor/Master of Science) offered in English: IELTS 5.5 or higher (PLIDA A2 or passing Italian language level A2 at Polito)\nEXCHANGE STUDENTS (mobility for courses/courses and final project/final project/Research)\nLanguage of teaching of the courses/activities included in the proposal of Learning Agreement: ITALIAN (B2 level) / ENGLISH (B2 level) / ENGLISH AND ITALIAN (English-B2 level, Italian-B2 level)",
+      "observaciones": "DT para el Máster in Communications and computer networks engineering. Para DT - 90 ECTS. El segundo año de DT, los alumnos están exentos de tasas de matricula pero deben pagar tasas requeridas por el Gobierno italiano / No se puede cursar asignaturas del 1er año de grado / Mínimo 20 créditos ECTS por semestre/ 3 alumnos para la DT / 4 alumnos en el área Biomedical Engineering y 4 alumnos en el área Electronic Engineering o computer science /  Para el TFM/TFG, no hay calificación oficial en el transcript of records, se debe pedir al Profesor Supervisor que constituya un tribunal y se pide una evaluación final / define a proposal of Learning Agreement including at least 18 creditsECTS per semester from the Degree Course for which you have been nominated (el resto de ECTS pueden ser elegidos en otras titulaciones)",
+      "pais": "IT"
+    },
+    {
+      "universidad": "Università degli Studi di Trento",
+      "ciudad": "Trento",
+      "codigo_erasmus": "I  TRENTO01",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "ITALIANO A2 (para asignaturas en italiano) o INGLÉS B1 (B2 para algunos grados; para asignaturas en inglés)",
+      "observaciones": "Algunas clases pueden pedir requisitos adicionales de idiomas:http://international.unitn.it/incoming/languagerequirements / Oferta académica en inglés: http://international.unitn.it/incoming/dss-academic-offer",
+      "pais": "IT"
+    },
+    {
+      "universidad": "Univ. of Limerick",
+      "ciudad": "Limerick",
+      "codigo_erasmus": "IRL LIMERIC01",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "",
+      "pais": "IE"
+    },
+    {
+      "universidad": "Ss. Cyril and Methodius University in Skopje",
+      "ciudad": "Skopje",
+      "codigo_erasmus": "MK SKOPJE01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "",
+      "pais": "MK"
+    },
+    {
+      "universidad": "UiT Norges Arctic university of Norway",
+      "ciudad": "Narvik",
+      "codigo_erasmus": "N  TROMSO01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B1 (IELTS or TOEFL preferIble)",
+      "observaciones": "",
+      "pais": "NO"
+    },
+    {
+      "universidad": "Norwegian University of Science and Technology NTNU",
+      "ciudad": "Trondheim",
+      "codigo_erasmus": "N  TRONDHE01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "Disponible solo asignaturas de Master en inglés",
+      "pais": "NO"
+    },
+    {
+      "universidad": "Technische Universiteit Eindhoven",
+      "ciudad": "Eindhoven",
+      "codigo_erasmus": "NL EINDHOV17",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "INGLÉS C1/C2 TOEFL (Test of English as a Foreign Language)\nOverall band score of at least 90 AND a minimum score of 21 for each section\nWe only accept the TOEFL internet-based test (iBT)\nWe only accept all scores from 1 test date; we do not accept MyBest Scores\nFor admission to the academic year 2023 - 2024 we do not accept the TOEFL iBT Special Home Edition test\nIELTS (academic version)\nOverall band score of at least 6.5 and a minimum of 6.0 for each section\nWe do not accept the IELTS online test\nWe only accept all scores from 1 test date; we do not accept IELTS One Skill Retake\nCambridge certificates\nProof that you have passed the C2 proficiency (formally known as Certificate of Proficiency in English CPE), with overall score 180 and a minimum of 169 in each section), or the C1 Advanced Certificate (formally known as the Certificate in Advanced English CAE) with overall score 176 and a minimum of 169 in each section\n\nThe language test results may not be older than 2 years.\nhttps://www.tue.nl/en/education/become-a-tue-student/admission-and-enrollment/language-proficiency-requirements",
+      "observaciones": "2*6 en 914 y 2*6 en 714 Posibilidad de 1 alumno * 12 meses \nlink para buscar supervisores para TFT: https://www.tue.nl/en/university/departments/electrical-engineering/research/ \nPara el área 714 (electrical engineering): el 50% de las asignaturas deben cursarse en Electrical Enginnering",
+      "pais": "NL"
+    },
+    {
+      "universidad": "Instituto Politécnico de Bragança",
+      "ciudad": "Bragança",
+      "codigo_erasmus": "P  BRAGANC01",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "PORTUGUÉS B1 o INGLÉS B1",
+      "observaciones": "",
+      "pais": "PT"
+    },
+    {
+      "universidad": "Universidade da Beira Interior",
+      "ciudad": "Covilhas",
+      "codigo_erasmus": "P  COVILHA01",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "PORTUGUÉS B1 o INGLÉS B1",
+      "observaciones": "",
+      "pais": "PT"
+    },
+    {
+      "universidad": "Polytechnic Institute of Leiria",
+      "ciudad": "Leiria",
+      "codigo_erasmus": "P  LEIRIA01",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "PORTUGUÉS A2 o INGLÉS B1",
+      "observaciones": "",
+      "pais": "PT"
+    },
+    {
+      "universidad": "Universidade de Lisboa* - Técnico de Lisboa",
+      "ciudad": "Lisboa",
+      "codigo_erasmus": "P  LISBOA109",
+      "plazas": "7",
+      "programa": "ER/EIT HEALTH",
+      "cert": "PORTUGUÉS B2 o INGLÉS B2",
+      "observaciones": "PRIORIDAD ALUMNOS PROGRAMA EIT HEALTH 2 plazas en Electrical Engineering y Computer Science + 5 plazas en Biomedical Engineering",
+      "pais": "PT"
+    },
+    {
+      "universidad": "Universidade de Lisboa* - Faculty of Sciences",
+      "ciudad": "Lisboa",
+      "codigo_erasmus": "P  LISBOA109",
+      "plazas": "6",
+      "programa": "ER",
+      "cert": "PORTUGUÉS B2",
+      "observaciones": "2 plazas en Electrical Engineering + 2 plazas en Biomedical Engineering +  2 plazas en Earth Science",
+      "pais": "PT"
+    },
+    {
+      "universidad": "University of Science and Technology - AGH",
+      "ciudad": "Cracovia",
+      "codigo_erasmus": "PL KRAKOW02",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2 (certificado del departamento de lingüística aceptado)",
+      "observaciones": "",
+      "pais": "PL"
+    },
+    {
+      "universidad": "Cracow University of Technology- Politechnika Krakowska",
+      "ciudad": "Cracovia",
+      "codigo_erasmus": "PL KRAKOW03",
+      "plazas": "3",
+      "programa": "ER",
+      "cert": "INGLÉS B1 (vale el TOEIC con 2 competencias)",
+      "observaciones": "oferta de asignaturas: https://erasmus.pk.edu.pl/incoming-students/studies-at-cut-faculties-and-subjects/ \nFaculty of Electrical and Computer Engineering: dr inż. Damian Grela (dgrela@pk.edu.pl)",
+      "pais": "PL"
+    },
+    {
+      "universidad": "Technical University of Lodz",
+      "ciudad": "Lodz",
+      "codigo_erasmus": "PL LODZ02",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "",
+      "pais": "PL"
+    },
+    {
+      "universidad": "Poznan University of Technology",
+      "ciudad": "Poznan",
+      "codigo_erasmus": "PL POZNAN02",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "INGLÉS B2 (certificate from the Language Department is valid)",
+      "observaciones": "2 alumnos en el área de teleco (2*12) y 2 alumnos en el área de bio (2*12) Se puede desdoblar el número de meses (8*5)",
+      "pais": "PL"
+    },
+    {
+      "universidad": "Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto - ISEP",
+      "ciudad": "Porto",
+      "codigo_erasmus": "P  PORTO05",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "PORTUGUÉS B1",
+      "observaciones": "",
+      "pais": "PT"
+    },
+    {
+      "universidad": "Rzeszów University of Technology",
+      "ciudad": "Rzeszów",
+      "codigo_erasmus": "PL RZESZOW01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "",
+      "pais": "PL"
+    },
+    {
+      "universidad": "West Pomeranian University of Technology",
+      "ciudad": "Szczecin",
+      "codigo_erasmus": "PL SZCZECI02",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "",
+      "pais": "PL"
+    },
+    {
+      "universidad": "Warsaw University of Technology",
+      "ciudad": "Varsovia",
+      "codigo_erasmus": "PL WARSZAW02",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "2 alumnos en Information and Communication // 2 alumnos Electronics and automation. Si se incluye el TFT la universidad pide  tener un tutor en destino antes de iniciar la movilidad",
+      "pais": "PL"
+    },
+    {
+      "universidad": "Politechnika Wroclawska / Wroclaw University of Technology",
+      "ciudad": "Wroclaw",
+      "codigo_erasmus": "PL WROCLAW02",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "",
+      "pais": "PL"
+    },
+    {
+      "universidad": "Universitatea \"Lucian Blaga\" Sibiu",
+      "ciudad": "Sibiu",
+      "codigo_erasmus": "RO SIBIU01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "",
+      "pais": "RO"
+    },
+    {
+      "universidad": "University of Belgrade - School of Electrical Engineering",
+      "ciudad": "Belgrado",
+      "codigo_erasmus": "RS BELGRAD02",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2 (certificate from the Language Department is valid)",
+      "observaciones": "",
+      "pais": "RS"
+    },
+    {
+      "universidad": "Jönköping University",
+      "ciudad": "Jönköping",
+      "codigo_erasmus": "S  JONKOPI01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2 (TOEFL 575 (at least 4,5 in written test) / /90 (at least 20 in written test). IELTS 6.5 (and no section below 5.5)",
+      "observaciones": "",
+      "pais": "SE"
+    },
+    {
+      "universidad": "Blekinge Institute of Technology",
+      "ciudad": "Karlskrona",
+      "codigo_erasmus": "S  KARLSKR01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "Read more about cost of living at www.studyinsweden.se / Como cualquier destino en Suecia, es muy importante buscar alojamiento con suficiente antelación. En este destino es especialmente complicado, ya que al ser una ciudad pequeña la universidad no ayuda en la búsqueda de piso, ni tampoco existen residencias de estudiantes al uso.",
+      "pais": "SE"
+    },
+    {
+      "universidad": "Linköping University - Faculty of Science and Engineering",
+      "ciudad": "Linköping",
+      "codigo_erasmus": "S  LINKOPI01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "Buscar tutor para TFG si no se va a hacer asignaturas. https://liu.se/en/education/exchange-studies https://sway.com/k2fFXu3fSTJw918r?ref=Link Read more about cost of living at www.studyinsweden.se / GIB: https://liu.se/en/education/program/6mbme",
+      "pais": "SE"
+    },
+    {
+      "universidad": "Academia Tehnica Militara din Bucaresti - MTA",
+      "ciudad": "Bucarest",
+      "codigo_erasmus": "RO BUCURES02",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "",
+      "pais": "RO"
+    },
+    {
+      "universidad": "Luleå University of Technology",
+      "ciudad": "Luleå",
+      "codigo_erasmus": "S  LULEA01",
+      "plazas": "4",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "2 alumnos para eñ área electrical engineering + 2 alumnos en el área computer science\nSe requiere cursar en destino 30 ECTS / semestre",
+      "pais": "SE"
+    },
+    {
+      "universidad": "National University of Science and Technology POLITEHNICA Bucharest",
+      "ciudad": "Bucarest",
+      "codigo_erasmus": "RO BUCURES43",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B1",
+      "observaciones": "forma parte de EELISA",
+      "pais": "RO"
+    },
+    {
+      "universidad": "Lund Institute of Technology",
+      "ciudad": "Lund",
+      "codigo_erasmus": "S  LUND01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "list of courses available: https://www.lth.se/english/study-at-lth/exchange-studies/find-exchange-courses/courses-in-engineering/ \nStudents are not allowed to change courses unless there are problems in terms of course clashes or any other justifiable reason / El alumno debe matricular 30 créditos por semestre",
+      "pais": "SE"
+    },
+    {
+      "universidad": "KTH - School of Electrical Engineering EES",
+      "ciudad": "Estocolmo",
+      "codigo_erasmus": "S  STOCKHO04",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "El alumno debe matricular un máximo 30 créditos por semestre  / We have created a page focusing on double degrees and describing the studies, requirements and specializations.\nHere the link that will be useful to prospective double degree students at our school:\nhttps://www.kth.se/social/group/double-degree-stud-2/page/master-specializations-with-electrical-e/\n\nPara DT 90 ECTS típicamente. Read more about cost of living at www.studyinsweden.se",
+      "pais": "SE"
+    },
+    {
+      "universidad": "Mälardalen University",
+      "ciudad": "Västerås",
+      "codigo_erasmus": "S  VASTERA01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "Read more about cost of living at www.studyinsweden.se",
+      "pais": "SE"
+    },
+    {
+      "universidad": "Aalto University - School of Electrical Engineering",
+      "ciudad": "Helsinki",
+      "codigo_erasmus": "SF ESPOO12",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "INGLÉS B2 (también válido el certificado en inglés del departamento de lingüística de la ETSIT)",
+      "observaciones": "2/3 de las asignatutras deben ser del dpto. Electrical engineering. 1/3 puede ser de otros dpto de Aalto University (Schools of Technology)",
+      "pais": "FI"
+    },
+    {
+      "universidad": "South-Eastern Finland University of Applied Sciences XAMK",
+      "ciudad": "Mikkeli",
+      "codigo_erasmus": "SF MIKKELI07",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "https://into.aalto.fi/display/enmasterelec/How+to+apply",
+      "pais": "FI"
+    },
+    {
+      "universidad": "University of Oulu",
+      "ciudad": "Oulu",
+      "codigo_erasmus": "SF OULU01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "Enviar tema de TFG con mucha antelación.",
+      "pais": "FI"
+    },
+    {
+      "universidad": "Tampere University",
+      "ciudad": "Tampere",
+      "codigo_erasmus": "SF TAMPERE17",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2 (certificado de l departamentode lingüística válido) o a score report from one of the following language tests:\nTOEFL: Minimum score of 92/iBT (including Home Edition), with no section below 20\nIELTS: Minimum score of 6.5, with no individual score below 5.5 (including IELTS Online)\nDuolingo: Minimum score of 115\nCopies of other test scores may be accepted. We will contact you during the review process if any certificate or test score cannot be considered. Please note that test results are valid for only two years.",
+      "observaciones": "alumnado de bio cogen asignaturas de biotechnology en el departamento de electronics and automation. Están nominados en ese departamento, no hay IIA con biomedical engineering",
+      "pais": "FI"
+    },
+    {
+      "universidad": "University of Ljubljana",
+      "ciudad": "Ljubljana",
+      "codigo_erasmus": "SI LJUBLJA01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2 (A Language Certificate that references the CEFR scale.\nA TOEFL score of 79 (IBT) or an IELTS score of 6 for English.\nResults from the OLS (Online Language Support) platform.\nAny other official language certificate)",
+      "observaciones": "OJO: cada año se modifican las asignaturas que pueden cursar los alumnos de prog. de intercambio y no se garantiza el reconocimiento de créditos en la ETSIT con la modificación del PF / Para cursar asignaturas de Máster, el alumno debe haber superado al menos 180ECTS / los alumnos de GIB deben coger asignaturas de la facultad de electrical engineering:\nhttps://fe.uni-lj.si/wp-content/uploads/2024/04/Shema-predmetov-winter-semester.pdf\nhttps://fe.uni-lj.si/wp-content/uploads/2024/04/Shema-predmetov-summer-semester.pdf",
+      "pais": "SI"
+    },
+    {
+      "universidad": "ITÜ İstanbul Teknik Üniversitesi",
+      "ciudad": "Istambul",
+      "codigo_erasmus": "TR ISTANBU04",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B1",
+      "observaciones": "forma parte de EELISA",
+      "pais": "TR"
+    },
+    {
+      "universidad": "Marmara Üniversitesi",
+      "ciudad": "Istambul",
+      "codigo_erasmus": "TR ISTANBU05",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "",
+      "pais": "TR"
+    },
+    {
+      "universidad": "Yildiz Technical University",
+      "ciudad": "Istambul",
+      "codigo_erasmus": "TR ISTANBU07",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "acuerdo firmado con el departamento de biotecnología. Hace falta coger al menos una asignatura de este departamento para luego poder coger asignaturas del departamento de bioingeniería",
+      "pais": "TR"
+    },
+    {
+      "universidad": "Özyegin Üniversitesi",
+      "ciudad": "Istambul",
+      "codigo_erasmus": "TR ISTANBU31",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2 (No official test score is required from exchange students nominated by our partner universities. However, we expect to receive a formal letter from the institution (language dpt. attesting to the language level if the medium of instruction is not English)",
+      "observaciones": "course list: https://www.ozyegin.edu.tr/en/ects-course-catalog-courses-offered/courses-offered?utm_source=footer",
+      "pais": "TR"
+    },
+    {
+      "universidad": "Namik Kemal University",
+      "ciudad": "Tekirdag",
+      "codigo_erasmus": "TR TEKIRDAG01",
+      "plazas": "1",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "",
+      "pais": "TR"
+    },
+    {
+      "universidad": "Cranfield University",
+      "ciudad": "Cranfield",
+      "codigo_erasmus": "UK CRANFIE01",
+      "plazas": "3",
+      "programa": "AB/ER",
+      "cert": "INGLÉS B2 (TOEFL 92 iBT - TOEIC 800 - IELTS 6.5 - CAE) ver presentación en la web",
+      "observaciones": "Double degree programme: Se paga la matrícula completa que incluye un descuento del 50% (aprox. 14000£) excepto para los MBA. El curso académico dura entre 11 y 13 meses. Tuition fees: https://www.cranfield.ac.uk/study/taught-degrees/fees-and-funding / course list: https://www.cranfield.ac.uk/courses/taught/a-to-z\nPosibilidad de realizar un proyecto de investigación  \nPara visa: aplicar con la carta de aceptación (aprox. 370£)\nPara programa erasmus, se paga el crédito pero posibilidad de tener un descuento de 50€ (overseas fees)",
+      "pais": "UK"
+    },
+    {
+      "universidad": "Queen Mary University of London",
+      "ciudad": "Londres",
+      "codigo_erasmus": "UK LONDON031",
+      "plazas": "1",
+      "programa": "AB",
+      "cert": "INGLÉS B2-C1",
+      "observaciones": "La duración mínima del Proyecto son 9 meses / no se puede cursar asignaturas pero sí idiomas",
+      "pais": "UK"
+    },
+    {
+      "universidad": "UNIVERSIDADE DE BRASILIA",
+      "ciudad": "Brasilia",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "AB",
+      "cert": "PORTUGUES B1 o INGLÉS B2",
+      "observaciones": "CURSO DE GRADUAÇÃO EM ENGENHARIA DE REDES DE COMUNICAÇÂO FACULDADE DE TECNOLOGIA/UnB (FT/UnB) / primer semestre: febrero a junio; segundo semestre: agosto a diciembre",
+      "pais": "BR"
+    },
+    {
+      "universidad": "UNIVERSIDADE DE PASSO FUNDO (UPF)",
+      "ciudad": "Bairro São José",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "AB",
+      "cert": "PORTUGUES B1",
+      "observaciones": "Puede desdoblarse el número de plazas (2 plazas x 5 meses cada una) / primer semestre: febrero a junio; segundo semestre: agosto a diciembre",
+      "pais": "BR"
+    },
+    {
+      "universidad": "École Polytechnique Montreal",
+      "ciudad": "Montréal",
+      "codigo_erasmus": "",
+      "plazas": "3",
+      "programa": "AB",
+      "cert": "FRANCÉS C1",
+      "observaciones": "La selección se hace desde el Rectorado = todos los alumnos UPM compiten por la plaza",
+      "pais": "CA"
+    },
+    {
+      "universidad": "Universidade de Sao Paulo USP",
+      "ciudad": "Sao Paulo",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "MS",
+      "cert": "INGLÉS B2",
+      "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una) / primer semestre: febrero a junio; segundo semestre: agosto a diciembre",
+      "pais": "BR"
+    },
+    {
+      "universidad": "Georgia Tech",
+      "ciudad": "Metz y Atlanta",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "DEADLINE: 1 de diciembre TOEFL 90 (ECE) (min 19 for each section) or IELTS 7 (min 6.5 for reading and listening and min 5.5 for writing) or TOEIC 850\nGRE (only for CS): verbal 150 / quantitative 155 / analytical writing 3",
+      "observaciones": "http://www.gatech.edu / http://www.gt-lorraine.eu Master of Science degree in Electrical & Computer Engineering (30 SCH)\nEl master consiste en pasar 1 semestre (fall semester) en Metz, Francia y un curso completo en Atlanta, EEUU (spring y siguiente fall semester)\nGPA 3.5 / coste: $40K + financial aid",
+      "pais": "FR"
+    },
+    {
+      "universidad": "Georgia Tech",
+      "ciudad": "Metz y Atlanta",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "DEADLINE: 1 de diciembre TOEFL 90 (ECE) (min 19 for each section) or IELTS 7 (min 6.5 for reading and listening and min 5.5 for writing) or TOEIC 850\nGRE (only for CS): verbal 150 / quantitative 155 / analytical writing 3",
+      "observaciones": "http://www.gatech.edu / http://www.gt-lorraine.eu Master of Science degree in Electrical & Computer Engineering (30 SCH)\nEl master consiste en pasar 1 semestre (fall semester) en Metz, Francia y un curso completo en Atlanta, EEUU (spring y siguiente fall semester)\nGPA 3.5 / coste: $40K + financial aid",
+      "pais": "US"
+    },
+    {
+      "universidad": "Universidade Estadual de Campinas UNICAMP",
+      "ciudad": "Campinas",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "MS",
+      "cert": "INGLÉS B2",
+      "observaciones": "Puede desdoblarse el número de plazas (2 plazas x 5 meses cada una) / primer semestre: febrero a junio; segundo semestre: agosto a diciembre",
+      "pais": "BR"
+    },
+    {
+      "universidad": "Doshisha Universíty - Graduate School of  Science and Engineering",
+      "ciudad": "Kyoto",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "INGLÉS B2 (TOEFL 79; IELTS 6,0)",
+      "observaciones": "1 plaza para un curso completo / 1 plaza para DT /competitivo con otras Escuelas UPM. Nota mínima expediente: 7.0 \nSe oferta la posibilidad de realizar un proyecto de investigación como parte del TFM (el TFM se evaluará y defenderá en la ETSIT) Para DT: Course catalogue: http://istc.doshisha.ac.jp/en/course/course.html http://istc.doshisha.ac.jp/en/faq/faq.html / Para alumnos interesados en realizar una DT, ponerse en contacto con la oficina internacional (2 años) / Se puede solicitar la beca de Asia modalidad B 3000€",
+      "pais": "JP"
+    },
+    {
+      "universidad": "Technology Keio University",
+      "ciudad": "Tokyo",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "AB",
+      "cert": "INGLÉS B2",
+      "observaciones": "Para doble título: 2 plazas competitivo con otras escuelas UPM / Para alumnos interesados en realizar una DT, ponerse en contacto con la oficina internacional (2 years) / Se requiere una nota media de 7/10 / Se puede solicitar la beca de Asia modalidad B 3000€",
+      "pais": "JP"
+    },
+    {
+      "universidad": "Instituto Tecnológico de Buenos Aires - ITBA",
+      "ciudad": "Buenos Aires",
+      "codigo_erasmus": "",
+      "plazas": "3",
+      "programa": "MS",
+      "cert": "",
+      "observaciones": "Pueden juntarse las plazas (1 alumno x 10 meses + 1 semestre)",
+      "pais": "AR"
+    },
+    {
+      "universidad": "University of California - Berkeley",
+      "ciudad": "Berkeley",
+      "codigo_erasmus": "",
+      "plazas": "5",
+      "programa": "AB",
+      "cert": "INGLÉS B2: TOEFL 106",
+      "observaciones": "no pedir EECS sino IEOR - ME- NE / no es para research / GPA: min 3.4 / coste $62K + finalcial aid",
+      "pais": "US"
+    },
+    {
+      "universidad": "George Mason University",
+      "ciudad": "State of Virginia",
+      "codigo_erasmus": "",
+      "plazas": "6",
+      "programa": "AB",
+      "cert": "INGLÉS B2 (TOEFL Undergraduate 80 (minimum required in each seccion: 18) / Graduate 80 (minimum required in each seccion: 20) or IELTS 6.5 (minimum required in each seccion: 6.0) or Duolinguo Undergraduate 110 / Graduate (DD program) 120. GRE is a requirement for the MS in Electrical Engineering program https://www.gmu.edu/admissions-aid/apply-now/how-apply/international/english-proficiency-requirements",
+      "observaciones": "Existen 2 acuerdos: \n- Exchange program para alumnos de grado y máster (en conjunto con la UPM) : 1 plaza de 1 curso académico o 2 plazas de un semestre. GPA: 2.5 \n- Doble titulación (1+1 program): 5 plazas para alumnos del MUIT. GPA: 3.0 El alumno deberá pagar un seguro (aprox para curso completo 3000$). Se requiere el GRE para subir a la aplicación de GMU (ver application deadline). NO SE RECOMIENDA APLICAR PARA COMPUTER SCIENCE. \nOJO, para la agencia de evaluación externa Spantran the Evaluation Company, no hay que enviar el ToR en percentiles sino el ToR en inglés con ultima situación. Se puede pedir evaluation interna para el GPA\nrequisitos para alumnos de DT: https://admissions.gmu.edu/grad/application-deadlines-and-requirements/?academicUnit=VS. \nSe puede reconocer de 6 a 12 credit hours (de 12 a 24 ECTS)=transfer credits: course by course evaluation (externa). \nLos alumnos (menos de 10) pueden recibir un descuento del 35% (on out of state tuition fees).\nPara los dos acuerdos, se puede pedir la beca USA/CANADÁ.",
+      "pais": "US"
+    },
+    {
+      "universidad": "Universidad Popular Autónoma del Estado de Puebla UPAEP",
+      "ciudad": "Puebla",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "",
+      "observaciones": "",
+      "pais": "MX"
+    },
+    {
+      "universidad": "Universidad Anáhuac",
+      "ciudad": "México",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "AB",
+      "cert": "",
+      "observaciones": "",
+      "pais": "MX"
+    },
+    {
+      "universidad": "Illinois Tech",
+      "ciudad": "Chicago",
+      "codigo_erasmus": "",
+      "plazas": "15",
+      "programa": "AB",
+      "cert": "2 AÑOS DE VALIDEZ\n- TOEFL IBT 80 (20 en cada sección) - No se acepta TOEFL MyBest Scores - Score tests must be sent to IIT  Institution code 1318 - Choose Department not listed when completing the TOEFL official score request form :  Level - Graduate:  Campus - leave blank  \n- IELTS 6.5 (6.0 en cada sección) - No se acepta online IELTS - choose the electronic upload delivery system \n- Duolinguo English Test 115 (115 en cada sección)\n- GRE; A: entre 2.5 - 3.5 NEW: if you choose any 1-year Master's offered by the departments under the Armour College of Engineering and the School of Applied Technology, you will NOT be required to submit a GRE general score. If choosing College of Science, then you will be required to pass the GRE general exam. Institution code is 1318",
+      "observaciones": "Ver Presentación del IIT y https://admissions.iit.edu/graduate/apply/apply-masters-program\nDT mínimum 12 meses. Double Degree: 24 Credit hour mínimum requiered (included Research project = TFM) Se requiere un GPA de 3.0; nota mínima en la ETSIT 6.5;  no más de 10 asignaturas suspensas en toda la carrera \nIf interested in any of the Master's degree programs offered by the Department of Computer Science, and if you have some background in Computer Science, it is very important that you successfully pass - 6.5 out of 10,  the following course equivalents ( Master's level) at UPM :\nCS 430 - Introduction to Algorithms\nhttps://bulletin.iit.edu/undergraduate/courses/cs/\nCS 450 - Operating Systems\nhttps://bulletin.iit.edu/undergraduate/courses/cs/\nSo if  you have not yet taken these courses, you should register for those equivalent courses at UPM (if on offer) for the new semester starting in Feb at UPM\nIf on the other hand, you do not have any background in Computer Science, but are interested in one of the Master's degree programs offered by this department, you should also have successfully passed (6.5 out of 10) the following courses:\nCS 201 - Accelerated Introduction to Computer Science\nCS 401 - Introduction to Advanced Studies I\nCS 402 - Introduction to Advanced Studies II\nSe puede transfereir hasta 6 US credits (12 ECTS)\nDepartment of Computer Science: students must have successfully passed CS430 CS500 with a grade B (6.5)\nDepartment of Electrical and Compter Engineering: students must have successfully passed Probability and Statistics and Signals & Systems",
+      "pais": "US"
+    },
+    {
+      "universidad": "Universidad de Mendoza",
+      "ciudad": "Mendoza",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "",
+      "observaciones": "",
+      "pais": "AR"
+    },
+    {
+      "universidad": "Universidad Favaloro",
+      "ciudad": "Buenos Aires",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "",
+      "observaciones": "",
+      "pais": "AR"
+    },
+    {
+      "universidad": "Universidad Nacional de Tucumán",
+      "ciudad": "Tucumán",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "-",
+      "observaciones": "Áreas de estudios: Electrical Engineering / Biomedical Engineering / Computer Science",
+      "pais": "AR"
+    },
+    {
+      "universidad": "National Taiwan University - NTU",
+      "ciudad": "Taipei",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "INGLÉS B2 o CHINO B1",
+      "observaciones": "Las solicitudes para DT son prioritarias. Los alumnos deben cursar 18 créditos NTU (equivalente a 60ECTS) durante el primer año y realizar una master thesis de 6 meses de duración durante el segundo curso de la DT / Se puede solicitar la beca de Asia modalidad B 3000€",
+      "pais": "TW"
+    },
+    {
+      "universidad": "Universidade Estadual Paulista 'Júlio de Mesquita Filho' UNESP",
+      "ciudad": "Sao Paulo",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "MS",
+      "cert": "INGLÉS B2",
+      "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una) / primer semestre: febrero a junio; segundo semestre: agosto a diciembre",
+      "pais": "BR"
+    },
+    {
+      "universidad": "UNSW: The University of New South Wales",
+      "ciudad": "Sydney",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "AB",
+      "cert": "IELTS 6.5 o TOEFL 90 (iBT) o TOEFL 577 (PBT) o CPE (B grade) o CAE (A grade)",
+      "observaciones": "acuerdo bilateral no renovado. No conseguimos contatar con ellos.",
+      "pais": "AU"
+    },
+    {
+      "universidad": "Instituto Nacional de Telecomunicações INATEL",
+      "ciudad": "Santa Rita do Sapucaí",
+      "codigo_erasmus": "",
+      "plazas": "4",
+      "programa": "AB",
+      "cert": "PORTUGUES B1 o INGLÉS B2",
+      "observaciones": "Se pueden unir semestres y solicitar movilidad de un curso completo",
+      "pais": "BR"
+    },
+    {
+      "universidad": "Universidade Federal do Rio de Janeiro UFRJ",
+      "ciudad": "Rio de Janeiro",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "MS",
+      "cert": "INGLÉS B2",
+      "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una)",
+      "pais": "BR"
+    },
+    {
+      "universidad": "Pontificia Universidad Católica de Chile PUCC",
+      "ciudad": "Santiago de Chile",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "MS",
+      "cert": "",
+      "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una)",
+      "pais": "CL"
+    },
+    {
+      "universidad": "Pontifica Universidad Javeriana PUJ",
+      "ciudad": "Bogotá",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "MS",
+      "cert": "",
+      "observaciones": "Puede desdoblarse el número de plazas (2 plazas x 5 meses cada una)",
+      "pais": "CO"
+    },
+    {
+      "universidad": "Universidad de los Andes UNIAND",
+      "ciudad": "Bogotá",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "MS",
+      "cert": "",
+      "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una)",
+      "pais": "CO"
+    },
+    {
+      "universidad": "Instituto Politécnico Nacional IPN",
+      "ciudad": "México",
+      "codigo_erasmus": "",
+      "plazas": "3",
+      "programa": "MS",
+      "cert": "",
+      "observaciones": "Puede desdoblarse el número de plazas (6 plazas x 5 meses cada una)",
+      "pais": "MX"
+    },
+    {
+      "universidad": "Beijing Institute of Technology",
+      "ciudad": "Beijing",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "AB",
+      "cert": "INGLÉS B2",
+      "observaciones": "área de estudios: Telecom and Electronics /  La asignación se hace por parte del Rectorado / Se puede solicitar la beca de Asia modalidad B 3000€",
+      "pais": "CN"
+    },
+    {
+      "universidad": "Tongji University",
+      "ciudad": "Shanghai",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "INGLÉS B2",
+      "observaciones": "áreas de estudios: Software y Telecom and Electronics (1 plaza por área) / La asignación se hace por parte del Rectorado / beca 1.200€ (hay 10 becas para el primer semestre y 10 becas para el segundo semestre) / los alumnos chinos deberán tener un permiso de  residencia de mínimo 5 años en España",
+      "pais": "CN"
+    },
+    {
+      "universidad": "Tsinghua University",
+      "ciudad": "Beijing",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "AB",
+      "cert": "INGLÉS B2",
+      "observaciones": "área de studios: biomedical engineering y Telecom /  La asignación se hace por parte del Rectorado / Se puede solicitar la beca de Asia modalidad B 3000€",
+      "pais": "CN"
+    },
+    {
+      "universidad": "Zhejiang University",
+      "ciudad": "Hangzhou",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "AB",
+      "cert": "INGLÉS B2",
+      "observaciones": "área de estudios: Software / biomedical engineering / La asignación se hace por parte del Rectorado / Se puede solicitar la beca de Asia modalidad B 3000€ / Posibilidad de solicitar una beca del Gobierno Chino (CSC - China Scholarship Council )",
+      "pais": "CN"
+    },
+    {
+      "universidad": "Nanjing University of Posts and Telecommunications",
+      "ciudad": "Jiangsu",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "AB",
+      "cert": "INGLÉS B2",
+      "observaciones": "áreas de estudios: Telecom / Se puede solicitar la beca de Asia modalidad B 3000€",
+      "pais": "CN"
+    },
+    {
+      "universidad": "Beijing Jiatong University",
+      "ciudad": "Beijing",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "AB",
+      "cert": "INGLÉS B2",
+      "observaciones": "áreas de estudios: Telecom / Se puede solicitar la beca de Asia modalidad B 3000€",
+      "pais": "CN"
+    },
+    {
+      "universidad": "National Tsing Hua University",
+      "ciudad": "Hsinchu",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "AB",
+      "cert": "INGLÉS B2",
+      "observaciones": "áreas de estudios: Telecom / Se puede solicitar la beca de Asia modalidad B 3000€",
+      "pais": "CN"
+    },
+    {
+      "universidad": "Instituto Tecnológico y de Estudios Superiores de Monterrey ITESM",
+      "ciudad": "Monterrey",
+      "codigo_erasmus": "",
+      "plazas": "3",
+      "programa": "MS/AB",
+      "cert": "",
+      "observaciones": "Puede desdoblarse el número de plazas (6 plazas x 5 meses cada una). Los alumnos deben tener 180ECTS superados antes de la movilidad. 1 plaza para teleco, 1 plaza para datos 1 plaza para bio. Los alumnos de grado pueden solicitar la beca Magalhaes (MS); los alumnos de máster se nominan bajo un acuerdo bilateral (AB). Hay 2 plazas de un un semestre para máster o 1 plaza de un curso completo",
+      "pais": "MX"
+    },
+    {
+      "universidad": "Universidad EIA (Escuela de Ingenieria de Antioquia)",
+      "ciudad": "Medellín",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "",
+      "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una)",
+      "pais": "CO"
+    },
+    {
+      "universidad": "Universidad del Norte (UNINORTE)",
+      "ciudad": "Barranquilla",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "MS",
+      "cert": "",
+      "observaciones": "se pueden juntar semestres e ir un curso completo",
+      "pais": "CO"
+    },
+    {
+      "universidad": "Universidad Nacional Autónoma de México UNAM",
+      "ciudad": "México",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "MS",
+      "cert": "",
+      "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una)",
+      "pais": "MX"
+    },
+    {
+      "universidad": "Universidad de Alicante",
+      "ciudad": "Alicante",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "SICUE",
+      "cert": "",
+      "observaciones": "",
+      "pais": "ES"
+    },
+    {
+      "universidad": "Universidad de Extremadura (Campus de Cáceres)",
+      "ciudad": "Cáceres",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "SICUE",
+      "cert": "",
+      "observaciones": "",
+      "pais": "ES"
+    },
+    {
+      "universidad": "Universidad de Málaga",
+      "ciudad": "Málaga",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "SICUE",
+      "cert": "",
+      "observaciones": "",
+      "pais": "ES"
+    },
+    {
+      "universidad": "Universidad de Oviedo (EPI de Gijón)",
+      "ciudad": "Gijón",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "SICUE",
+      "cert": "",
+      "observaciones": "2 alumnos de 9 meses para GITST y 2 alumnos de 9 meses para GISD",
+      "pais": "ES"
+    },
+    {
+      "universidad": "Universidad de Sevilla",
+      "ciudad": "Sevilla",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "SICUE",
+      "cert": "",
+      "observaciones": "",
+      "pais": "ES"
+    },
+    {
+      "universidad": "Universidad de Valladolid",
+      "ciudad": "Valladolid",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "SICUE",
+      "cert": "",
+      "observaciones": "2 alumnos de 9 meses para GITST y 2 alumnos de 9 meses para GIB (acuerdo firmado con la Facultad de Medicina)",
+      "pais": "ES"
+    },
+    {
+      "universidad": "Universidad de Vigo",
+      "ciudad": "Vigo",
+      "codigo_erasmus": "",
+      "plazas": "3",
+      "programa": "SICUE",
+      "cert": "",
+      "observaciones": "",
+      "pais": "ES"
+    },
+    {
+      "universidad": "Universidad del Pais Vasco",
+      "ciudad": "Bilbao",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "SICUE",
+      "cert": "",
+      "observaciones": "",
+      "pais": "ES"
+    },
+    {
+      "universidad": "Universidad de Gerona",
+      "ciudad": "Gerona",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "SICUE",
+      "cert": "",
+      "observaciones": "Campus de Montilivi",
+      "pais": "ES"
+    },
+    {
+      "universidad": "Toyohashi University of Technology",
+      "ciudad": "Toyohashi",
+      "codigo_erasmus": "",
+      "plazas": "5",
+      "programa": "AB",
+      "cert": "INGLÉS B2",
+      "observaciones": "Fuerte relación con ISOM - GIS program (Global Green Innovators Department Program) hasta marzo 2029 beca para estudiantes de Europa: 80000yen/month = 482€/mes\nhttps://drive.google.com/drive/folders/1ZbM2o8Lp1VvXx20ReUESaCFDG7NRQY7k",
+      "pais": "JP"
+    },
+    {
+      "universidad": "Universidad de Colima",
+      "ciudad": "Colima",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "",
+      "observaciones": "",
+      "pais": "MX"
+    },
+    {
+      "universidad": "Universidad de Colima",
+      "ciudad": "Colima",
+      "codigo_erasmus": "",
+      "plazas": "3",
+      "programa": "AB",
+      "cert": "",
+      "observaciones": "",
+      "pais": "MX"
+    },
+    {
+      "universidad": "Universidad Tecnológica de Panamá UTP",
+      "ciudad": "El Dorado",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "MS",
+      "cert": "",
+      "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una)",
+      "pais": "PA"
+    },
+    {
+      "universidad": "Universiti Sains Malaysia",
+      "ciudad": "Penang",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "INGLÉS B2",
+      "observaciones": "área de studios: Software. La asignación se hace por parte del Rectorado / Se puede solicitar la beca de Asia modalidad B 3000€",
+      "pais": "MY"
+    },
+    {
+      "universidad": "Pontificia Universidad Católica del Perú PUCP",
+      "ciudad": "Lima",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "MS",
+      "cert": "",
+      "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una)",
+      "pais": "PE"
+    },
+    {
+      "universidad": "Universidad Católica de Salta - UCASAL",
+      "ciudad": "Salta",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "AB",
+      "cert": "",
+      "observaciones": "el estudiante podrá participar en el programa tras haber cursado al menos tres (3) años completos o 180 ECTS de estudios universitarios",
+      "pais": "AR"
+    },
+    {
+      "universidad": "Instituto Mauá de Tecnología",
+      "ciudad": "São Caetano do Sul/São Paulo",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "PORTUGUES B1",
+      "observaciones": "Puede desdoblarse el número de plazas (4 plazas x 5 meses cada una) / https://www.maua.br/en / primer semestre: febrero a junio; segundo semestre: agosto a diciembre",
+      "pais": "BR"
+    },
+    {
+      "universidad": "Universidad Tecnológica de Pereira UTP",
+      "ciudad": "Pereira",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "AB",
+      "cert": "",
+      "observaciones": "",
+      "pais": "CO"
+    },
+    {
+      "universidad": "Universidad Politécnica de Cataluña UPC",
+      "ciudad": "Barcelona",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "SICUE",
+      "cert": "",
+      "observaciones": "2 plazas para GIB - 1 plaza por para GISD (facultad de informática - Grado en Ciencia e Ingeniería de Datos)",
+      "pais": "ES"
+    },
+    {
+      "universidad": "Universidad Pomeu Fabra",
+      "ciudad": "Barcelona",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "SICUE",
+      "cert": "",
+      "observaciones": "",
+      "pais": "ES"
+    },
+    {
+      "universidad": "Universidad Católica San Antonio de\nMurcia",
+      "ciudad": "Murcia",
+      "codigo_erasmus": "",
+      "plazas": "1",
+      "programa": "SICUE",
+      "cert": "",
+      "observaciones": "",
+      "pais": "ES"
+    },
+    {
+      "universidad": "Universidad Politécnica de Valencia UPV",
+      "ciudad": "Valencia",
+      "codigo_erasmus": "",
+      "plazas": "5",
+      "programa": "SICUE",
+      "cert": "",
+      "observaciones": "",
+      "pais": "ES"
+    },
+    {
+      "universidad": "INSA Centre Val de Loire",
+      "ciudad": "Blois",
+      "codigo_erasmus": "F  BLOIS13",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "FRANCÉS B1",
+      "observaciones": "Se puede desdoblar el número de plazas (4 estudiantes por 1 semestre)",
+      "pais": "FR"
+    },
+    {
+      "universidad": "University of Zagreb - Faculty of Electrical Engineering and Computing",
+      "ciudad": "Zagreb",
+      "codigo_erasmus": "HR ZAGREB 01",
+      "plazas": "",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "",
+      "pais": "HR"
+    },
+    {
+      "universidad": "Budapest University of Technology and Economics",
+      "ciudad": "Budapest",
+      "codigo_erasmus": "HU BUDAPES02",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "INGLÉS B2",
+      "observaciones": "forma parte de EELISA",
+      "pais": "HU"
+    },
+    {
+      "universidad": "Universidad Autónoma de Nuevo León - UANL",
+      "ciudad": "Nuevo León",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "",
+      "observaciones": "",
+      "pais": "MX"
+    },
+    {
+      "universidad": "Universidad Politécnica de Puerto Rico PUPR",
+      "ciudad": "San Juan",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "",
+      "observaciones": "",
+      "pais": "PR"
+    },
+    {
+      "universidad": "Universidade de Coimbra",
+      "ciudad": "Coimbra",
+      "codigo_erasmus": "P  COIMBRA01",
+      "plazas": "2",
+      "programa": "ER",
+      "cert": "PORTUGUÉS B1 o INGLÉS B2",
+      "observaciones": "bachelor’s classes are taught in Portuguese and master’s in English",
+      "pais": "PT"
+    },
+    {
+      "universidad": "Universidad de Montevideo",
+      "ciudad": "Montevideo",
+      "codigo_erasmus": "",
+      "plazas": "2",
+      "programa": "AB",
+      "cert": "",
+      "observaciones": "Para alumnado del GITST, solo itinerario de telemática",
+      "pais": "UY"
+    }
+  ]
+}
