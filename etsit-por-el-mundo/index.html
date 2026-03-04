@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mapa Erasmus ETSIT</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/svgmap@2.13.0/dist/svgMap.min.css">
+  <link rel="stylesheet" href="./assets/app.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/svgmap@2.13.0/dist/svgMap.min.js"></script>
+  <script defer src="./assets/app.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <h1>Mapa de destinos Erasmus</h1>
+      <p>Pasa el cursor por un país para ver ciudades. Click para ver plazas y filtrar.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="map" class="map"></div>
+
+    <section class="panel">
+      <h2>Filtros</h2>
+      <div class="filters">
+        <label>País
+          <select id="fCountry"><option value="">Todos</option></select>
+        </label>
+        <label>Ciudad
+          <select id="fCity"><option value="">Todas</option></select>
+        </label>
+        <label>Programa
+          <select id="fProgram"><option value="">Todos</option></select>
+        </label>
+        <label>Idioma / Cert
+          <select id="fCert"><option value="">Todos</option></select>
+        </label>
+        <button id="clear" type="button">Limpiar</button>
+      </div>
+
+      <div class="results">
+        <div id="count"></div>
+        <div class="tableWrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Universidad</th><th>Ciudad</th><th>País</th><th>Código</th><th>Plazas</th><th>Programa</th><th>Cert</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
