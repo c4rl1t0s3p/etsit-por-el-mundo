@@ -1,9 +1,7 @@
 /* ============================================================
    ETSIT POR EL MUNDO — app.js
-   Versión robusta con diagnóstico y manejo de errores explícito
    ============================================================ */
 
-/* ── Constantes globales ─────────────────────────────────── */
 const COUNTRY_NAMES = {
   AR:"Argentina", AT:"Austria", AU:"Australia", BE:"Bélgica",
   BG:"Bulgaria", BR:"Brasil", CA:"Canadá", CH:"Suiza",
@@ -24,97 +22,80 @@ const PROG_LABELS = {
   "ER/EIT HEALTH":"Erasmus / EIT Health", "MS/AB":"MS / AB"
 };
 
-/* svgMap usa GB, nuestro Excel usa UK */
 const JSON_TO_SVG = { UK:"GB" };
 const SVG_TO_JSON = { GB:"UK" };
 
-/* ── Variables de estado ─────────────────────────────────── */
-let countries = {};
-let offersAll = [];
+let countries  = {};
+let offersAll  = [];
+let applyCountryFilter;
 
-/* ── Función para calcular la base URL ──────────────────── */
 function getBase() {
-  const href = window.location.href.split("?")[0].split("#")[0];
+  var href = window.location.href.split("?")[0].split("#")[0];
   return href.endsWith("/") ? href : href.substring(0, href.lastIndexOf("/") + 1);
 }
 
-/* ── Arranque: esperar a que el DOM esté listo ───────────── */
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("[ETSIT] DOM listo, iniciando carga...");
   loadData();
 });
 
-/* ── Carga de datos ──────────────────────────────────────── */
 async function loadData() {
   const jsonURL = getBase() + "data/oferta.json";
-  console.log("[ETSIT] Cargando JSON desde:", jsonURL);
-
   let data;
   try {
     const res = await fetch(jsonURL, { cache: "no-store" });
-    if (!res.ok) throw new Error("HTTP " + res.status + " al cargar " + jsonURL);
+    if (!res.ok) throw new Error("HTTP " + res.status);
     data = await res.json();
-    console.log("[ETSIT] JSON cargado OK —", data.offers.length, "ofertas,", Object.keys(data.countries).length, "países");
   } catch (err) {
     console.error("[ETSIT] ERROR cargando JSON:", err);
     document.getElementById("rows").innerHTML =
       '<tr><td colspan="8" style="padding:24px;color:#c00;text-align:center;">Error cargando datos: ' + err.message + '</td></tr>';
     return;
   }
-
   countries = data.countries || {};
-  offersAll = data.offers || [];
+  offersAll = data.offers   || [];
 
   initStats();
-  initMap();
   initFilters();
+  initMap();
 }
 
-/* ── Stats del header ────────────────────────────────────── */
 function initStats() {
-  const totalPlazas    = offersAll.reduce((s, o) => s + (parseInt(o.plazas) || 0), 0);
-  const totalCountries = Object.keys(countries).length;
-  const totalUnis      = new Set(offersAll.map(o => o.universidad)).size;
-
+  var totalPlazas    = offersAll.reduce(function(s,o){ return s+(parseInt(o.plazas)||0); }, 0);
+  var totalCountries = Object.keys(countries).length;
+  var totalUnis      = new Set(offersAll.map(function(o){ return o.universidad; })).size;
   animateNum("statTotal",        totalPlazas);
   animateNum("statCountries",    totalCountries);
   animateNum("statUniversities", totalUnis);
 }
 
 function animateNum(id, target) {
-  const el = document.getElementById(id);
+  var el = document.getElementById(id);
   if (!el) return;
-  let cur = 0;
-  const step = Math.max(1, Math.ceil(target / 40));
-  const iv = setInterval(function () {
+  var cur = 0, step = Math.max(1, Math.ceil(target / 40));
+  var iv = setInterval(function() {
     cur = Math.min(cur + step, target);
     el.textContent = cur.toLocaleString("es-ES");
     if (cur >= target) clearInterval(iv);
   }, 30);
 }
 
-/* ── Mapa ────────────────────────────────────────────────── */
 function initMap() {
   if (typeof svgMap === "undefined") {
-    console.error("[ETSIT] svgMap no está cargado todavía. Reintentando en 500ms...");
     setTimeout(initMap, 500);
     return;
   }
 
-  console.log("[ETSIT] Inicializando svgMap...");
-
-  const values = {};
-  Object.entries(countries).forEach(function (entry) {
-    var iso2 = entry[0], info = entry[1];
-    var svgCode = JSON_TO_SVG[iso2] || iso2;
-    values[svgCode] = { value: info.offers_count || 0 };
+  var values = {};
+  Object.entries(countries).forEach(function(e) {
+    var svgCode = JSON_TO_SVG[e[0]] || e[0];
+    values[svgCode] = { value: e[1].offers_count || 0 };
   });
 
   try {
     new svgMap({
-      targetElementID: "map",
+      targetElementID:       "map",
       data: {
-        data:      { value: { name: "Plazas", format: "{0}" } },
+        data:      { value: { name:"Plazas", format:"{0}" } },
         applyData: "value",
         values:    values
       },
@@ -123,58 +104,81 @@ function initMap() {
       colorNoData:           "#dde3ed",
       mouseWheelZoomEnabled: true,
       noDataText:            "Sin plazas",
+
       onGetTooltip: function (tooltipDiv, countryCode) {
         var ourCode = SVG_TO_JSON[countryCode] || countryCode;
         var info    = countries[ourCode];
         if (!info) {
-          tooltipDiv.innerHTML = "<strong>" + countryCode + "</strong><br><small style='color:#888'>Sin plazas disponibles</small>";
+          tooltipDiv.innerHTML =
+            "<strong style='color:#0d1a2e'>" + countryCode + "</strong>" +
+            "<br><small style='color:#888'>Sin plazas disponibles</small>";
           return;
         }
         var name  = COUNTRY_NAMES[ourCode] || ourCode;
         var shown = (info.cities || []).slice(0, 10);
-        var extra = info.cities.length > 10 ? "<span style='color:#888'>…y " + (info.cities.length - 10) + " más</span>" : "";
+        var extra = info.cities.length > 10
+          ? "<span style='color:#888'>…y "+(info.cities.length-10)+" más</span>" : "";
+
+        var fCountry = document.getElementById("fCountry");
+        var isActive = fCountry && fCountry.value === ourCode;
+        var activeTag = isActive
+          ? "<span style='display:inline-block;background:#003DA5;color:#fff;font-size:10px;border-radius:100px;padding:2px 8px;margin-left:6px;vertical-align:middle'>Filtrado ✓</span>"
+          : "";
+
         tooltipDiv.innerHTML =
-          "<div style='font-family:Syne,sans-serif;font-weight:800;font-size:15px;margin-bottom:8px;color:#0d1a2e'>" + name + "</div>" +
+          "<div style='font-family:Syne,sans-serif;font-weight:800;font-size:15px;margin-bottom:8px;color:#0d1a2e'>" +
+            name + activeTag +
+          "</div>" +
           "<div style='display:flex;gap:16px;margin-bottom:10px;font-size:12px;color:#5b6880'>" +
             "<span><b style='color:#003DA5;font-size:16px'>" + info.offers_count + "</b> plazas</span>" +
             "<span><b style='color:#003DA5;font-size:16px'>" + info.cities_count + "</b> ciudades</span>" +
           "</div>" +
-          "<div style='font-size:12px;color:#0d1a2e;line-height:1.6'>" +
-            shown.map(function(c){ return "<span style='display:inline-block;background:#f0f4fb;border-radius:4px;padding:1px 7px;margin:2px 2px 0 0'>" + c + "</span>"; }).join("") +
-            extra +
+          "<div style='font-size:12px;color:#0d1a2e;line-height:1.8'>" +
+            shown.map(function(c){
+              return "<span style='display:inline-block;background:#f0f4fb;border-radius:4px;padding:1px 7px;margin:2px 2px 0 0'>" + c + "</span>";
+            }).join("") + extra +
           "</div>" +
-          "<div style='margin-top:10px;font-size:11px;color:#888;text-align:center;border-top:1px solid #eee;padding-top:8px'>Haz clic para ver todas las plazas →</div>";
+          "<div style='margin-top:10px;font-size:11px;color:#888;text-align:center;border-top:1px solid #eee;padding-top:8px'>" +
+            (isActive ? "Haz clic para quitar el filtro ✕" : "Haz clic para filtrar plazas de " + name) +
+          "</div>";
       },
+
       onClick: function (countryCode) {
         var ourCode = SVG_TO_JSON[countryCode] || countryCode;
-        if (!countries[ourCode]) {
-          console.log("[ETSIT] Click en país sin datos:", countryCode);
-          return;
+        if (!countries[ourCode]) return;
+        if (typeof applyCountryFilter === "function") {
+          applyCountryFilter(ourCode);
         }
-        var url = getBase() + "country.html?country=" + encodeURIComponent(ourCode);
-        console.log("[ETSIT] Navegando a:", url);
-        window.location.href = url;
       }
     });
-    console.log("[ETSIT] svgMap inicializado correctamente");
+
+    _addMapCursorStyles();
+
   } catch (err) {
     console.error("[ETSIT] Error inicializando svgMap:", err);
   }
 }
 
-/* ── Filtros ─────────────────────────────────────────────── */
-function initFilters() {
-  console.log("[ETSIT] Inicializando filtros...");
+function _addMapCursorStyles() {
+  var style = document.createElement("style");
+  style.textContent =
+    "#map path[fill]:not([fill='#dde3ed']):not([fill='none']) { cursor: pointer; }" +
+    "#map path { transition: opacity 0.15s ease, filter 0.15s ease; }" +
+    "#map path:hover { opacity: 0.82; filter: brightness(1.08); }";
+  document.head.appendChild(style);
+}
 
+function initFilters() {
   var fCountry = document.getElementById("fCountry");
   var fCity    = document.getElementById("fCity");
   var fProgram = document.getElementById("fProgram");
   var fCert    = document.getElementById("fCert");
   var rows     = document.getElementById("rows");
   var count    = document.getElementById("count");
+  var section  = document.getElementById("filterSection");
 
   if (!fCountry || !fCity || !fProgram || !fCert || !rows || !count) {
-    console.error("[ETSIT] No se encontraron elementos del DOM para los filtros");
+    console.error("[ETSIT] Elementos de filtro no encontrados");
     return;
   }
 
@@ -183,7 +187,6 @@ function initFilters() {
       .sort(function(a,b){ return a.localeCompare(b,"es"); });
   }
 
-  /* Poblar países */
   Object.entries(COUNTRY_NAMES)
     .filter(function(e){ return !!countries[e[0]]; })
     .sort(function(a,b){ return a[1].localeCompare(b[1],"es"); })
@@ -194,15 +197,12 @@ function initFilters() {
       fCountry.appendChild(opt);
     });
 
-  /* Poblar programas */
   uniqueSorted(offersAll.map(function(o){ return o.programa; })).forEach(function(v) {
     var opt = document.createElement("option");
-    opt.value = v;
-    opt.textContent = PROG_LABELS[v] || v;
+    opt.value = v; opt.textContent = PROG_LABELS[v] || v;
     fProgram.appendChild(opt);
   });
 
-  /* Poblar idiomas */
   function certShort(cert) {
     if (!cert || cert === "-") return "";
     var m = cert.match(/^([A-ZÁÉÍÓÚÜÑA-Za-záéíóúüñ]+(?:\s[A-ZÁÉÍÓÚÜÑA-Za-záéíóúüñ]+)?)\s/);
@@ -211,13 +211,9 @@ function initFilters() {
 
   uniqueSorted(offersAll.map(function(o){ return certShort(o.cert); }).filter(Boolean)).forEach(function(v) {
     var opt = document.createElement("option");
-    opt.value = v;
-    opt.textContent = v;
+    opt.value = v; opt.textContent = v;
     fCert.appendChild(opt);
   });
-
-  console.log("[ETSIT] Filtros poblados — países:", fCountry.options.length - 1,
-    "programas:", fProgram.options.length - 1, "certs:", fCert.options.length - 1);
 
   function populateCities() {
     var cc = fCountry.value;
@@ -226,9 +222,7 @@ function initFilters() {
       : uniqueSorted(offersAll.map(function(o){ return o.ciudad; }));
     fCity.innerHTML = '<option value="">Todas las ciudades</option>';
     cities.forEach(function(v) {
-      var opt = document.createElement("option");
-      opt.value = v; opt.textContent = v;
-      fCity.appendChild(opt);
+      fCity.appendChild(new Option(v, v));
     });
   }
 
@@ -258,8 +252,8 @@ function initFilters() {
 
   function render() {
     var filtered = offersAll.filter(passes);
-    var plural   = filtered.length === 1 ? "resultado" : "resultados";
-    count.textContent = filtered.length.toLocaleString("es-ES") + " " + plural;
+    count.textContent = filtered.length.toLocaleString("es-ES") +
+      (filtered.length === 1 ? " resultado" : " resultados");
 
     if (filtered.length === 0) {
       rows.innerHTML =
@@ -273,24 +267,41 @@ function initFilters() {
     var fragment = document.createDocumentFragment();
     filtered.slice(0, 5000).forEach(function(o) {
       var tr = document.createElement("tr");
-      var countryName = COUNTRY_NAMES[o.pais] || o.pais || "";
-      var progLabel   = PROG_LABELS[o.programa] || o.programa || "";
-      var bClass      = progBadgeClass(o.programa);
       tr.innerHTML =
         "<td><strong>" + (o.universidad || "—") + "</strong></td>" +
         "<td>" + (o.ciudad || "—") + "</td>" +
-        "<td><span class='country-cell'><span>" + countryName + "</span><small style='color:#888'>" + (o.pais||"") + "</small></span></td>" +
-        "<td><code style='font-size:12px;color:#555'>" + (o.codigo_erasmus || "—") + "</code></td>" +
-        "<td class='plazas-cell'><span class='plazas-badge'>" + (o.plazas || "—") + "</span></td>" +
-        "<td><span class='prog-badge " + bClass + "'>" + progLabel + "</span></td>" +
+        "<td><span class='country-cell'><span>" + (COUNTRY_NAMES[o.pais]||o.pais||"") + "</span>" +
+          "<small style='color:#888'>" + (o.pais||"") + "</small></span></td>" +
+        "<td><code style='font-size:12px;color:#555'>" + (o.codigo_erasmus||"—") + "</code></td>" +
+        "<td class='plazas-cell'><span class='plazas-badge'>" + (o.plazas||"—") + "</span></td>" +
+        "<td><span class='prog-badge " + progBadgeClass(o.programa) + "'>" + (PROG_LABELS[o.programa]||o.programa||"") + "</span></td>" +
         "<td style='font-size:12px;color:#5b6880;max-width:180px'>" + formatCert(o.cert) + "</td>" +
-        "<td class='obs-cell'>" + (o.observaciones || "") + "</td>";
+        "<td class='obs-cell'>" + (o.observaciones||"") + "</td>";
       fragment.appendChild(tr);
     });
     rows.innerHTML = "";
     rows.appendChild(fragment);
-    console.log("[ETSIT] Renderizados", filtered.length, "resultados");
   }
+
+  applyCountryFilter = function(ourCode) {
+    var isAlreadyActive = fCountry.value === ourCode;
+
+    if (isAlreadyActive) {
+      fCountry.value = "";
+    } else {
+      fCountry.value = ourCode;
+    }
+
+    populateCities();
+    render();
+
+    fCountry.classList.add("filter-select--active");
+    setTimeout(function() { fCountry.classList.remove("filter-select--active"); }, 1200);
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   document.getElementById("clearFilters").addEventListener("click", function() {
     fCountry.value = ""; fCity.value = ""; fProgram.value = ""; fCert.value = "";
@@ -306,5 +317,5 @@ function initFilters() {
   populateCities();
   render();
 
-  console.log("[ETSIT] ✓ Todo inicializado correctamente");
+  console.log("[ETSIT] ✓ Todo inicializado");
 }
