@@ -3,30 +3,75 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Plazas por país</title>
+  <title>Plazas por país · ETSIT por el Mundo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./assets/app.css">
+  <link rel="stylesheet" href="./assets/country.css">
   <script defer src="./assets/country.js"></script>
 </head>
-<body>
-  <header class="top">
-    <div class="wrap">
-      <a href="./" style="text-decoration:underline;">← Volver al mapa</a>
-      <h1 id="title" style="margin-top:8px;"></h1>
-      <p id="meta"></p>
+<body class="country-page">
+
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <div class="header-brand">
+        <div class="brand-badge">ETSIT · UPM</div>
+        <h1 id="pageTitle">Cargando…</h1>
+        <p class="header-sub" id="pageMeta"></p>
+      </div>
+      <div>
+        <a href="./" class="btn-back">
+          ← Volver al mapa
+        </a>
+      </div>
     </div>
   </header>
 
   <main class="wrap">
-    <div class="tableWrap" style="margin-top:16px;">
-      <table>
-        <thead>
-          <tr>
-            <th>Universidad</th><th>Ciudad</th><th>Código</th><th>Plazas</th><th>Programa</th><th>Cert</th>
-          </tr>
-        </thead>
-        <tbody id="rows"></tbody>
-      </table>
+
+    <!-- Filtro rápido ciudad -->
+    <div class="country-toolbar" id="toolbar">
+      <div class="toolbar-left">
+        <label class="filter-label" for="cityFilter">Filtrar por ciudad</label>
+        <select id="cityFilter" class="filter-select"></select>
+      </div>
+      <div class="toolbar-stats" id="toolbarStats"></div>
     </div>
+
+    <!-- Tabla -->
+    <section class="filter-section" style="margin-top:0;">
+      <div class="results-area">
+        <div class="table-scroll">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Universidad</th>
+                <th>Ciudad</th>
+                <th>Código Erasmus</th>
+                <th>Plazas</th>
+                <th>Programa</th>
+                <th>Idioma requerido</th>
+                <th>Observaciones</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>Oficina Internacional · ETSIT UPM</span>
+      <span class="footer-sep">·</span>
+      <span>Oferta de movilidad 2026–27</span>
+    </div>
+  </footer>
+
 </body>
 </html>
