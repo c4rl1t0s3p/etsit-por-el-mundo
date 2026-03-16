@@ -20,6 +20,15 @@
     US:"Estados Unidos", UY:"Uruguay"
   };
 
+  /*
+   * svgMap usa códigos ISO 3166-1 alpha-2 estándar en sus paths SVG.
+   * Nuestro Excel usa "UK" para Reino Unido, pero el estándar es "GB".
+   * Este mapa convierte los códigos del JSON → código que entiende svgMap,
+   * y el inverso para recuperar datos cuando el mapa devuelve su código.
+   */
+  const JSON_TO_SVG = { UK: "GB" };          // nuestro código → código svgMap
+  const SVG_TO_JSON = { GB: "UK" };          // código svgMap  → nuestro código
+
   const PROG_LABELS = {
     ER: "Erasmus+",
     MS: "MundoSantander",
@@ -64,9 +73,11 @@
   }
 
   /* ── Mapa ────────────────────────────────────────────── */
+  // Construir values con los códigos que entiende svgMap (GB en lugar de UK, etc.)
   const values = {};
   for (const [iso2, info] of Object.entries(countries)) {
-    values[iso2] = { value: info.offers_count || 0 };
+    const svgCode = JSON_TO_SVG[iso2] || iso2;
+    values[svgCode] = { value: info.offers_count || 0 };
   }
 
   new svgMap({
@@ -78,17 +89,18 @@
     },
     colorMin: "#d0e4ff",
     colorMax: "#003DA5",
-    colorNoData: "#f0f2f5",
-    flagType: "emoji",
+    colorNoData: "#dde3ed",
     mouseWheelZoomEnabled: true,
     noDataText: "Sin plazas",
     onGetTooltip: function (tooltipDiv, countryCode) {
-      const info = countries[countryCode];
+      // svgMap nos devuelve su código (p.ej. "GB") → traducir al nuestro ("UK")
+      const ourCode = SVG_TO_JSON[countryCode] || countryCode;
+      const info = countries[ourCode];
       if (!info) {
         tooltipDiv.innerHTML = `<div style="font-weight:700; font-size:14px;">${countryCode}</div><div style="font-size:12px;color:#666;margin-top:4px;">Sin plazas disponibles</div>`;
         return;
       }
-      const name = COUNTRY_NAMES[countryCode] || countryCode;
+      const name = COUNTRY_NAMES[ourCode] || ourCode;
       const cities = info.cities || [];
       const shown = cities.slice(0, 10);
       const extra = cities.length > 10 ? `<span style="color:#888">…y ${cities.length - 10} más</span>` : "";
@@ -111,8 +123,10 @@
       `;
     },
     onClick: function (countryCode) {
-      if (!countries[countryCode]) return;
-      window.location.href = `./country.html?country=${encodeURIComponent(countryCode)}`;
+      // Traducir código svgMap → nuestro código JSON
+      const ourCode = SVG_TO_JSON[countryCode] || countryCode;
+      if (!countries[ourCode]) return;
+      window.location.href = `./country.html?country=${encodeURIComponent(ourCode)}`;
     }
   });
 
