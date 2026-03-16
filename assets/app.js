@@ -1,12 +1,69 @@
+/* ============================================================
+   ETSIT POR EL MUNDO — app.js (index)
+   ============================================================ */
+
 (async function () {
   const DATA_URL = "./data/oferta.json";
 
-  const res = await fetch(DATA_URL, { cache: "no-store" });
-  const data = await res.json();
-  const countries = data.countries || {};
-  const offersAll = data.offers || [];
+  /* ── Nombres legibles de país (ISO 2 → español) ─────── */
+  const COUNTRY_NAMES = {
+    AR:"Argentina", AT:"Austria", AU:"Australia", BE:"Bélgica",
+    BG:"Bulgaria", BR:"Brasil", CA:"Canadá", CH:"Suiza",
+    CL:"Chile", CN:"China", CO:"Colombia", CZ:"República Checa",
+    DE:"Alemania", DK:"Dinamarca", ES:"España", FI:"Finlandia",
+    FR:"Francia", GR:"Grecia", HR:"Croacia", HU:"Hungría",
+    IE:"Irlanda", IT:"Italia", JP:"Japón", MK:"Macedonia del Norte",
+    MX:"México", MY:"Malasia", NL:"Países Bajos", NO:"Noruega",
+    PA:"Panamá", PE:"Perú", PL:"Polonia", PR:"Puerto Rico",
+    PT:"Portugal", RO:"Rumanía", RS:"Serbia", SE:"Suecia",
+    SI:"Eslovenia", TR:"Turquía", TW:"Taiwán", UK:"Reino Unido",
+    US:"Estados Unidos", UY:"Uruguay"
+  };
 
-  // MAPA
+  const PROG_LABELS = {
+    ER: "Erasmus+",
+    MS: "MundoSantander",
+    AB: "Acuerdo Bilateral",
+    SICUE: "SICUE",
+    "AB/ER": "AB / Erasmus",
+    "ER/EIT HEALTH": "Erasmus / EIT Health",
+    "MS/AB": "MS / AB"
+  };
+
+  /* ── Cargar datos ────────────────────────────────────── */
+  let data, countries, offersAll;
+  try {
+    const res = await fetch(DATA_URL, { cache: "no-store" });
+    data = await res.json();
+    countries = data.countries || {};
+    offersAll = data.offers || [];
+  } catch (err) {
+    console.error("Error cargando oferta.json:", err);
+    return;
+  }
+
+  /* ── Stats globales ──────────────────────────────────── */
+  const totalPlazas = offersAll.reduce((s, o) => s + (parseInt(o.plazas) || 0), 0);
+  const totalCountries = Object.keys(countries).length;
+  const totalUnis = new Set(offersAll.map(o => o.universidad)).size;
+
+  animateNum("statTotal", totalPlazas);
+  animateNum("statCountries", totalCountries);
+  animateNum("statUniversities", totalUnis);
+
+  function animateNum(id, target) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    let cur = 0;
+    const step = Math.ceil(target / 40);
+    const iv = setInterval(() => {
+      cur = Math.min(cur + step, target);
+      el.textContent = cur.toLocaleString("es-ES");
+      if (cur >= target) clearInterval(iv);
+    }, 30);
+  }
+
+  /* ── Mapa ────────────────────────────────────────────── */
   const values = {};
   for (const [iso2, info] of Object.entries(countries)) {
     values[iso2] = { value: info.offers_count || 0 };
@@ -15,28 +72,42 @@
   new svgMap({
     targetElementID: "map",
     data: {
-      data: { value: { name: "Entradas", format: "{0}" } },
+      data: { value: { name: "Plazas", format: "{0}" } },
       applyData: "value",
       values
     },
-    colorMin: "#e7eeff",
-    colorMax: "#2b63ff",
+    colorMin: "#d0e4ff",
+    colorMax: "#003DA5",
+    colorNoData: "#f0f2f5",
+    flagType: "emoji",
     mouseWheelZoomEnabled: true,
+    noDataText: "Sin plazas",
     onGetTooltip: function (tooltipDiv, countryCode) {
       const info = countries[countryCode];
-      if (!info) return;
+      if (!info) {
+        tooltipDiv.innerHTML = `<div style="font-weight:700; font-size:14px;">${countryCode}</div><div style="font-size:12px;color:#666;margin-top:4px;">Sin plazas disponibles</div>`;
+        return;
+      }
+      const name = COUNTRY_NAMES[countryCode] || countryCode;
       const cities = info.cities || [];
-      const shown = cities.slice(0, 12);
-      const extra = cities.length > 12 ? `… +${cities.length - 12} más` : "";
+      const shown = cities.slice(0, 10);
+      const extra = cities.length > 10 ? `<span style="color:#888">…y ${cities.length - 10} más</span>` : "";
+
       tooltipDiv.innerHTML = `
-        <div style="font-weight:700; margin-bottom:6px;">
-          ${countryCode} — ${info.cities_count} ciudades
+        <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:15px; margin-bottom:8px; color:#0d1a2e;">
+          ${name}
         </div>
-        <div style="font-size:12px; line-height:1.35;">
-          ${shown.map(c => `<div>• ${c}</div>`).join("")}
-          ${extra ? `<div style="opacity:.8; margin-top:4px;">${extra}</div>` : ""}
+        <div style="display:flex; gap:16px; margin-bottom:10px; font-size:12px; color:#5b6880;">
+          <span><b style="color:#003DA5; font-size:16px;">${info.offers_count}</b> plazas</span>
+          <span><b style="color:#003DA5; font-size:16px;">${info.cities_count}</b> ciudades</span>
         </div>
-        <div style="margin-top:8px; font-size:12px; opacity:.9;">Click para ver plazas</div>
+        <div style="font-size:12px; color:#0d1a2e; line-height:1.6;">
+          ${shown.map(c => `<span style="display:inline-block;background:#f0f4fb;border-radius:4px;padding:1px 7px;margin:2px 2px 0 0;">${c}</span>`).join("")}
+          ${extra}
+        </div>
+        <div style="margin-top:10px; font-size:11px; color:#888; text-align:center; border-top:1px solid #eee; padding-top:8px;">
+          Haz clic para ver todas las plazas →
+        </div>
       `;
     },
     onClick: function (countryCode) {
@@ -45,77 +116,117 @@
     }
   });
 
-  // FILTROS
-  const $ = (id) => document.getElementById(id);
+  /* ── Filtros ─────────────────────────────────────────── */
+  const $ = id => document.getElementById(id);
   const fCountry = $("fCountry");
-  const fCity = $("fCity");
+  const fCity    = $("fCity");
   const fProgram = $("fProgram");
-  const fCert = $("fCert");
-  const rows = $("rows");
-  const count = $("count");
+  const fCert    = $("fCert");
+  const rows     = $("rows");
+  const count    = $("count");
 
   function uniqueSorted(arr) {
-    return [...new Set(arr.map(x => (x || "").trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+    return [...new Set(arr.map(x => (x || "").trim()).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
   }
 
-  // Países
-  Object.keys(countries).sort().forEach(cc => {
-    const opt = document.createElement("option");
-    opt.value = cc; opt.textContent = cc;
-    fCountry.appendChild(opt);
+  /* Poblar selectores */
+  Object.entries(COUNTRY_NAMES)
+    .filter(([cc]) => countries[cc])
+    .sort((a, b) => a[1].localeCompare(b[1], "es"))
+    .forEach(([cc, name]) => {
+      const opt = new Option(`${name} (${cc})`, cc);
+      fCountry.appendChild(opt);
+    });
+
+  uniqueSorted(offersAll.map(o => o.programa)).forEach(v => {
+    fProgram.appendChild(new Option(PROG_LABELS[v] || v, v));
   });
 
-  // Programas / certs
-  uniqueSorted(offersAll.map(o => o.programa)).forEach(v => {
-    const opt = document.createElement("option");
-    opt.value = v; opt.textContent = v;
-    fProgram.appendChild(opt);
-  });
-  uniqueSorted(offersAll.map(o => o.cert)).forEach(v => {
-    const opt = document.createElement("option");
-    opt.value = v; opt.textContent = v;
-    fCert.appendChild(opt);
+  /* Certificados: extraer el idioma principal de la cadena larga */
+  const certShort = cert => {
+    if (!cert || cert === "-") return "";
+    const m = cert.match(/^([A-ZÁÉÍÓÚÜÑ][a-záéíóúüñA-ZÁÉÍÓÚÜÑ]+(?:\s[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñA-ZÁÉÍÓÚÜÑ]+)?)\s/);
+    return m ? m[1].toUpperCase() : cert.slice(0, 30);
+  };
+
+  uniqueSorted(offersAll.map(o => certShort(o.cert)).filter(Boolean)).forEach(v => {
+    fCert.appendChild(new Option(v, v));
   });
 
   function populateCities() {
     const cc = fCountry.value;
-    const cities = cc && countries[cc] ? countries[cc].cities : uniqueSorted(offersAll.map(o => o.ciudad));
-    fCity.innerHTML = `<option value="">Todas</option>`;
-    cities.forEach(v => {
-      const opt = document.createElement("option");
-      opt.value = v; opt.textContent = v;
-      fCity.appendChild(opt);
-    });
+    const cities = cc && countries[cc]
+      ? countries[cc].cities
+      : uniqueSorted(offersAll.map(o => o.ciudad));
+    fCity.innerHTML = `<option value="">Todas las ciudades</option>`;
+    cities.forEach(v => fCity.appendChild(new Option(v, v)));
   }
 
   function passes(o) {
     if (fCountry.value && o.pais !== fCountry.value) return false;
     if (fCity.value && o.ciudad !== fCity.value) return false;
     if (fProgram.value && o.programa !== fProgram.value) return false;
-    if (fCert.value && o.cert !== fCert.value) return false;
+    if (fCert.value && certShort(o.cert) !== fCert.value) return false;
     return true;
+  }
+
+  function progBadgeClass(prog) {
+    if (!prog) return "";
+    const p = prog.toLowerCase();
+    if (p.includes("er")) return "er";
+    if (p.includes("ms")) return "ms";
+    if (p.includes("ab")) return "ab";
+    if (p.includes("sicue")) return "sicue";
+    return "";
   }
 
   function render() {
     const filtered = offersAll.filter(passes);
-    count.textContent = `${filtered.length} resultados`;
-    rows.innerHTML = "";
+    const plural = filtered.length === 1 ? "resultado" : "resultados";
+    count.textContent = `${filtered.length.toLocaleString("es-ES")} ${plural}`;
+
+    if (filtered.length === 0) {
+      rows.innerHTML = `
+        <tr><td colspan="8">
+          <div class="empty-state">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <p>No hay destinos que coincidan con los filtros seleccionados.</p>
+          </div>
+        </td></tr>
+      `;
+      return;
+    }
+
+    const fragment = document.createDocumentFragment();
     for (const o of filtered.slice(0, 5000)) {
       const tr = document.createElement("tr");
+      const countryName = COUNTRY_NAMES[o.pais] || o.pais || "";
+      const progLabel = PROG_LABELS[o.programa] || o.programa || "";
+      const bClass = progBadgeClass(o.programa);
       tr.innerHTML = `
-        <td>${o.universidad || ""}</td>
-        <td>${o.ciudad || ""}</td>
-        <td>${o.pais || ""}</td>
-        <td>${o.codigo_erasmus || ""}</td>
-        <td>${o.plazas || ""}</td>
-        <td>${o.programa || ""}</td>
-        <td>${o.cert || ""}</td>
+        <td><strong>${o.universidad || "—"}</strong></td>
+        <td>${o.ciudad || "—"}</td>
+        <td><span class="country-cell"><span>${countryName}</span><small style="color:#888">${o.pais || ""}</small></span></td>
+        <td><code style="font-size:12px;color:#555;">${o.codigo_erasmus || "—"}</code></td>
+        <td class="plazas-cell"><span class="plazas-badge">${o.plazas || "—"}</span></td>
+        <td><span class="prog-badge ${bClass}">${progLabel}</span></td>
+        <td style="font-size:12px; color:#5b6880; max-width:180px;">${formatCert(o.cert)}</td>
+        <td class="obs-cell">${o.observaciones || ""}</td>
       `;
-      rows.appendChild(tr);
+      fragment.appendChild(tr);
     }
+    rows.innerHTML = "";
+    rows.appendChild(fragment);
   }
 
-  document.getElementById("clear").addEventListener("click", () => {
+  function formatCert(cert) {
+    if (!cert || cert === "-") return '<span style="color:#bbb">—</span>';
+    // Mostrar sólo el primer requisito de idioma (hasta la primera coma o paréntesis)
+    const short = cert.split(/[,(]/)[0].trim();
+    return `<span title="${cert.replace(/"/g,"&quot;")}">${short}</span>`;
+  }
+
+  $("clearFilters").addEventListener("click", () => {
     fCountry.value = ""; fCity.value = ""; fProgram.value = ""; fCert.value = "";
     populateCities(); render();
   });

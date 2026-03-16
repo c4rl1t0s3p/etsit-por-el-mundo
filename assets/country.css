@@ -1,0 +1,94 @@
+/* ── Country page extras ─────────────────────────────── */
+
+.country-page .site-header {
+  background-image: linear-gradient(135deg, #001a5a 0%, #003DA5 55%, #0a6e4a 100%);
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  transition: background .15s;
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+}
+
+.btn-back:hover {
+  background: rgba(255,255,255,.25);
+}
+
+.country-toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 28px 0 16px;
+  box-shadow: var(--shadow);
+}
+
+.toolbar-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 220px;
+}
+
+.toolbar-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.t-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.t-stat-num {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--brand);
+  line-height: 1;
+}
+
+.t-stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+}
+
+/* City group header row */
+.city-group-header td {
+  background: #f0f4fb;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--brand);
+  padding: 8px 16px;
+  border-top: 2px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 600px) {
+  .country-toolbar { flex-direction: column; align-items: stretch; }
+  .toolbar-stats { justify-content: space-around; }
+}

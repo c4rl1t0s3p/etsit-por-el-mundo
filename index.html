@@ -3,49 +3,100 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mapa Erasmus ETSIT</title>
+  <title>ETSIT por el Mundo · Movilidad Internacional</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/svgmap@2.13.0/dist/svgMap.min.css">
   <link rel="stylesheet" href="./assets/app.css">
+
   <script defer src="https://cdn.jsdelivr.net/npm/svgmap@2.13.0/dist/svgMap.min.js"></script>
   <script defer src="./assets/app.js"></script>
 </head>
 <body>
-  <header class="top">
-    <div class="wrap">
-      <h1>Mapa de destinos Erasmus</h1>
-      <p>Pasa el cursor por un país para ver ciudades. Click para ver plazas y filtrar.</p>
+
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <div class="header-brand">
+        <div class="brand-badge">ETSIT · UPM</div>
+        <h1>Por el Mundo</h1>
+        <p class="header-sub">Oferta de plazas de movilidad internacional 2026–27</p>
+      </div>
+      <div class="header-stats">
+        <div class="stat-item"><span class="stat-num" id="statTotal">—</span><span class="stat-label">plazas totales</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat-item"><span class="stat-num" id="statCountries">—</span><span class="stat-label">países</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat-item"><span class="stat-num" id="statUniversities">—</span><span class="stat-label">universidades</span></div>
+      </div>
     </div>
   </header>
 
   <main class="wrap">
-    <div id="map" class="map"></div>
 
-    <section class="panel">
-      <h2>Filtros</h2>
-      <div class="filters">
-        <label>País
-          <select id="fCountry"><option value="">Todos</option></select>
-        </label>
-        <label>Ciudad
-          <select id="fCity"><option value="">Todas</option></select>
-        </label>
-        <label>Programa
-          <select id="fProgram"><option value="">Todos</option></select>
-        </label>
-        <label>Idioma / Cert
-          <select id="fCert"><option value="">Todos</option></select>
-        </label>
-        <button id="clear" type="button">Limpiar</button>
+    <section class="map-section">
+      <div class="map-header">
+        <h2 class="section-title">Mapa de destinos</h2>
+        <p class="map-hint">
+          <span class="hint-pulse"></span>
+          Pasa el cursor sobre un país · Haz clic para explorar sus universidades
+        </p>
+      </div>
+      <div class="map-container">
+        <div id="map"></div>
+        <div class="map-legend">
+          <span class="legend-label">Menos plazas</span>
+          <div class="legend-gradient"></div>
+          <span class="legend-label">Más plazas</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="filter-section" id="filterSection">
+      <div class="filter-header">
+        <h2 class="section-title">Explorar destinos</h2>
+        <span id="count" class="result-badge"></span>
       </div>
 
-      <div class="results">
-        <div id="count"></div>
-        <div class="tableWrap">
-          <table>
+      <div class="filters-grid">
+        <div class="filter-group">
+          <label class="filter-label" for="fCountry">País</label>
+          <select id="fCountry" class="filter-select"><option value="">Todos los países</option></select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label" for="fCity">Ciudad</label>
+          <select id="fCity" class="filter-select"><option value="">Todas las ciudades</option></select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label" for="fProgram">Programa</label>
+          <select id="fProgram" class="filter-select"><option value="">Todos los programas</option></select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label" for="fCert">Idioma / Certificado</label>
+          <select id="fCert" class="filter-select"><option value="">Todos</option></select>
+        </div>
+        <div class="filter-group filter-actions">
+          <button id="clearFilters" class="btn-clear" type="button">
+            ✕ Limpiar filtros
+          </button>
+        </div>
+      </div>
+
+      <div class="results-area">
+        <div class="table-scroll">
+          <table class="results-table">
             <thead>
               <tr>
-                <th>Universidad</th><th>Ciudad</th><th>País</th><th>Código</th><th>Plazas</th><th>Programa</th><th>Cert</th>
+                <th>Universidad</th>
+                <th>Ciudad</th>
+                <th>País</th>
+                <th>Código Erasmus</th>
+                <th>Plazas</th>
+                <th>Programa</th>
+                <th>Idioma requerido</th>
+                <th>Observaciones</th>
               </tr>
             </thead>
             <tbody id="rows"></tbody>
@@ -53,6 +104,16 @@
         </div>
       </div>
     </section>
+
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>Oficina Internacional · ETSIT UPM</span>
+      <span class="footer-sep">·</span>
+      <span>Oferta de movilidad 2026–27</span>
+    </div>
+  </footer>
+
 </body>
 </html>
