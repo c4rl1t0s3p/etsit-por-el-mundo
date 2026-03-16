@@ -29,12 +29,16 @@
     "MS/AB": "MS / AB"
   };
 
-  /* ── Validar parámetro ─────────────────────────────── */
-  const cc = (new URLSearchParams(location.search).get("country") || "").toUpperCase();
-  if (!/^[A-Z]{2}$/.test(cc)) {
+  /* ── Validar parámetro y normalizar código ─────────── */
+  // svgMap puede haber enviado "GB" (su código) en lugar de "UK" (nuestro JSON)
+  const SVG_TO_JSON = { GB: "UK" };
+  const rawCode = (new URLSearchParams(location.search).get("country") || "").toUpperCase();
+  if (!/^[A-Z]{2}$/.test(rawCode)) {
     location.href = "./";
     return;
   }
+  // Traducir si es necesario (GB → UK, etc.)
+  const cc = SVG_TO_JSON[rawCode] || rawCode;
 
   /* ── Cargar datos ──────────────────────────────────── */
   let data, info;
