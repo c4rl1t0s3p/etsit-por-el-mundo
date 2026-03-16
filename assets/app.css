@@ -250,13 +250,15 @@ body {
 
 /* Override svgMap tooltip */
 .svgMap-tooltip {
-  border-radius: 10px !important;
-  box-shadow: 0 4px 20px rgba(0,0,0,.18) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,.16) !important;
   font-family: var(--font-body) !important;
   font-size: 13px !important;
   border: 1px solid var(--border) !important;
-  padding: 10px 14px !important;
-  max-width: 260px !important;
+  padding: 12px 16px !important;
+  max-width: 280px !important;
+  transition: opacity 0.15s ease !important;
+  pointer-events: none !important;
 }
 
 .svgMap-tooltip-title {
@@ -264,6 +266,18 @@ body {
   font-size: 15px !important;
   font-weight: 700 !important;
   margin-bottom: 6px !important;
+}
+
+/* Smooth path transitions */
+#map svg path {
+  transition: opacity 0.12s ease, filter 0.12s ease !important;
+  will-change: opacity, filter;
+}
+
+#map svg path:hover {
+  opacity: 0.78 !important;
+  filter: brightness(1.1) !important;
+  cursor: pointer;
 }
 
 /* Override svgMap controls */
@@ -390,6 +404,20 @@ body {
   border-color: var(--brand);
   box-shadow: 0 0 0 3px rgba(0,61,165,.15);
   background-color: var(--surface);
+}
+
+/* Flash animado cuando se activa el filtro de país desde el mapa */
+.filter-select--active {
+  border-color: var(--brand) !important;
+  background-color: #e8f0fe !important;
+  box-shadow: 0 0 0 3px rgba(0,61,165,.2) !important;
+  animation: filterPulse 1.2s ease forwards;
+}
+
+@keyframes filterPulse {
+  0%   { box-shadow: 0 0 0 0   rgba(0,61,165,.4); }
+  40%  { box-shadow: 0 0 0 6px rgba(0,61,165,.15); }
+  100% { box-shadow: 0 0 0 3px rgba(0,61,165,.0); background-color: var(--bg); }
 }
 
 .filter-actions {
