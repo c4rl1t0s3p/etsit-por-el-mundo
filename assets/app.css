@@ -206,26 +206,46 @@ body {
   box-shadow: var(--shadow);
   overflow: hidden;
   padding-bottom: 12px;
-  position: relative;
-  z-index: 1;
+  isolation: isolate;
+  contain: layout style;
 }
 
 #map {
   min-height: 500px;
   width: 100%;
   position: relative;
-  z-index: 1;
+  overflow: hidden;
 }
 
-/* Asegurar que el mapa NO tape los filtros de abajo */
 .map-section {
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .filter-section {
   position: relative;
-  z-index: 10;
+  z-index: 100;
+}
+
+/* Forzar que todos los elementos interactivos de filtros reciban eventos */
+.filters-grid,
+.filter-group,
+.filter-select,
+.btn-clear,
+.results-area,
+.table-scroll {
+  pointer-events: auto !important;
+  position: relative;
+}
+
+/* Contener el wrapper de svgMap dentro de su caja */
+.svgMap-wrapper {
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.svgMap-map-image-container {
+  overflow: hidden !important;
 }
 
 /* Override svgMap tooltip */

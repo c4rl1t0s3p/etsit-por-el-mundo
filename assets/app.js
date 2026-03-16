@@ -3,7 +3,9 @@
    ============================================================ */
 
 (async function () {
-  const DATA_URL = "./data/oferta.json";
+  // Ruta al JSON robusta tanto en local como en GitHub Pages
+  const base = window.location.href.replace(/\/[^/]*$/, "/");
+  const DATA_URL = base + "data/oferta.json";
 
   /* ── Nombres legibles de país (ISO 2 → español) ─────── */
   const COUNTRY_NAMES = {
@@ -126,7 +128,9 @@
       // Traducir código svgMap → nuestro código JSON
       const ourCode = SVG_TO_JSON[countryCode] || countryCode;
       if (!countries[ourCode]) return;
-      window.location.href = `./country.html?country=${encodeURIComponent(ourCode)}`;
+      // Usar ruta relativa robusta compatible con GitHub Pages
+      const base = window.location.href.replace(/\/[^/]*$/, "/");
+      window.location.href = base + "country.html?country=" + encodeURIComponent(ourCode);
     }
   });
 

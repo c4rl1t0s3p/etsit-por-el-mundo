@@ -3,7 +3,8 @@
    ============================================================ */
 
 (async function () {
-  const DATA_URL = "./data/oferta.json";
+  const base = window.location.href.replace(/\?.*$/, "").replace(/\/[^/]*$/, "/");
+  const DATA_URL = base + "data/oferta.json";
 
   const COUNTRY_NAMES = {
     AR:"Argentina", AT:"Austria", AU:"Australia", BE:"Bélgica",
