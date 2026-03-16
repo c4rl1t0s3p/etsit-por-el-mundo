@@ -550,3 +550,84 @@ body {
   .filter-actions { grid-column: 1; }
   #map            { min-height: 300px; }
 }
+
+#map {
+  min-height: 500px;
+  width: 100%;
+  user-select: none;
+}
+
+#map svg {
+  display: block;
+}
+
+#map svg [id^="svgMap-country-"] {
+  transition:
+    fill 0.22s ease,
+    opacity 0.18s ease,
+    stroke 0.18s ease,
+    stroke-width 0.18s ease,
+    transform 0.18s ease,
+    filter 0.18s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#map svg [id^="svgMap-country-"]:hover {
+  opacity: 0.92;
+  filter: brightness(1.02);
+}
+
+#map svg [id^="svgMap-country-"].is-selected-country {
+  stroke: #E8320A !important;
+  stroke-width: 2.4 !important;
+  filter: brightness(1.04);
+}
+
+.svgMap-map-wrapper {
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.svgMap-map-controls-wrapper {
+  bottom: 16px !important;
+  right: 16px !important;
+}
+
+.svgMap-map-controls-zoom {
+  border-radius: 12px !important;
+  border: 1px solid var(--border) !important;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 30, 80, 0.12) !important;
+}
+
+.svgMap-map-controls-zoom button {
+  width: 42px !important;
+  height: 42px !important;
+  background: rgba(255,255,255,0.96) !important;
+  color: var(--text) !important;
+  font-size: 18px !important;
+  transition: background .18s ease, transform .18s ease;
+}
+
+.svgMap-map-controls-zoom button:hover {
+  background: #f3f6fb !important;
+}
+
+.svgMap-map-controls-zoom button:active {
+  transform: scale(0.97);
+}
+
+.svgMap-tooltip {
+  border-radius: 14px !important;
+  box-shadow: 0 14px 40px rgba(0,0,0,.16) !important;
+  backdrop-filter: blur(8px);
+}
+
+.filter-select--active {
+  animation: filterPulse 0.8s ease;
+}
+
+@keyframes filterPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(0, 61, 165, 0.28); }
+  100% { box-shadow: 0 0 0 14px rgba(0, 61, 165, 0); }
+}
