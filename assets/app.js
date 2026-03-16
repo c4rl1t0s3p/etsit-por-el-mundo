@@ -25,9 +25,9 @@ const PROG_LABELS = {
 const JSON_TO_SVG = { UK:"GB" };
 const SVG_TO_JSON = { GB:"UK" };
 
-let countries  = {};
-let offersAll  = [];
-let applyCountryFilter;
+let countries = {};
+let offersAll = [];
+let applyCountryFilter = null;
 
 function getBase() {
   var href = window.location.href.split("?")[0].split("#")[0];
@@ -39,20 +39,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 async function loadData() {
-  const jsonURL = getBase() + "data/oferta.json";
-  let data;
+  var url = getBase() + "data/oferta.json";
+  console.log("[ETSIT] Cargando:", url);
   try {
-    const res = await fetch(jsonURL, { cache: "no-store" });
+    var res = await fetch(url, { cache: "no-store" });
     if (!res.ok) throw new Error("HTTP " + res.status);
-    data = await res.json();
+    var data = await res.json();
+    countries = data.countries || {};
+    offersAll = data.offers   || [];
+    console.log("[ETSIT] JSON OK —", offersAll.length, "ofertas,", Object.keys(countries).length, "países");
   } catch (err) {
-    console.error("[ETSIT] ERROR cargando JSON:", err);
-    document.getElementById("rows").innerHTML =
-      '<tr><td colspan="8" style="padding:24px;color:#c00;text-align:center;">Error cargando datos: ' + err.message + '</td></tr>';
+    console.error("[ETSIT] Error cargando JSON:", err);
+    var rows = document.getElementById("rows");
+    if (rows) rows.innerHTML =
+      '<tr><td colspan="8" style="padding:32px;color:#c00;text-align:center">Error al cargar datos: ' + err.message + '</td></tr>';
     return;
   }
-  countries = data.countries || {};
-  offersAll = data.offers   || [];
 
   initStats();
   initFilters();
@@ -60,112 +62,124 @@ async function loadData() {
 }
 
 function initStats() {
-  var totalPlazas    = offersAll.reduce(function(s,o){ return s+(parseInt(o.plazas)||0); }, 0);
-  var totalCountries = Object.keys(countries).length;
-  var totalUnis      = new Set(offersAll.map(function(o){ return o.universidad; })).size;
-  animateNum("statTotal",        totalPlazas);
-  animateNum("statCountries",    totalCountries);
-  animateNum("statUniversities", totalUnis);
+  var plazas = offersAll.reduce(function(s,o){ return s + (parseInt(o.plazas)||0); }, 0);
+  var paises = Object.keys(countries).length;
+  var unis   = new Set(offersAll.map(function(o){ return o.universidad; })).size;
+  animateNum("statTotal",        plazas);
+  animateNum("statCountries",    paises);
+  animateNum("statUniversities", unis);
 }
 
 function animateNum(id, target) {
   var el = document.getElementById(id);
   if (!el) return;
-  var cur = 0, step = Math.max(1, Math.ceil(target / 40));
+  var cur = 0, step = Math.max(1, Math.ceil(target / 45));
   var iv = setInterval(function() {
     cur = Math.min(cur + step, target);
     el.textContent = cur.toLocaleString("es-ES");
     if (cur >= target) clearInterval(iv);
-  }, 30);
+  }, 28);
 }
 
 function initMap() {
   if (typeof svgMap === "undefined") {
-    setTimeout(initMap, 500);
+    console.log("[ETSIT] svgMap aún no cargado, reintentando...");
+    setTimeout(initMap, 300);
     return;
   }
 
   var values = {};
-  Object.entries(countries).forEach(function(e) {
-    var svgCode = JSON_TO_SVG[e[0]] || e[0];
-    values[svgCode] = { value: e[1].offers_count || 0 };
+  Object.keys(countries).forEach(function(iso2) {
+    var svgCode = JSON_TO_SVG[iso2] || iso2;
+    values[svgCode] = { value: countries[iso2].offers_count || 0 };
   });
 
-  try {
-    new svgMap({
-      targetElementID:       "map",
-      data: {
-        data:      { value: { name:"Plazas", format:"{0}" } },
-        applyData: "value",
-        values:    values
-      },
-      colorMin:              "#d0e4ff",
-      colorMax:              "#003DA5",
-      colorNoData:           "#dde3ed",
-      mouseWheelZoomEnabled: true,
-      noDataText:            "Sin plazas",
+  new svgMap({
+    targetElementID:       "map",
+    data: {
+      data:      { value: { name: "Plazas", format: "{0}" } },
+      applyData: "value",
+      values:    values
+    },
+    colorMin:              "#d0e4ff",
+    colorMax:              "#003DA5",
+    colorNoData:           "#dde3ed",
+    mouseWheelZoomEnabled: true,
+    noDataText:            "Sin plazas",
 
-      onGetTooltip: function (tooltipDiv, countryCode) {
-        var ourCode = SVG_TO_JSON[countryCode] || countryCode;
-        var info    = countries[ourCode];
-        if (!info) {
-          tooltipDiv.innerHTML =
-            "<strong style='color:#0d1a2e'>" + countryCode + "</strong>" +
-            "<br><small style='color:#888'>Sin plazas disponibles</small>";
-          return;
-        }
-        var name  = COUNTRY_NAMES[ourCode] || ourCode;
-        var shown = (info.cities || []).slice(0, 10);
-        var extra = info.cities.length > 10
-          ? "<span style='color:#888'>…y "+(info.cities.length-10)+" más</span>" : "";
+    onGetTooltip: function (tooltipDiv, countryCode) {
+      var ourCode = SVG_TO_JSON[countryCode] || countryCode;
+      var info    = countries[ourCode];
 
-        var fCountry = document.getElementById("fCountry");
-        var isActive = fCountry && fCountry.value === ourCode;
-        var activeTag = isActive
-          ? "<span style='display:inline-block;background:#003DA5;color:#fff;font-size:10px;border-radius:100px;padding:2px 8px;margin-left:6px;vertical-align:middle'>Filtrado ✓</span>"
-          : "";
-
+      if (!info) {
         tooltipDiv.innerHTML =
-          "<div style='font-family:Syne,sans-serif;font-weight:800;font-size:15px;margin-bottom:8px;color:#0d1a2e'>" +
-            name + activeTag +
+          "<div style='font-weight:700;color:#0d1a2e;margin-bottom:4px'>" +
+            (COUNTRY_NAMES[ourCode] || countryCode) +
           "</div>" +
-          "<div style='display:flex;gap:16px;margin-bottom:10px;font-size:12px;color:#5b6880'>" +
-            "<span><b style='color:#003DA5;font-size:16px'>" + info.offers_count + "</b> plazas</span>" +
-            "<span><b style='color:#003DA5;font-size:16px'>" + info.cities_count + "</b> ciudades</span>" +
-          "</div>" +
-          "<div style='font-size:12px;color:#0d1a2e;line-height:1.8'>" +
-            shown.map(function(c){
-              return "<span style='display:inline-block;background:#f0f4fb;border-radius:4px;padding:1px 7px;margin:2px 2px 0 0'>" + c + "</span>";
-            }).join("") + extra +
-          "</div>" +
-          "<div style='margin-top:10px;font-size:11px;color:#888;text-align:center;border-top:1px solid #eee;padding-top:8px'>" +
-            (isActive ? "Haz clic para quitar el filtro ✕" : "Haz clic para filtrar plazas de " + name) +
-          "</div>";
-      },
+          "<div style='font-size:12px;color:#999'>Sin plazas disponibles</div>";
+        return;
+      }
 
-      onClick: function (countryCode) {
-        var ourCode = SVG_TO_JSON[countryCode] || countryCode;
-        if (!countries[ourCode]) return;
-        if (typeof applyCountryFilter === "function") {
-          applyCountryFilter(ourCode);
-        }
+      var name  = COUNTRY_NAMES[ourCode] || ourCode;
+      var shown = (info.cities || []).slice(0, 10);
+      var extra = info.cities.length > 10
+        ? "<span style='color:#aaa;font-style:italic'> +" + (info.cities.length-10) + " más</span>"
+        : "";
+
+      var fCountry = document.getElementById("fCountry");
+      var active   = fCountry && fCountry.value === ourCode;
+
+      tooltipDiv.innerHTML =
+        "<div style='font-family:Syne,sans-serif;font-weight:800;font-size:15px;color:#0d1a2e;margin-bottom:8px;display:flex;align-items:center;gap:8px'>" +
+          name +
+          (active
+            ? "<span style='font-size:10px;font-family:DM Sans,sans-serif;background:#003DA5;color:#fff;border-radius:100px;padding:2px 8px;font-weight:600'>Activo ✓</span>"
+            : "") +
+        "</div>" +
+        "<div style='display:flex;gap:20px;margin-bottom:10px'>" +
+          "<div style='text-align:center'><div style='font-size:20px;font-weight:800;color:#003DA5;font-family:Syne,sans-serif'>" + info.offers_count + "</div><div style='font-size:10px;color:#888;text-transform:uppercase;letter-spacing:.06em'>plazas</div></div>" +
+          "<div style='text-align:center'><div style='font-size:20px;font-weight:800;color:#003DA5;font-family:Syne,sans-serif'>" + info.cities_count + "</div><div style='font-size:10px;color:#888;text-transform:uppercase;letter-spacing:.06em'>ciudades</div></div>" +
+        "</div>" +
+        "<div style='font-size:12px;color:#0d1a2e;line-height:1.8;margin-bottom:8px'>" +
+          shown.map(function(c){
+            return "<span style='display:inline-block;background:#f0f4fb;border-radius:4px;padding:1px 8px;margin:2px 2px 0 0;font-size:11px'>" + c + "</span>";
+          }).join("") + extra +
+        "</div>" +
+        "<div style='font-size:11px;color:" + (active ? "#003DA5" : "#aaa") + ";text-align:center;border-top:1px solid #eee;padding-top:8px;font-weight:" + (active ? "600" : "400") + "'>" +
+          (active ? "↑ Clic para quitar este filtro" : "↓ Clic para ver plazas de " + name) +
+        "</div>";
+    },
+
+    onClick: function (countryCode) {
+      var ourCode = SVG_TO_JSON[countryCode] || countryCode;
+      if (!countries[ourCode]) return;
+      if (typeof applyCountryFilter === "function") {
+        applyCountryFilter(ourCode);
+      }
+    }
+  });
+
+  setTimeout(function() {
+    var svg = document.querySelector("#map svg");
+    if (!svg) return;
+    Object.keys(countries).forEach(function(iso2) {
+      var svgCode = JSON_TO_SVG[iso2] || iso2;
+      var path = svg.querySelector("#svgMap-country-" + svgCode);
+      if (path) {
+        path.style.cursor = "pointer";
+        path.addEventListener("mouseenter", function() {
+          this.style.opacity = "0.75";
+          this.style.transition = "opacity 0.12s ease";
+        });
+        path.addEventListener("mouseleave", function() {
+          this.style.opacity = "1";
+        });
       }
     });
+    console.log("[ETSIT] Cursores y hover aplicados al mapa");
+  }, 150);
 
-    _addMapCursorStyles();
-
-  } catch (err) {
-    console.error("[ETSIT] Error inicializando svgMap:", err);
-  }
-}
-
-function _addMapCursorStyles() {
-  var style = document.createElement("style");
-  style.textContent =
-    "#map path[fill]:not([fill='#dde3ed']):not([fill='none']) { cursor: pointer; }" +
-    "#map path { transition: opacity 0.15s ease, filter 0.15s ease; }" +
-    "#map path:hover { opacity: 0.82; filter: brightness(1.08); }";
-  document.head.appendChild(style);
+  console.log("[ETSIT] svgMap inicializado");
 }
 
 function initFilters() {
@@ -178,60 +192,20 @@ function initFilters() {
   var section  = document.getElementById("filterSection");
 
   if (!fCountry || !fCity || !fProgram || !fCert || !rows || !count) {
-    console.error("[ETSIT] Elementos de filtro no encontrados");
+    console.error("[ETSIT] Elementos del DOM no encontrados");
     return;
   }
 
   function uniqueSorted(arr) {
-    return Array.from(new Set(arr.map(function(x){ return (x||"").trim(); }).filter(Boolean)))
-      .sort(function(a,b){ return a.localeCompare(b,"es"); });
+    return Array.from(new Set(
+      arr.map(function(x){ return (x||"").trim(); }).filter(Boolean)
+    )).sort(function(a,b){ return a.localeCompare(b,"es"); });
   }
-
-  Object.entries(COUNTRY_NAMES)
-    .filter(function(e){ return !!countries[e[0]]; })
-    .sort(function(a,b){ return a[1].localeCompare(b[1],"es"); })
-    .forEach(function(e) {
-      var opt = document.createElement("option");
-      opt.value = e[0];
-      opt.textContent = e[1] + " (" + e[0] + ")";
-      fCountry.appendChild(opt);
-    });
-
-  uniqueSorted(offersAll.map(function(o){ return o.programa; })).forEach(function(v) {
-    var opt = document.createElement("option");
-    opt.value = v; opt.textContent = PROG_LABELS[v] || v;
-    fProgram.appendChild(opt);
-  });
 
   function certShort(cert) {
     if (!cert || cert === "-") return "";
-    var m = cert.match(/^([A-ZÁÉÍÓÚÜÑA-Za-záéíóúüñ]+(?:\s[A-ZÁÉÍÓÚÜÑA-Za-záéíóúüñ]+)?)\s/);
+    var m = cert.match(/^([A-ZÁÉÍÓÚÜÑa-záéíóúüñ]+(?:\s[A-ZÁÉÍÓÚÜÑa-záéíóúüñ]+)?)\s/);
     return m ? m[1].toUpperCase() : cert.slice(0, 30);
-  }
-
-  uniqueSorted(offersAll.map(function(o){ return certShort(o.cert); }).filter(Boolean)).forEach(function(v) {
-    var opt = document.createElement("option");
-    opt.value = v; opt.textContent = v;
-    fCert.appendChild(opt);
-  });
-
-  function populateCities() {
-    var cc = fCountry.value;
-    var cities = (cc && countries[cc])
-      ? countries[cc].cities
-      : uniqueSorted(offersAll.map(function(o){ return o.ciudad; }));
-    fCity.innerHTML = '<option value="">Todas las ciudades</option>';
-    cities.forEach(function(v) {
-      fCity.appendChild(new Option(v, v));
-    });
-  }
-
-  function passes(o) {
-    if (fCountry.value && o.pais     !== fCountry.value) return false;
-    if (fCity.value    && o.ciudad   !== fCity.value)    return false;
-    if (fProgram.value && o.programa !== fProgram.value) return false;
-    if (fCert.value    && certShort(o.cert) !== fCert.value) return false;
-    return true;
   }
 
   function progBadgeClass(prog) {
@@ -250,6 +224,40 @@ function initFilters() {
     return '<span title="' + cert.replace(/"/g,"&quot;") + '">' + short + "</span>";
   }
 
+  Object.entries(COUNTRY_NAMES)
+    .filter(function(e){ return !!countries[e[0]]; })
+    .sort(function(a,b){ return a[1].localeCompare(b[1],"es"); })
+    .forEach(function(e) {
+      fCountry.appendChild(new Option(e[1] + " (" + e[0] + ")", e[0]));
+    });
+
+  uniqueSorted(offersAll.map(function(o){ return o.programa; }))
+    .forEach(function(v) {
+      fProgram.appendChild(new Option(PROG_LABELS[v] || v, v));
+    });
+
+  uniqueSorted(offersAll.map(function(o){ return certShort(o.cert); }).filter(Boolean))
+    .forEach(function(v) {
+      fCert.appendChild(new Option(v, v));
+    });
+
+  function populateCities() {
+    var cc = fCountry.value;
+    var cities = (cc && countries[cc])
+      ? countries[cc].cities
+      : uniqueSorted(offersAll.map(function(o){ return o.ciudad; }));
+    fCity.innerHTML = '<option value="">Todas las ciudades</option>';
+    cities.forEach(function(v){ fCity.appendChild(new Option(v, v)); });
+  }
+
+  function passes(o) {
+    if (fCountry.value && o.pais     !== fCountry.value) return false;
+    if (fCity.value    && o.ciudad   !== fCity.value)    return false;
+    if (fProgram.value && o.programa !== fProgram.value) return false;
+    if (fCert.value    && certShort(o.cert) !== fCert.value) return false;
+    return true;
+  }
+
   function render() {
     var filtered = offersAll.filter(passes);
     count.textContent = filtered.length.toLocaleString("es-ES") +
@@ -264,39 +272,36 @@ function initFilters() {
       return;
     }
 
-    var fragment = document.createDocumentFragment();
+    var frag = document.createDocumentFragment();
     filtered.slice(0, 5000).forEach(function(o) {
       var tr = document.createElement("tr");
       tr.innerHTML =
         "<td><strong>" + (o.universidad || "—") + "</strong></td>" +
         "<td>" + (o.ciudad || "—") + "</td>" +
-        "<td><span class='country-cell'><span>" + (COUNTRY_NAMES[o.pais]||o.pais||"") + "</span>" +
-          "<small style='color:#888'>" + (o.pais||"") + "</small></span></td>" +
-        "<td><code style='font-size:12px;color:#555'>" + (o.codigo_erasmus||"—") + "</code></td>" +
-        "<td class='plazas-cell'><span class='plazas-badge'>" + (o.plazas||"—") + "</span></td>" +
-        "<td><span class='prog-badge " + progBadgeClass(o.programa) + "'>" + (PROG_LABELS[o.programa]||o.programa||"") + "</span></td>" +
+        "<td><span class='country-cell'>" +
+          "<span>" + (COUNTRY_NAMES[o.pais] || o.pais || "") + "</span>" +
+          "<small style='color:#888'>" + (o.pais || "") + "</small>" +
+        "</span></td>" +
+        "<td><code style='font-size:12px;color:#555'>" + (o.codigo_erasmus || "—") + "</code></td>" +
+        "<td class='plazas-cell'><span class='plazas-badge'>" + (o.plazas || "—") + "</span></td>" +
+        "<td><span class='prog-badge " + progBadgeClass(o.programa) + "'>" + (PROG_LABELS[o.programa] || o.programa || "") + "</span></td>" +
         "<td style='font-size:12px;color:#5b6880;max-width:180px'>" + formatCert(o.cert) + "</td>" +
-        "<td class='obs-cell'>" + (o.observaciones||"") + "</td>";
-      fragment.appendChild(tr);
+        "<td class='obs-cell'>" + (o.observaciones || "") + "</td>";
+      frag.appendChild(tr);
     });
     rows.innerHTML = "";
-    rows.appendChild(fragment);
+    rows.appendChild(frag);
   }
 
   applyCountryFilter = function(ourCode) {
-    var isAlreadyActive = fCountry.value === ourCode;
-
-    if (isAlreadyActive) {
-      fCountry.value = "";
-    } else {
-      fCountry.value = ourCode;
-    }
-
+    fCountry.value = (fCountry.value === ourCode) ? "" : ourCode;
     populateCities();
     render();
 
+    fCountry.classList.remove("filter-select--active");
+    void fCountry.offsetWidth;
     fCountry.classList.add("filter-select--active");
-    setTimeout(function() { fCountry.classList.remove("filter-select--active"); }, 1200);
+    setTimeout(function(){ fCountry.classList.remove("filter-select--active"); }, 1400);
 
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -309,7 +314,7 @@ function initFilters() {
     render();
   });
 
-  fCountry.addEventListener("change", function() { populateCities(); render(); });
+  fCountry.addEventListener("change", function(){ populateCities(); render(); });
   fCity.addEventListener("change",    render);
   fProgram.addEventListener("change", render);
   fCert.addEventListener("change",    render);
@@ -317,5 +322,7 @@ function initFilters() {
   populateCities();
   render();
 
-  console.log("[ETSIT] ✓ Todo inicializado");
+  console.log("[ETSIT] ✓ Filtros listos —",
+    fCountry.options.length - 1, "países,",
+    fProgram.options.length - 1, "programas");
 }
