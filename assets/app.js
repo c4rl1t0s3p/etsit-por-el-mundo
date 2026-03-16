@@ -28,6 +28,8 @@ const SVG_TO_JSON = { GB:"UK" };
 let countries = {};
 let offersAll = [];
 let applyCountryFilter = null;
+let mapInstance = null;
+let activeCountryCode = "";
 
 function getBase() {
   var href = window.location.href.split("?")[0].split("#")[0];
@@ -80,6 +82,53 @@ function animateNum(id, target) {
     if (cur >= target) clearInterval(iv);
   }, 28);
 }
+function getCountryPathByCode(iso2) {
+  var svgCode = JSON_TO_SVG[iso2] || iso2;
+  return document.querySelector("#svgMap-country-" + svgCode);
+}
+
+function syncMapSelection() {
+  document.querySelectorAll("#map svg [id^='svgMap-country-']").forEach(function(el) {
+    el.classList.remove("is-selected-country");
+  });
+
+  if (!activeCountryCode) return;
+
+  var activePath = getCountryPathByCode(activeCountryCode);
+  if (activePath) {
+    activePath.classList.add("is-selected-country");
+  }
+}
+
+function enhanceMapCountries() {
+  var svg = document.querySelector("#map svg");
+  if (!svg) {
+    requestAnimationFrame(enhanceMapCountries);
+    return;
+  }
+
+  Object.keys(countries).forEach(function(iso2) {
+    var path = getCountryPathByCode(iso2);
+    if (!path) return;
+
+    path.style.cursor = "pointer";
+    path.classList.add("is-map-country");
+    path.setAttribute("tabindex", "0");
+    path.setAttribute("role", "button");
+    path.setAttribute("aria-label", "Filtrar por " + (COUNTRY_NAMES[iso2] || iso2));
+
+    path.addEventListener("keydown", function(e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        if (typeof applyCountryFilter === "function") {
+          applyCountryFilter(iso2, true);
+        }
+      }
+    });
+  });
+
+  syncMapSelection();
+}
 
 function initMap() {
   if (typeof svgMap === "undefined") {
@@ -94,22 +143,37 @@ function initMap() {
     values[svgCode] = { value: countries[iso2].offers_count || 0 };
   });
 
-  new svgMap({
-    targetElementID:       "map",
-    data: {
-      data:      { value: { name: "Plazas", format: "{0}" } },
-      applyData: "value",
-      values:    values
-    },
-    colorMin:              "#d0e4ff",
-    colorMax:              "#003DA5",
-    colorNoData:           "#dde3ed",
+  mapInstance = new svgMap({
+    targetElementID: "map",
+    minZoom: 1,
+    maxZoom: 12,
+    initialZoom: 1.12,
+    zoomScaleSensitivity: 0.28,
     mouseWheelZoomEnabled: true,
-    noDataText:            "Sin plazas",
+    mouseWheelZoomWithKey: true,
+    mouseWheelKeyMessage: "Pulsa ALT para hacer zoom",
+    showZoomReset: true,
+    resetZoomOnResize: true,
+    zoomButtonsPosition: "bottomRight",
+    noDataText: "Sin plazas",
+    colorMin: "#d0e4ff",
+    colorMax: "#003DA5",
+    colorNoData: "#dde3ed",
 
-    onGetTooltip: function (tooltipDiv, countryCode) {
+    data: {
+      data: {
+        value: {
+          name: "Plazas",
+          format: "{0}"
+        }
+      },
+      applyData: "value",
+      values: values
+    },
+
+    onGetTooltip: function(tooltipDiv, countryCode) {
       var ourCode = SVG_TO_JSON[countryCode] || countryCode;
-      var info    = countries[ourCode];
+      var info = countries[ourCode];
 
       if (!info) {
         tooltipDiv.innerHTML =
@@ -120,14 +184,13 @@ function initMap() {
         return;
       }
 
-      var name  = COUNTRY_NAMES[ourCode] || ourCode;
+      var name = COUNTRY_NAMES[ourCode] || ourCode;
       var shown = (info.cities || []).slice(0, 10);
       var extra = info.cities.length > 10
-        ? "<span style='color:#aaa;font-style:italic'> +" + (info.cities.length-10) + " más</span>"
+        ? "<span style='color:#aaa;font-style:italic'> +" + (info.cities.length - 10) + " más</span>"
         : "";
 
-      var fCountry = document.getElementById("fCountry");
-      var active   = fCountry && fCountry.value === ourCode;
+      var active = activeCountryCode === ourCode;
 
       tooltipDiv.innerHTML =
         "<div style='font-family:Syne,sans-serif;font-weight:800;font-size:15px;color:#0d1a2e;margin-bottom:8px;display:flex;align-items:center;gap:8px'>" +
@@ -141,23 +204,29 @@ function initMap() {
           "<div style='text-align:center'><div style='font-size:20px;font-weight:800;color:#003DA5;font-family:Syne,sans-serif'>" + info.cities_count + "</div><div style='font-size:10px;color:#888;text-transform:uppercase;letter-spacing:.06em'>ciudades</div></div>" +
         "</div>" +
         "<div style='font-size:12px;color:#0d1a2e;line-height:1.8;margin-bottom:8px'>" +
-          shown.map(function(c){
+          shown.map(function(c) {
             return "<span style='display:inline-block;background:#f0f4fb;border-radius:4px;padding:1px 8px;margin:2px 2px 0 0;font-size:11px'>" + c + "</span>";
           }).join("") + extra +
         "</div>" +
         "<div style='font-size:11px;color:" + (active ? "#003DA5" : "#aaa") + ";text-align:center;border-top:1px solid #eee;padding-top:8px;font-weight:" + (active ? "600" : "400") + "'>" +
-          (active ? "↑ Clic para quitar este filtro" : "↓ Clic para ver plazas de " + name) +
+          (active ? "↑ Clic para quitar este filtro" : "↓ Clic para filtrar por " + name) +
         "</div>";
     },
 
-    onClick: function (countryCode) {
+    onClick: function(countryCode) {
       var ourCode = SVG_TO_JSON[countryCode] || countryCode;
       if (!countries[ourCode]) return;
+
       if (typeof applyCountryFilter === "function") {
-        applyCountryFilter(ourCode);
+        applyCountryFilter(ourCode, true);
       }
     }
   });
+
+  requestAnimationFrame(enhanceMapCountries);
+
+  console.log("[ETSIT] svgMap inicializado");
+}
 
   setTimeout(function() {
     var svg = document.querySelector("#map svg");
@@ -179,8 +248,6 @@ function initMap() {
     console.log("[ETSIT] Cursores y hover aplicados al mapa");
   }, 150);
 
-  console.log("[ETSIT] svgMap inicializado");
-}
 
 function initFilters() {
   var fCountry = document.getElementById("fCountry");
@@ -241,14 +308,25 @@ function initFilters() {
       fCert.appendChild(new Option(v, v));
     });
 
-  function populateCities() {
-    var cc = fCountry.value;
-    var cities = (cc && countries[cc])
-      ? countries[cc].cities
-      : uniqueSorted(offersAll.map(function(o){ return o.ciudad; }));
-    fCity.innerHTML = '<option value="">Todas las ciudades</option>';
-    cities.forEach(function(v){ fCity.appendChild(new Option(v, v)); });
+function populateCities() {
+  var cc = fCountry.value;
+  var previousCity = fCity.value;
+
+  var cities = (cc && countries[cc])
+    ? countries[cc].cities
+    : uniqueSorted(offersAll.map(function(o){ return o.ciudad; }));
+
+  fCity.innerHTML = '<option value="">Todas las ciudades</option>';
+  cities.forEach(function(v) {
+    fCity.appendChild(new Option(v, v));
+  });
+
+  if (cities.indexOf(previousCity) >= 0) {
+    fCity.value = previousCity;
+  } else {
+    fCity.value = "";
   }
+}
 
   function passes(o) {
     if (fCountry.value && o.pais     !== fCountry.value) return false;
@@ -293,31 +371,51 @@ function initFilters() {
     rows.appendChild(frag);
   }
 
-  applyCountryFilter = function(ourCode) {
-    fCountry.value = (fCountry.value === ourCode) ? "" : ourCode;
-    populateCities();
-    render();
+applyCountryFilter = function(ourCode, scrollToFilters) {
+  fCountry.value = (fCountry.value === ourCode) ? "" : ourCode;
+  activeCountryCode = fCountry.value || "";
 
+  populateCities();
+  render();
+  syncMapSelection();
+
+  fCountry.classList.remove("filter-select--active");
+  void fCountry.offsetWidth;
+  fCountry.classList.add("filter-select--active");
+  setTimeout(function() {
     fCountry.classList.remove("filter-select--active");
-    void fCountry.offsetWidth;
-    fCountry.classList.add("filter-select--active");
-    setTimeout(function(){ fCountry.classList.remove("filter-select--active"); }, 1400);
+  }, 1400);
 
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+  if (scrollToFilters && section) {
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
+};
 
-  document.getElementById("clearFilters").addEventListener("click", function() {
-    fCountry.value = ""; fCity.value = ""; fProgram.value = ""; fCert.value = "";
-    populateCities();
-    render();
-  });
+document.getElementById("clearFilters").addEventListener("click", function() {
+  fCountry.value = "";
+  fCity.value = "";
+  fProgram.value = "";
+  fCert.value = "";
+  activeCountryCode = "";
 
-  fCountry.addEventListener("change", function(){ populateCities(); render(); });
-  fCity.addEventListener("change",    render);
-  fProgram.addEventListener("change", render);
-  fCert.addEventListener("change",    render);
+  populateCities();
+  render();
+  syncMapSelection();
+});
+
+fCountry.addEventListener("change", function() {
+  activeCountryCode = fCountry.value || "";
+  populateCities();
+  render();
+  syncMapSelection();
+});
+
+fCity.addEventListener("change", render);
+fProgram.addEventListener("change", render);
+fCert.addEventListener("change", render);
 
   populateCities();
   render();
