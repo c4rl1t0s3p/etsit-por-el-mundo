@@ -122,6 +122,10 @@ function initMap() {
       colorMax:              "#003DA5",
       colorNoData:           "#dde3ed",
       mouseWheelZoomEnabled: true,
+      zoomEnabled:           true,
+      zoomScaleSensitivity:  0.3,
+      minZoom:               1,
+      maxZoom:               10,
       noDataText:            "Sin plazas",
       onGetTooltip: function (tooltipDiv, countryCode) {
         var ourCode = SVG_TO_JSON[countryCode] || countryCode;
@@ -143,7 +147,7 @@ function initMap() {
             shown.map(function(c){ return "<span style='display:inline-block;background:#f0f4fb;border-radius:4px;padding:1px 7px;margin:2px 2px 0 0'>" + c + "</span>"; }).join("") +
             extra +
           "</div>" +
-          "<div style='margin-top:10px;font-size:11px;color:#888;text-align:center;border-top:1px solid #eee;padding-top:8px'>Haz clic para ver todas las plazas →</div>";
+          "<div style='margin-top:10px;font-size:11px;color:#003DA5;text-align:center;border-top:1px solid #eee;padding-top:8px;font-weight:600'>↓ Haz clic para filtrar en la tabla</div>";
       },
       onClick: function (countryCode) {
         var ourCode = SVG_TO_JSON[countryCode] || countryCode;
@@ -151,12 +155,47 @@ function initMap() {
           console.log("[ETSIT] Click en país sin datos:", countryCode);
           return;
         }
-        var url = getBase() + "country.html?country=" + encodeURIComponent(ourCode);
-        console.log("[ETSIT] Navegando a:", url);
-        window.location.href = url;
+        // Aplicar filtro de país en la sección inferior
+        var fCountry = document.getElementById("fCountry");
+        if (fCountry) {
+          fCountry.value = ourCode;
+          // Disparar evento change para actualizar ciudades y tabla
+          fCountry.dispatchEvent(new Event("change"));
+          // Animación de highlight en el select
+          fCountry.classList.remove("map-selected");
+          void fCountry.offsetWidth; // reflow para reiniciar animación
+          fCountry.classList.add("map-selected");
+          setTimeout(function() { fCountry.classList.remove("map-selected"); }, 600);
+          // Scroll suave hacia la sección de filtros
+          var filterSection = document.getElementById("filterSection");
+          if (filterSection) {
+            filterSection.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+          console.log("[ETSIT] Filtro aplicado para:", ourCode, COUNTRY_NAMES[ourCode]);
+        }
       }
     });
     console.log("[ETSIT] svgMap inicializado correctamente");
+
+    // Conectar botones de zoom + y - del mapa
+    setTimeout(function () {
+      var mapEl = document.getElementById("map");
+      if (!mapEl) return;
+      var zoomIn  = mapEl.querySelector(".svgMap-map-controls-zoom-in");
+      var zoomOut = mapEl.querySelector(".svgMap-map-controls-zoom-out");
+      // svgMap ya asigna sus propios listeners a estos botones internamente,
+      // pero a veces el pointer-events del contenedor los bloquea.
+      // Nos aseguramos de que sean clickables:
+      [zoomIn, zoomOut].forEach(function (btn) {
+        if (!btn) return;
+        btn.style.pointerEvents = "auto";
+        btn.style.cursor = "pointer";
+        btn.style.position = "relative";
+        btn.style.zIndex = "999";
+      });
+      console.log("[ETSIT] Botones de zoom verificados");
+    }, 600);
+
   } catch (err) {
     console.error("[ETSIT] Error inicializando svgMap:", err);
   }
