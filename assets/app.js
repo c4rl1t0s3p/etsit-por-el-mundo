@@ -1,6 +1,5 @@
 /* ============================================================
    ETSIT POR EL MUNDO — app.js
-   Versión robusta con diagnóstico y manejo de errores explícito
    ============================================================ */
 
 /* ── Constantes globales ─────────────────────────────────── */
@@ -24,58 +23,44 @@ const PROG_LABELS = {
   "ER/EIT HEALTH":"Erasmus / EIT Health", "MS/AB":"MS / AB"
 };
 
-/* svgMap usa GB, nuestro Excel usa UK */
 const JSON_TO_SVG = { UK:"GB" };
 const SVG_TO_JSON = { GB:"UK" };
 
-/* ── Variables de estado ─────────────────────────────────── */
 let countries = {};
 let offersAll = [];
 
-/* ── Función para calcular la base URL ──────────────────── */
 function getBase() {
   const href = window.location.href.split("?")[0].split("#")[0];
   return href.endsWith("/") ? href : href.substring(0, href.lastIndexOf("/") + 1);
 }
 
-/* ── Arranque: esperar a que el DOM esté listo ───────────── */
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("[ETSIT] DOM listo, iniciando carga...");
   loadData();
 });
 
-/* ── Carga de datos ──────────────────────────────────────── */
 async function loadData() {
   const jsonURL = getBase() + "data/oferta.json";
-  console.log("[ETSIT] Cargando JSON desde:", jsonURL);
-
   let data;
   try {
     const res = await fetch(jsonURL, { cache: "no-store" });
-    if (!res.ok) throw new Error("HTTP " + res.status + " al cargar " + jsonURL);
+    if (!res.ok) throw new Error("HTTP " + res.status);
     data = await res.json();
-    console.log("[ETSIT] JSON cargado OK —", data.offers.length, "ofertas,", Object.keys(data.countries).length, "países");
   } catch (err) {
-    console.error("[ETSIT] ERROR cargando JSON:", err);
     document.getElementById("rows").innerHTML =
       '<tr><td colspan="8" style="padding:24px;color:#c00;text-align:center;">Error cargando datos: ' + err.message + '</td></tr>';
     return;
   }
-
   countries = data.countries || {};
   offersAll = data.offers || [];
-
   initStats();
   initMap();
   initFilters();
 }
 
-/* ── Stats del header ────────────────────────────────────── */
 function initStats() {
   const totalPlazas    = offersAll.reduce((s, o) => s + (parseInt(o.plazas) || 0), 0);
   const totalCountries = Object.keys(countries).length;
   const totalUnis      = new Set(offersAll.map(o => o.universidad)).size;
-
   animateNum("statTotal",        totalPlazas);
   animateNum("statCountries",    totalCountries);
   animateNum("statUniversities", totalUnis);
@@ -93,15 +78,12 @@ function animateNum(id, target) {
   }, 30);
 }
 
-/* ── Mapa ────────────────────────────────────────────────── */
+/* ── Mapa ──────────────────────────────────────────────────── */
 function initMap() {
   if (typeof svgMap === "undefined") {
-    console.error("[ETSIT] svgMap no está cargado todavía. Reintentando en 500ms...");
     setTimeout(initMap, 500);
     return;
   }
-
-  console.log("[ETSIT] Inicializando svgMap...");
 
   const values = {};
   Object.entries(countries).forEach(function (entry) {
@@ -122,16 +104,14 @@ function initMap() {
       colorMax:              "#003DA5",
       colorNoData:           "#dde3ed",
       mouseWheelZoomEnabled: true,
-      zoomEnabled:           true,
-      zoomScaleSensitivity:  0.3,
-      minZoom:               1,
-      maxZoom:               10,
       noDataText:            "Sin plazas",
       onGetTooltip: function (tooltipDiv, countryCode) {
         var ourCode = SVG_TO_JSON[countryCode] || countryCode;
         var info    = countries[ourCode];
         if (!info) {
-          tooltipDiv.innerHTML = "<strong>" + countryCode + "</strong><br><small style='color:#888'>Sin plazas disponibles</small>";
+          tooltipDiv.innerHTML =
+            "<div style='font-family:Syne,sans-serif;font-weight:800;font-size:14px;color:#0d1a2e'>" + countryCode + "</div>" +
+            "<div style='font-size:12px;color:#888;margin-top:4px'>Sin plazas disponibles</div>";
           return;
         }
         var name  = COUNTRY_NAMES[ourCode] || ourCode;
@@ -144,104 +124,188 @@ function initMap() {
             "<span><b style='color:#003DA5;font-size:16px'>" + info.cities_count + "</b> ciudades</span>" +
           "</div>" +
           "<div style='font-size:12px;color:#0d1a2e;line-height:1.6'>" +
-            shown.map(function(c){ return "<span style='display:inline-block;background:#f0f4fb;border-radius:4px;padding:1px 7px;margin:2px 2px 0 0'>" + c + "</span>"; }).join("") +
-            extra +
+            shown.map(function(c){
+              return "<span style='display:inline-block;background:#f0f4fb;border-radius:4px;padding:1px 7px;margin:2px 2px 0 0'>" + c + "</span>";
+            }).join("") + extra +
           "</div>" +
           "<div style='margin-top:10px;font-size:11px;color:#003DA5;text-align:center;border-top:1px solid #eee;padding-top:8px;font-weight:600'>↓ Haz clic para filtrar en la tabla</div>";
-      },
-      onClick: function (countryCode) {
-        var ourCode = SVG_TO_JSON[countryCode] || countryCode;
-        if (!countries[ourCode]) {
-          console.log("[ETSIT] Click en país sin datos:", countryCode);
-          return;
-        }
-        // Aplicar filtro de país en la sección inferior
-        var fCountry = document.getElementById("fCountry");
-        if (fCountry) {
-          fCountry.value = ourCode;
-          // Disparar evento change para actualizar ciudades y tabla
-          fCountry.dispatchEvent(new Event("change"));
-          // Animación de highlight en el select
-          fCountry.classList.remove("map-selected");
-          void fCountry.offsetWidth; // reflow para reiniciar animación
-          fCountry.classList.add("map-selected");
-          setTimeout(function() { fCountry.classList.remove("map-selected"); }, 600);
-          // Scroll suave hacia la sección de filtros
-          var filterSection = document.getElementById("filterSection");
-          if (filterSection) {
-            filterSection.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-          console.log("[ETSIT] Filtro aplicado para:", ourCode, COUNTRY_NAMES[ourCode]);
-        }
       }
     });
-    console.log("[ETSIT] svgMap inicializado correctamente");
-
-    // Conectar botones de zoom + y - del mapa
-    setTimeout(function () {
-      var mapEl = document.getElementById("map");
-      if (!mapEl) return;
-      var zoomIn  = mapEl.querySelector(".svgMap-map-controls-zoom-in");
-      var zoomOut = mapEl.querySelector(".svgMap-map-controls-zoom-out");
-      // svgMap ya asigna sus propios listeners a estos botones internamente,
-      // pero a veces el pointer-events del contenedor los bloquea.
-      // Nos aseguramos de que sean clickables:
-      [zoomIn, zoomOut].forEach(function (btn) {
-        if (!btn) return;
-        btn.style.pointerEvents = "auto";
-        btn.style.cursor = "pointer";
-        btn.style.position = "relative";
-        btn.style.zIndex = "999";
-      });
-      console.log("[ETSIT] Botones de zoom verificados");
-    }, 600);
-
   } catch (err) {
     console.error("[ETSIT] Error inicializando svgMap:", err);
+    return;
   }
+
+  /* Esperar a que svgMap renderice el SVG y luego inyectar eventos */
+  waitForSvg(function(svgEl) {
+    attachMapClicks(svgEl);
+    fixZoomButtons();
+  });
+}
+
+function waitForSvg(cb) {
+  var attempts = 0;
+  var iv = setInterval(function() {
+    var svgEl = document.querySelector("#map svg");
+    if (svgEl) {
+      clearInterval(iv);
+      cb(svgEl);
+    }
+    if (++attempts > 50) clearInterval(iv);
+  }, 100);
+}
+
+/* ── Click en el SVG: detectar país y aplicar filtro ─────── */
+function attachMapClicks(svgEl) {
+  svgEl.addEventListener("click", function(e) {
+    var el = e.target;
+    var countryCode = "";
+
+    /* svgMap marca los paths con data-id o con clase svgMap-country-XX */
+    while (el && el !== svgEl) {
+      if (el.getAttribute && el.getAttribute("data-id")) {
+        countryCode = el.getAttribute("data-id");
+        break;
+      }
+      var cls = el.className && typeof el.className === "string"
+        ? el.className : (el.className && el.className.baseVal) || "";
+      var m = cls.match(/svgMap-country-([A-Z]{2})/);
+      if (m) { countryCode = m[1]; break; }
+      el = el.parentElement;
+    }
+
+    if (!countryCode) return;
+    var ourCode = SVG_TO_JSON[countryCode] || countryCode;
+    if (!countries[ourCode]) return;
+    applyCountryFilter(ourCode);
+  });
+
+  /* Cursor pointer sobre países con datos */
+  svgEl.addEventListener("mousemove", function(e) {
+    var el = e.target;
+    var hasData = false;
+    while (el && el !== svgEl) {
+      var code = el.getAttribute && el.getAttribute("data-id");
+      if (!code) {
+        var cls = el.className && typeof el.className === "string"
+          ? el.className : (el.className && el.className.baseVal) || "";
+        var m = cls.match(/svgMap-country-([A-Z]{2})/);
+        if (m) code = m[1];
+      }
+      if (code) {
+        var ourCode = SVG_TO_JSON[code] || code;
+        hasData = !!countries[ourCode];
+        break;
+      }
+      el = el.parentElement;
+    }
+    svgEl.style.cursor = hasData ? "pointer" : "default";
+  });
+}
+
+function applyCountryFilter(ourCode) {
+  var fCountry = document.getElementById("fCountry");
+  if (!fCountry) return;
+  fCountry.value = ourCode;
+  fCountry.dispatchEvent(new Event("change"));
+  fCountry.classList.remove("map-selected");
+  void fCountry.offsetWidth;
+  fCountry.classList.add("map-selected");
+  setTimeout(function() { fCountry.classList.remove("map-selected"); }, 800);
+  var fs = document.getElementById("filterSection");
+  if (fs) fs.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+/* ── Botones de zoom ────────────────────────────────────── */
+function fixZoomButtons() {
+  var mapEl       = document.getElementById("map");
+  var mapContainer = mapEl.closest(".map-container") || mapEl.parentElement;
+
+  /* svgMap genera los botones dentro del wrapper; los sacamos del overflow:hidden */
+  var ctrlWrapper = mapEl.querySelector(".svgMap-map-controls-wrapper");
+
+  if (ctrlWrapper) {
+    /* Reubicar en map-container (fuera del #map que tiene overflow:hidden) */
+    mapContainer.style.position = "relative";
+    mapContainer.appendChild(ctrlWrapper);
+    ctrlWrapper.style.cssText += ";position:absolute;bottom:16px;left:16px;right:auto;z-index:9999;pointer-events:auto;";
+
+    var btnIn  = ctrlWrapper.querySelector(".svgMap-map-controls-zoom-in");
+    var btnOut = ctrlWrapper.querySelector(".svgMap-map-controls-zoom-out");
+    [btnIn, btnOut].forEach(function(b) {
+      if (!b) return;
+      b.style.cssText += ";pointer-events:auto!important;cursor:pointer!important;z-index:9999!important;";
+    });
+    return;
+  }
+
+  /* Fallback: crear botones propios que simulan el zoom via transform */
+  if (mapContainer.querySelector(".etsit-zoom")) return;
+
+  mapContainer.style.position = "relative";
+  var svgEl   = mapEl.querySelector("svg");
+  var innerG  = svgEl && svgEl.querySelector("g");
+  var scale   = 1;
+
+  function applyZoom() {
+    var target = innerG || svgEl;
+    if (!target) return;
+    target.style.transformOrigin = "50% 50%";
+    target.style.transition = "transform .2s ease";
+    target.style.transform = "scale(" + scale + ")";
+  }
+
+  var zoomDiv = document.createElement("div");
+  zoomDiv.className = "etsit-zoom";
+  zoomDiv.style.cssText = "position:absolute;bottom:16px;left:16px;display:flex;flex-direction:column;gap:2px;z-index:9999;pointer-events:auto;";
+
+  function makeBtn(label, delta) {
+    var b = document.createElement("button");
+    b.textContent = label;
+    b.style.cssText = "width:32px;height:32px;border:1px solid #e2e7f0;background:#fff;color:#0d1a2e;font-size:20px;line-height:1;cursor:pointer;border-radius:6px;box-shadow:0 2px 8px rgba(0,30,80,.1);display:flex;align-items:center;justify-content:center;padding:0;pointer-events:auto;";
+    b.addEventListener("click", function(e) {
+      e.stopPropagation();
+      scale = Math.max(1, Math.min(10, scale * delta));
+      applyZoom();
+    });
+    return b;
+  }
+
+  zoomDiv.appendChild(makeBtn("+", 1.4));
+  zoomDiv.appendChild(makeBtn("−", 1/1.4));
+  mapContainer.appendChild(zoomDiv);
 }
 
 /* ── Filtros ─────────────────────────────────────────────── */
 function initFilters() {
-  console.log("[ETSIT] Inicializando filtros...");
-
   var fCountry = document.getElementById("fCountry");
   var fCity    = document.getElementById("fCity");
   var fProgram = document.getElementById("fProgram");
   var fCert    = document.getElementById("fCert");
   var rows     = document.getElementById("rows");
   var count    = document.getElementById("count");
-
-  if (!fCountry || !fCity || !fProgram || !fCert || !rows || !count) {
-    console.error("[ETSIT] No se encontraron elementos del DOM para los filtros");
-    return;
-  }
+  if (!fCountry || !fCity || !fProgram || !fCert || !rows || !count) return;
 
   function uniqueSorted(arr) {
     return Array.from(new Set(arr.map(function(x){ return (x||"").trim(); }).filter(Boolean)))
       .sort(function(a,b){ return a.localeCompare(b,"es"); });
   }
 
-  /* Poblar países */
   Object.entries(COUNTRY_NAMES)
     .filter(function(e){ return !!countries[e[0]]; })
     .sort(function(a,b){ return a[1].localeCompare(b[1],"es"); })
     .forEach(function(e) {
       var opt = document.createElement("option");
-      opt.value = e[0];
-      opt.textContent = e[1] + " (" + e[0] + ")";
+      opt.value = e[0]; opt.textContent = e[1] + " (" + e[0] + ")";
       fCountry.appendChild(opt);
     });
 
-  /* Poblar programas */
   uniqueSorted(offersAll.map(function(o){ return o.programa; })).forEach(function(v) {
     var opt = document.createElement("option");
-    opt.value = v;
-    opt.textContent = PROG_LABELS[v] || v;
+    opt.value = v; opt.textContent = PROG_LABELS[v] || v;
     fProgram.appendChild(opt);
   });
 
-  /* Poblar idiomas */
   function certShort(cert) {
     if (!cert || cert === "-") return "";
     var m = cert.match(/^([A-ZÁÉÍÓÚÜÑA-Za-záéíóúüñ]+(?:\s[A-ZÁÉÍÓÚÜÑA-Za-záéíóúüñ]+)?)\s/);
@@ -250,13 +314,9 @@ function initFilters() {
 
   uniqueSorted(offersAll.map(function(o){ return certShort(o.cert); }).filter(Boolean)).forEach(function(v) {
     var opt = document.createElement("option");
-    opt.value = v;
-    opt.textContent = v;
+    opt.value = v; opt.textContent = v;
     fCert.appendChild(opt);
   });
-
-  console.log("[ETSIT] Filtros poblados — países:", fCountry.options.length - 1,
-    "programas:", fProgram.options.length - 1, "certs:", fCert.options.length - 1);
 
   function populateCities() {
     var cc = fCountry.value;
@@ -299,7 +359,6 @@ function initFilters() {
     var filtered = offersAll.filter(passes);
     var plural   = filtered.length === 1 ? "resultado" : "resultados";
     count.textContent = filtered.length.toLocaleString("es-ES") + " " + plural;
-
     if (filtered.length === 0) {
       rows.innerHTML =
         '<tr><td colspan="8"><div class="empty-state">' +
@@ -308,7 +367,6 @@ function initFilters() {
         "</div></td></tr>";
       return;
     }
-
     var fragment = document.createDocumentFragment();
     filtered.slice(0, 5000).forEach(function(o) {
       var tr = document.createElement("tr");
@@ -328,13 +386,11 @@ function initFilters() {
     });
     rows.innerHTML = "";
     rows.appendChild(fragment);
-    console.log("[ETSIT] Renderizados", filtered.length, "resultados");
   }
 
   document.getElementById("clearFilters").addEventListener("click", function() {
     fCountry.value = ""; fCity.value = ""; fProgram.value = ""; fCert.value = "";
-    populateCities();
-    render();
+    populateCities(); render();
   });
 
   fCountry.addEventListener("change", function() { populateCities(); render(); });
@@ -344,6 +400,4 @@ function initFilters() {
 
   populateCities();
   render();
-
-  console.log("[ETSIT] ✓ Todo inicializado correctamente");
 }

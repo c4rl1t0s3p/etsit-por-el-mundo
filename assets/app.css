@@ -214,7 +214,59 @@ body {
   min-height: 500px;
   width: 100%;
   position: relative;
+  overflow: hidden; /* el mapa en sí está aquí, los controles se mueven fuera */
+}
+
+/* Los botones de zoom los reubicamos en .map-container via JS */
+.map-container .svgMap-map-controls-wrapper,
+.map-container .etsit-zoom {
+  position: absolute !important;
+  bottom: 16px !important;
+  left: 16px !important;
+  right: auto !important;
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+}
+
+.map-container .svgMap-map-controls-zoom {
+  border-radius: 8px !important;
+  border: 1px solid var(--border) !important;
   overflow: hidden;
+  box-shadow: var(--shadow) !important;
+}
+
+.map-container .svgMap-map-controls-zoom button,
+.map-container .etsit-zoom button {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  font-size: 18px !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  position: relative !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.map-container .svgMap-map-controls-zoom button:hover,
+.map-container .etsit-zoom button:hover {
+  background: var(--bg) !important;
+}
+
+/* Animación de highlight cuando se aplica filtro desde el mapa */
+@keyframes filterHighlight {
+  0%   { box-shadow: 0 0 0 0   rgba(0,61,165,.6); border-color: var(--brand); }
+  60%  { box-shadow: 0 0 0 8px rgba(0,61,165,.1); border-color: var(--brand); }
+  100% { box-shadow: 0 0 0 3px rgba(0,61,165,.15); border-color: var(--brand); }
+}
+
+.filter-select.map-selected {
+  animation: filterHighlight .8s ease-out forwards;
 }
 
 .map-section {
@@ -266,56 +318,9 @@ body {
   margin-bottom: 6px !important;
 }
 
-/* Override svgMap controls */
+/* svgMap tooltip overrides adicionales */
 .svgMap-map-controls-wrapper {
-  bottom: 16px !important;
-  right: 16px !important;
-}
-
-.svgMap-map-controls-zoom {
-  border-radius: 8px !important;
-  border: 1px solid var(--border) !important;
-  overflow: hidden;
-  box-shadow: var(--shadow) !important;
-}
-
-.svgMap-map-controls-zoom button {
-  background: var(--surface) !important;
-  color: var(--text) !important;
-  font-size: 18px !important;
-  pointer-events: auto !important;
-  cursor: pointer !important;
-  position: relative !important;
-  z-index: 999 !important;
-}
-
-.svgMap-map-controls-zoom button:hover {
-  background: var(--bg) !important;
-}
-
-/* Asegurar que el wrapper de controles no bloquee clics */
-.svgMap-map-controls-wrapper {
-  pointer-events: auto !important;
-  z-index: 999 !important;
-}
-
-/* Indicador visual de país activo en el filtro */
-#fCountry:not([value=""]) {
-  border-color: var(--brand) !important;
-  box-shadow: 0 0 0 3px rgba(0,61,165,.15) !important;
-  background-color: var(--surface) !important;
-}
-
-/* Animación de highlight cuando se aplica el filtro desde el mapa */
-@keyframes filterHighlight {
-  0%   { box-shadow: 0 0 0 0   rgba(0,61,165,.5); }
-  50%  { box-shadow: 0 0 0 8px rgba(0,61,165,.15); }
-  100% { box-shadow: 0 0 0 3px rgba(0,61,165,.15); }
-}
-
-.filter-select.map-selected {
-  animation: filterHighlight .5s ease-out forwards;
-  border-color: var(--brand) !important;
+  display: none; /* se reubica via JS en .map-container */
 }
 
 .map-legend {
